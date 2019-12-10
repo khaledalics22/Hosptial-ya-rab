@@ -1,0 +1,24 @@
+C:\Users\Kh\source\repos\Hospital ISA\bin\Debug\Hospital ISA.exe.config
+C:\Users\Kh\source\repos\Hospital ISA\bin\Debug\Hospital ISA.exe
+C:\Users\Kh\source\repos\Hospital ISA\bin\Debug\Hospital ISA.pdb
+C:\Users\Kh\source\repos\Hospital ISA\obj\Debug\Hospital ISA.csprojAssemblyReference.cache
+C:\Users\Kh\source\repos\Hospital ISA\obj\Debug\Hospital_ISA.Properties.Resources.resources
+C:\Users\Kh\source\repos\Hospital ISA\obj\Debug\Hospital ISA.csproj.GenerateResource.cache
+C:\Users\Kh\source\repos\Hospital ISA\obj\Debug\Hospital ISA.exe
+C:\Users\Kh\source\repos\Hospital ISA\obj\Debug\Hospital ISA.pdb
+C:\Users\user\Desktop\DB Project\Hospital-DB-ISA-\bin\Debug\Hospital ISA.exe.config
+C:\Users\user\Desktop\DB Project\Hospital-DB-ISA-\bin\Debug\Hospital ISA.exe
+C:\Users\user\Desktop\DB Project\Hospital-DB-ISA-\bin\Debug\Hospital ISA.pdb
+C:\Users\user\Desktop\DB Project\Hospital-DB-ISA-\obj\Debug\Hospital_ISA.Properties.Resources.resources
+C:\Users\user\Desktop\DB Project\Hospital-DB-ISA-\obj\Debug\Hospital ISA.csproj.GenerateResource.cache
+C:\Users\user\Desktop\DB Project\Hospital-DB-ISA-\obj\Debug\Hospital ISA.exe
+C:\Users\user\Desktop\DB Project\Hospital-DB-ISA-\obj\Debug\Hospital ISA.pdb
+C:\Users\user\Desktop\DB Project\Hospital-DB-ISA-\obj\Debug\Hospital_ISA.LoginPage.resources
+C:\Users\user\Desktop\DB Project\Hospital-DB-ISA-\obj\Debug\Hospital_ISA.Manager.resources
+C:\Users\user\Desktop\DB Project\Hospital-DB-ISA-\obj\Debug\Hospital_ISA.AddDoctor.resources
+C:\Users\user\Desktop\DB Project\Hospital-DB-ISA-\obj\Debug\Hospital ISA.csprojAssemblyReference.cache
+C:\Users\user\Desktop\DB Project\Hospital-DB-ISA-\obj\Debug\Hospital_ISA.AddNurse.resources
+C:\Users\user\Desktop\DB Project\Hospital-DB-ISA-\obj\Debug\Hospital_ISA.AddEmployee.resources
+C:\Users\user\Desktop\DB Project\Hospital-DB-ISA-\obj\Debug\Hospital_ISA.EditDoctor.resources
+C:\Users\user\Desktop\DB Project\Hospital-DB-ISA-\obj\Debug\Hospital_ISA.EditNurse.resources
+C:\Users\user\Desktop\DB Project\Hospital-DB-ISA-\obj\Debug\Hospital_ISA.EditEmp.resources
