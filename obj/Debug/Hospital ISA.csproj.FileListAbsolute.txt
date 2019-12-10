@@ -22,3 +22,34 @@ C:\Users\user\Desktop\DB Project\Hospital-DB-ISA-\obj\Debug\Hospital_ISA.AddEmpl
 C:\Users\user\Desktop\DB Project\Hospital-DB-ISA-\obj\Debug\Hospital_ISA.EditDoctor.resources
 C:\Users\user\Desktop\DB Project\Hospital-DB-ISA-\obj\Debug\Hospital_ISA.EditNurse.resources
 C:\Users\user\Desktop\DB Project\Hospital-DB-ISA-\obj\Debug\Hospital_ISA.EditEmp.resources
+E:\ENGINEERING\CMP2-1\DB\project\project code\hos\bin\Debug\Hospital ISA.exe.config
+E:\ENGINEERING\CMP2-1\DB\project\project code\hos\bin\Debug\Hospital ISA.exe
+E:\ENGINEERING\CMP2-1\DB\project\project code\hos\bin\Debug\Hospital ISA.pdb
+E:\ENGINEERING\CMP2-1\DB\project\project code\hos\obj\Debug\Hospital ISA.csprojAssemblyReference.cache
+E:\ENGINEERING\CMP2-1\DB\project\project code\hos\obj\Debug\Hospital_ISA.AddDoctor.resources
+E:\ENGINEERING\CMP2-1\DB\project\project code\hos\obj\Debug\Hospital_ISA.AddEmployee.resources
+E:\ENGINEERING\CMP2-1\DB\project\project code\hos\obj\Debug\Hospital_ISA.AddNurse.resources
+E:\ENGINEERING\CMP2-1\DB\project\project code\hos\obj\Debug\Hospital_ISA.EditDoctor.resources
+E:\ENGINEERING\CMP2-1\DB\project\project code\hos\obj\Debug\Hospital_ISA.EditEmp.resources
+E:\ENGINEERING\CMP2-1\DB\project\project code\hos\obj\Debug\Hospital_ISA.EditNurse.resources
+E:\ENGINEERING\CMP2-1\DB\project\project code\hos\obj\Debug\Hospital_ISA.LoginPage.resources
+E:\ENGINEERING\CMP2-1\DB\project\project code\hos\obj\Debug\Hospital_ISA.Manager.resources
+E:\ENGINEERING\CMP2-1\DB\project\project code\hos\obj\Debug\Hospital_ISA.Properties.Resources.resources
+E:\ENGINEERING\CMP2-1\DB\project\project code\hos\obj\Debug\Hospital_ISA.ViewPatient.resources
+E:\ENGINEERING\CMP2-1\DB\project\project code\hos\obj\Debug\Hospital ISA.csproj.GenerateResource.cache
+E:\ENGINEERING\CMP2-1\DB\project\project code\hos\obj\Debug\Hospital ISA.exe
+E:\ENGINEERING\CMP2-1\DB\project\project code\hos\obj\Debug\Hospital ISA.pdb
+E:\ENGINEERING\CMP2-1\DB\project\project code\hos\obj\Debug\Hospital_ISA.Explore.resources
+E:\ENGINEERING\CMP2-1\DB\project\project code\hos\obj\Debug\Hospital_ISA.Patient.resources
+E:\ENGINEERING\CMP2-1\DB\project\project code\hos\obj\Debug\Hospital_ISA.DoctorInfo.resources
+E:\ENGINEERING\CMP2-1\DB\project\project code\hos\obj\Debug\Hospital_ISA.Book.resources
+E:\ENGINEERING\CMP2-1\DB\project\project code\hos\obj\Debug\Hospital_ISA.Appoints.resources
+E:\ENGINEERING\CMP2-1\DB\project\project code\hos\obj\Debug\Hospital_ISA.AppointsInfo.resources
+E:\ENGINEERING\CMP2-1\DB\project\project code\hos\obj\Debug\Hospital_ISA.HealthStatistics.resources
+E:\ENGINEERING\CMP2-1\DB\project\project code\hos\obj\Debug\Hospital_ISA.Income.resources
+E:\ENGINEERING\CMP2-1\DB\project\project code\hos\obj\Debug\Hospital_ISA.ManagerMain.resources
+E:\ENGINEERING\CMP2-1\DB\project\project code\hos\obj\Debug\Hospital_ISA.Pharmacist.resources
+E:\ENGINEERING\CMP2-1\DB\project\project code\hos\obj\Debug\Hospital_ISA.Prescription.resources
+E:\ENGINEERING\CMP2-1\DB\project\project code\hos\obj\Debug\Hospital_ISA.PriscInfo.resources
+E:\ENGINEERING\CMP2-1\DB\project\project code\hos\obj\Debug\Hospital_ISA.Statistics.resources
+E:\ENGINEERING\CMP2-1\DB\project\project code\hos\obj\Debug\Hospital_ISA.StatisticsParent.resources

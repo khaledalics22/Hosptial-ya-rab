@@ -33,5 +33,11 @@ namespace Hospital_ISA
             m.Show();
             
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Patient p = new Patient();
+            p.Show();          
+        }
     }
 }
