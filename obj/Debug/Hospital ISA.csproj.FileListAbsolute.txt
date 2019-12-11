@@ -86,3 +86,8 @@ D:\mahmoudamrnabil\github\myprojects\Hosptial-ya-rab\obj\Debug\Hospital ISA.exe
 D:\mahmoudamrnabil\github\myprojects\Hosptial-ya-rab\obj\Debug\Hospital ISA.pdb
 D:\mahmoudamrnabil\github\myprojects\Hosptial-ya-rab\obj\Debug\Hospital_ISA.DoctorAppointments.resources
 D:\mahmoudamrnabil\github\myprojects\Hosptial-ya-rab\obj\Debug\Hospital_ISA.DoctorPatientInfo.resources
+D:\mahmoudamrnabil\github\myprojects\Hosptial-ya-rab\obj\Debug\Hospital_ISA.RecepionistBook.resources
+D:\mahmoudamrnabil\github\myprojects\Hosptial-ya-rab\obj\Debug\Hospital_ISA.ReceptionistHome.resources
+D:\mahmoudamrnabil\github\myprojects\Hosptial-ya-rab\obj\Debug\Hospital_ISA.ReceptionistDoctorInfo.resources
+D:\mahmoudamrnabil\github\myprojects\Hosptial-ya-rab\obj\Debug\Hospital_ISA.AddPatient.resources
+D:\mahmoudamrnabil\github\myprojects\Hosptial-ya-rab\obj\Debug\Hospital_ISA.Rooms.resources
