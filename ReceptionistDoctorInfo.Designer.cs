@@ -60,7 +60,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(624, 80);
             this.button1.TabIndex = 2;
-            this.button1.Text = "doctor info";
+            this.button1.Text = "Doctor info";
             this.button1.UseVisualStyleBackColor = false;
             // 
             // label1
