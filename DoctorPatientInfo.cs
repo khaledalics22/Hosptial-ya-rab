@@ -10,19 +10,19 @@ using System.Windows.Forms;
 
 namespace Hospital_ISA
 {
-    public partial class Pharmacist : Form
+    public partial class DoctorPatientInfo : Form
     {
-        public Pharmacist()
+        public DoctorPatientInfo()
         {
             InitializeComponent();
         }
 
-        private void groupBox2_Enter(object sender, EventArgs e)
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void splitter1_SplitterMoved(object sender, SplitterEventArgs e)
+        private void textBox4_TextChanged(object sender, EventArgs e)
         {
 
         }

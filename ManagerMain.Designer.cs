@@ -42,9 +42,10 @@
             this.label1.BackColor = System.Drawing.Color.Blue;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(308, 9);
+            this.label1.Location = new System.Drawing.Point(231, 7);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(163, 39);
+            this.label1.Size = new System.Drawing.Size(135, 31);
             this.label1.TabIndex = 32;
             this.label1.Text = "Statistics";
             // 
@@ -52,9 +53,10 @@
             // 
             this.splitter1.BackColor = System.Drawing.Color.Blue;
             this.splitter1.Location = new System.Drawing.Point(0, 0);
-            this.splitter1.MaximumSize = new System.Drawing.Size(1024, 70);
+            this.splitter1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.splitter1.MaximumSize = new System.Drawing.Size(768, 57);
             this.splitter1.Name = "splitter1";
-            this.splitter1.Size = new System.Drawing.Size(802, 70);
+            this.splitter1.Size = new System.Drawing.Size(602, 57);
             this.splitter1.TabIndex = 30;
             this.splitter1.TabStop = false;
             // 
@@ -63,9 +65,10 @@
             this.button1.BackColor = System.Drawing.Color.Blue;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(219, 268);
+            this.button1.Location = new System.Drawing.Point(164, 218);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(356, 50);
+            this.button1.Size = new System.Drawing.Size(267, 41);
             this.button1.TabIndex = 28;
             this.button1.Text = "Retrieve Staff";
             this.button1.UseVisualStyleBackColor = false;
@@ -76,9 +79,10 @@
             this.button3.BackColor = System.Drawing.Color.Blue;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(219, 174);
+            this.button3.Location = new System.Drawing.Point(164, 141);
+            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(356, 50);
+            this.button3.Size = new System.Drawing.Size(267, 41);
             this.button3.TabIndex = 33;
             this.button3.Text = "Statistics";
             this.button3.UseVisualStyleBackColor = false;
@@ -88,23 +92,25 @@
             // 
             this.pictureBox1.Image = global::Hospital_ISA.Properties.Resources.arrow;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(59, 70);
+            this.pictureBox1.Size = new System.Drawing.Size(44, 57);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 31;
             this.pictureBox1.TabStop = false;
             // 
             // ManagerMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(600, 366);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.splitter1);
             this.Controls.Add(this.button1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "ManagerMain";
             this.Text = "ManagerMain";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

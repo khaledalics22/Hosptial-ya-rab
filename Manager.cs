@@ -41,5 +41,20 @@ namespace Hospital_ISA
             ed.Show();
             Close();
         }
+
+        private void Manager_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
