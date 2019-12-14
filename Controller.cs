@@ -68,6 +68,46 @@ namespace DBapplication
             Parameters.Add("@Nssn", id);
             return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
         }
+        //select all drugs
+        public DataTable SelectAllDrugs()
+        {
+            String StoredProcedureName = StoredProcedures.AllDrugs;
+            return dbMan.ExecuteReader(StoredProcedureName, null);
+        }
+        //Select Empty Drugs
+        public DataTable SelectEmptyDrugs()
+        {
+            String StoredProcedureName = StoredProcedures.EmptyDrugs;
+            return dbMan.ExecuteReader(StoredProcedureName, null);
+        }
+        //find drugs by name
+        public DataTable SearchDrugs(string s)
+        {
+            String StoredProcedureName = StoredProcedures.FindDrugs;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@name", s);
+            return dbMan.ExecuteReader(StoredProcedureName, Parameters);
+        }
+        //find empty drugs by name
+        public DataTable SearchEmptyDrugs(string s)
+        {
+            String StoredProcedureName = StoredProcedures.FindEmptyDrugs;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@name", s);
+            return dbMan.ExecuteReader(StoredProcedureName, Parameters);
+        }
+         //insert drugs
+        public int InsertDrugs(int c,string n,int q,float p)
+        {
+            String StoredProcedureName = StoredProcedures.InsertDrug;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@code", c);
+            Parameters.Add("@name", n);
+            Parameters.Add("@q", q);
+            Parameters.Add("@p", p);
+            return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
+        }
+
 
     }
 }

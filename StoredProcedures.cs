@@ -8,7 +8,7 @@ namespace DBapplication
     public class StoredProcedures
     {
         // stored procedures goes here 
-
+        
         public static string GetDocs = "GetAllDocs";
         public static string GetNurses = "GetAllNurse";
         public static string GetEmps = "GetAllEmp";
@@ -16,6 +16,12 @@ namespace DBapplication
         public static string DeleteEmp = "DeleteEmp";
         public static string DeleteDoc = "DeleteDoctor";
         public static string DeleteNurse = "DeleteNurse";
+
+        public static string AllDrugs = "SelectAllDrugs";
+        public static string EmptyDrugs = "SelectEmptyDrugs";
+        public static string FindDrugs = "FindDrug";
+        public static string FindEmptyDrugs = "FindEmptyDrug";
+        public static string InsertDrug = "InsertDrug";
 
     }
 }
