@@ -48,9 +48,9 @@
             this.label1.BackColor = System.Drawing.Color.Blue;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(334, 9);
+            this.label1.Location = new System.Drawing.Point(376, 11);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(135, 39);
+            this.label1.Size = new System.Drawing.Size(157, 46);
             this.label1.TabIndex = 27;
             this.label1.Text = "Income";
             // 
@@ -58,9 +58,10 @@
             // 
             this.splitter1.BackColor = System.Drawing.Color.Blue;
             this.splitter1.Location = new System.Drawing.Point(0, 0);
-            this.splitter1.MaximumSize = new System.Drawing.Size(1024, 70);
+            this.splitter1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.splitter1.MaximumSize = new System.Drawing.Size(1152, 88);
             this.splitter1.Name = "splitter1";
-            this.splitter1.Size = new System.Drawing.Size(802, 70);
+            this.splitter1.Size = new System.Drawing.Size(902, 88);
             this.splitter1.TabIndex = 25;
             this.splitter1.TabStop = false;
             // 
@@ -68,8 +69,9 @@
             // 
             this.pictureBox1.Image = global::Hospital_ISA.Properties.Resources.arrow;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(59, 70);
+            this.pictureBox1.Size = new System.Drawing.Size(66, 88);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 26;
             this.pictureBox1.TabStop = false;
@@ -82,9 +84,10 @@
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "All"});
-            this.comboBox1.Location = new System.Drawing.Point(481, 115);
+            this.comboBox1.Location = new System.Drawing.Point(541, 144);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(129, 26);
+            this.comboBox1.Size = new System.Drawing.Size(145, 30);
             this.comboBox1.TabIndex = 29;
             this.comboBox1.Text = "End Time";
             this.comboBox1.ValueMember = "kd";
@@ -97,9 +100,10 @@
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Items.AddRange(new object[] {
             "All"});
-            this.comboBox2.Location = new System.Drawing.Point(268, 115);
+            this.comboBox2.Location = new System.Drawing.Point(302, 144);
+            this.comboBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(129, 26);
+            this.comboBox2.Size = new System.Drawing.Size(145, 30);
             this.comboBox2.TabIndex = 30;
             this.comboBox2.Text = "Start Time";
             this.comboBox2.ValueMember = "kd";
@@ -112,9 +116,10 @@
             this.comboBox3.FormattingEnabled = true;
             this.comboBox3.Items.AddRange(new object[] {
             "All"});
-            this.comboBox3.Location = new System.Drawing.Point(32, 115);
+            this.comboBox3.Location = new System.Drawing.Point(36, 144);
+            this.comboBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(129, 26);
+            this.comboBox3.Size = new System.Drawing.Size(145, 30);
             this.comboBox3.TabIndex = 31;
             this.comboBox3.Text = "Department";
             this.comboBox3.ValueMember = "kd";
@@ -123,9 +128,10 @@
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.Blue;
-            this.button1.Location = new System.Drawing.Point(639, 390);
+            this.button1.Location = new System.Drawing.Point(719, 488);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(129, 33);
+            this.button1.Size = new System.Drawing.Size(145, 41);
             this.button1.TabIndex = 32;
             this.button1.Text = "Show";
             this.button1.UseVisualStyleBackColor = true;
@@ -136,9 +142,9 @@
             this.label3.BackColor = System.Drawing.Color.White;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Blue;
-            this.label3.Location = new System.Drawing.Point(27, 390);
+            this.label3.Location = new System.Drawing.Point(30, 488);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(179, 29);
+            this.label3.Size = new System.Drawing.Size(205, 36);
             this.label3.TabIndex = 33;
             this.label3.Text = "Total income:";
             // 
@@ -148,28 +154,29 @@
             this.label2.BackColor = System.Drawing.Color.White;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Blue;
-            this.label2.Location = new System.Drawing.Point(212, 390);
+            this.label2.Location = new System.Drawing.Point(238, 488);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(83, 29);
+            this.label2.Size = new System.Drawing.Size(97, 36);
             this.label2.TabIndex = 34;
             this.label2.Text = "Value";
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(32, 161);
+            this.dataGridView1.Location = new System.Drawing.Point(36, 201);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(578, 216);
+            this.dataGridView1.Size = new System.Drawing.Size(650, 270);
             this.dataGridView1.TabIndex = 35;
             // 
             // Income
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(900, 562);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label3);
@@ -180,6 +187,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.splitter1);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Income";
             this.Text = "Income";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

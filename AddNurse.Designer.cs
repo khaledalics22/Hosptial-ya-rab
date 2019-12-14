@@ -51,10 +51,13 @@
             this.label12 = new System.Windows.Forms.Label();
             this.comboBox6 = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
-            this.label13 = new System.Windows.Forms.Label();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.label13 = new System.Windows.Forms.Label();
+            this.comboBox5 = new System.Windows.Forms.ComboBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // button3
@@ -254,7 +257,7 @@
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(892, 648);
+            this.button5.Location = new System.Drawing.Point(901, 741);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(159, 84);
             this.button5.TabIndex = 60;
@@ -267,7 +270,7 @@
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(548, 664);
+            this.button4.Location = new System.Drawing.Point(639, 664);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(124, 68);
             this.button4.TabIndex = 59;
@@ -288,7 +291,7 @@
             "Nurses",
             "Employees",
             "Patients"});
-            this.comboBox4.Location = new System.Drawing.Point(548, 608);
+            this.comboBox4.Location = new System.Drawing.Point(639, 603);
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(124, 45);
             this.comboBox4.TabIndex = 58;
@@ -298,7 +301,7 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label12.Location = new System.Drawing.Point(424, 616);
+            this.label12.Location = new System.Drawing.Point(506, 608);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(127, 37);
             this.label12.TabIndex = 57;
@@ -335,6 +338,74 @@
             this.label2.TabIndex = 63;
             this.label2.Text = "Shift:";
             // 
+            // comboBox3
+            // 
+            this.comboBox3.BackColor = System.Drawing.Color.White;
+            this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox3.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.comboBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox3.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.ItemHeight = 37;
+            this.comboBox3.Items.AddRange(new object[] {
+            "Doctors",
+            "Nurses",
+            "Employees",
+            "Patients"});
+            this.comboBox3.Location = new System.Drawing.Point(131, 574);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(124, 45);
+            this.comboBox3.TabIndex = 66;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label3.Location = new System.Drawing.Point(13, 582);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(113, 37);
+            this.label3.TabIndex = 65;
+            this.label3.Text = "Clincs:";
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.DodgerBlue;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(1, 669);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(124, 63);
+            this.button2.TabIndex = 101;
+            this.button2.Text = "Reserved Shifts";
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.AllowUserToAddRows = false;
+            this.dataGridView2.AllowUserToDeleteRows = false;
+            this.dataGridView2.BackgroundColor = System.Drawing.Color.DodgerBlue;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Location = new System.Drawing.Point(131, 639);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.ReadOnly = true;
+            this.dataGridView2.RowHeadersWidth = 62;
+            this.dataGridView2.RowTemplate.Height = 28;
+            this.dataGridView2.Size = new System.Drawing.Size(309, 112);
+            this.dataGridView2.TabIndex = 100;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label13.Location = new System.Drawing.Point(13, 771);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(90, 37);
+            this.label13.TabIndex = 99;
+            this.label13.Text = "Shift:";
+            // 
             // comboBox5
             // 
             this.comboBox5.BackColor = System.Drawing.Color.White;
@@ -354,64 +425,25 @@
             "",
             "",
             ""});
-            this.comboBox5.Location = new System.Drawing.Point(126, 664);
+            this.comboBox5.Location = new System.Drawing.Point(109, 769);
             this.comboBox5.Name = "comboBox5";
             this.comboBox5.Size = new System.Drawing.Size(260, 45);
-            this.comboBox5.TabIndex = 62;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label13.Location = new System.Drawing.Point(30, 667);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(90, 37);
-            this.label13.TabIndex = 61;
-            this.label13.Text = "Shift:";
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.BackColor = System.Drawing.Color.White;
-            this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox3.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.comboBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox3.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.ItemHeight = 37;
-            this.comboBox3.Items.AddRange(new object[] {
-            "Doctors",
-            "Nurses",
-            "Employees",
-            "Patients"});
-            this.comboBox3.Location = new System.Drawing.Point(126, 608);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(124, 45);
-            this.comboBox3.TabIndex = 66;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label3.Location = new System.Drawing.Point(12, 611);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(113, 37);
-            this.label3.TabIndex = 65;
-            this.label3.Text = "Clincs:";
+            this.comboBox5.TabIndex = 98;
             // 
             // AddNurse
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1066, 760);
+            this.ClientSize = new System.Drawing.Size(1066, 824);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.dataGridView2);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.comboBox5);
             this.Controls.Add(this.comboBox3);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.comboBox6);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.comboBox5);
-            this.Controls.Add(this.label13);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.comboBox4);
@@ -435,6 +467,7 @@
             this.Controls.Add(this.button3);
             this.Name = "AddNurse";
             this.Text = "AddNurse";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -465,9 +498,11 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.ComboBox comboBox6;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox5;
-        private System.Windows.Forms.Label label13;
         private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.ComboBox comboBox5;
     }
 }

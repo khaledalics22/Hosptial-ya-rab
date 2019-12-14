@@ -51,10 +51,13 @@
             this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
-            this.label13 = new System.Windows.Forms.Label();
             this.comboBox6 = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.label13 = new System.Windows.Forms.Label();
+            this.comboBox5 = new System.Windows.Forms.ComboBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // button3
@@ -270,7 +273,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label3.Location = new System.Drawing.Point(30, 618);
+            this.label3.Location = new System.Drawing.Point(16, 588);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(113, 37);
             this.label3.TabIndex = 35;
@@ -291,7 +294,7 @@
             "Nurses",
             "Employees",
             "Patients"});
-            this.comboBox3.Location = new System.Drawing.Point(135, 610);
+            this.comboBox3.Location = new System.Drawing.Point(135, 588);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(124, 45);
             this.comboBox3.TabIndex = 36;
@@ -303,7 +306,7 @@
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(551, 666);
+            this.button4.Location = new System.Drawing.Point(593, 666);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(124, 68);
             this.button4.TabIndex = 40;
@@ -325,7 +328,7 @@
             "Nurses",
             "Employees",
             "Patients"});
-            this.comboBox4.Location = new System.Drawing.Point(551, 610);
+            this.comboBox4.Location = new System.Drawing.Point(593, 599);
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(124, 45);
             this.comboBox4.TabIndex = 39;
@@ -336,7 +339,7 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label12.Location = new System.Drawing.Point(427, 618);
+            this.label12.Location = new System.Drawing.Point(460, 602);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(127, 37);
             this.label12.TabIndex = 38;
@@ -349,50 +352,13 @@
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(895, 650);
+            this.button5.Location = new System.Drawing.Point(910, 741);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(159, 84);
             this.button5.TabIndex = 41;
             this.button5.Text = "Save";
             this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
-            // comboBox5
-            // 
-            this.comboBox5.BackColor = System.Drawing.Color.White;
-            this.comboBox5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox5.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.comboBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox5.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.ItemHeight = 37;
-            this.comboBox5.Items.AddRange(new object[] {
-            "06:00 : 09:00",
-            "09:00 : 12:00",
-            "12:00 : 15:00",
-            "15:00 : 18:00",
-            "18:00 : 21:00",
-            "21:00 : 24:00",
-            "",
-            "",
-            ""});
-            this.comboBox5.Location = new System.Drawing.Point(135, 677);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(260, 45);
-            this.comboBox5.TabIndex = 43;
-            this.comboBox5.SelectedIndexChanged += new System.EventHandler(this.comboBox5_SelectedIndexChanged);
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label13.Location = new System.Drawing.Point(53, 681);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(90, 37);
-            this.label13.TabIndex = 42;
-            this.label13.Text = "Shift:";
-            this.label13.Click += new System.EventHandler(this.label13_Click);
             // 
             // comboBox6
             // 
@@ -427,16 +393,80 @@
             this.label2.Text = "Shift:";
             this.label2.Click += new System.EventHandler(this.label2_Click_1);
             // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.DodgerBlue;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(5, 669);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(124, 65);
+            this.button2.TabIndex = 101;
+            this.button2.Text = "Reserved Shifts";
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.AllowUserToAddRows = false;
+            this.dataGridView2.AllowUserToDeleteRows = false;
+            this.dataGridView2.BackgroundColor = System.Drawing.Color.DodgerBlue;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Location = new System.Drawing.Point(135, 650);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.ReadOnly = true;
+            this.dataGridView2.RowHeadersWidth = 62;
+            this.dataGridView2.RowTemplate.Height = 28;
+            this.dataGridView2.Size = new System.Drawing.Size(309, 112);
+            this.dataGridView2.TabIndex = 100;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label13.Location = new System.Drawing.Point(17, 771);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(90, 37);
+            this.label13.TabIndex = 99;
+            this.label13.Text = "Shift:";
+            // 
+            // comboBox5
+            // 
+            this.comboBox5.BackColor = System.Drawing.Color.White;
+            this.comboBox5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox5.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.comboBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox5.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.comboBox5.FormattingEnabled = true;
+            this.comboBox5.ItemHeight = 37;
+            this.comboBox5.Items.AddRange(new object[] {
+            "06:00 : 09:00",
+            "09:00 : 12:00",
+            "12:00 : 15:00",
+            "15:00 : 18:00",
+            "18:00 : 21:00",
+            "21:00 : 24:00",
+            "",
+            "",
+            ""});
+            this.comboBox5.Location = new System.Drawing.Point(113, 769);
+            this.comboBox5.Name = "comboBox5";
+            this.comboBox5.Size = new System.Drawing.Size(260, 45);
+            this.comboBox5.TabIndex = 98;
+            // 
             // AddDoctor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1066, 743);
+            this.ClientSize = new System.Drawing.Size(1066, 825);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.dataGridView2);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.comboBox5);
             this.Controls.Add(this.comboBox6);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.comboBox5);
-            this.Controls.Add(this.label13);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.comboBox4);
@@ -463,6 +493,7 @@
             this.Name = "AddDoctor";
             this.Text = "AddDoctor";
             this.Load += new System.EventHandler(this.AddDoctor_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -493,9 +524,11 @@
         private System.Windows.Forms.ComboBox comboBox4;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.ComboBox comboBox5;
-        private System.Windows.Forms.Label label13;
         private System.Windows.Forms.ComboBox comboBox6;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.ComboBox comboBox5;
     }
 }
