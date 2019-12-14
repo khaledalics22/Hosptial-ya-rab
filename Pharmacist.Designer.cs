@@ -63,7 +63,7 @@
             this.label2.ForeColor = System.Drawing.Color.Blue;
             this.label2.Location = new System.Drawing.Point(933, 17);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(76, 32);
+            this.label2.Size = new System.Drawing.Size(98, 32);
             this.label2.TabIndex = 18;
             this.label2.Text = "Search";
             this.label2.UseWaitCursor = true;
@@ -336,6 +336,7 @@
             this.Controls.Add(this.splitter1);
             this.Name = "Pharmacist";
             this.Text = "Pharmacist";
+            this.Load += new System.EventHandler(this.Pharmacist_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);

@@ -19,8 +19,55 @@ namespace DBapplication
         {
             dbMan.CloseConnection();
         }
-   
-           //add functions here
-      
+
+        //select all doctors
+        public DataTable SelectDoctors()
+        {
+            String StoredProcedureName = StoredProcedures.GetDocs;
+            return dbMan.ExecuteReader(StoredProcedureName, null);
+        }
+        //select all nurses
+        public DataTable SelectNurses()
+        {
+            String StoredProcedureName = StoredProcedures.GetNurses;
+            return dbMan.ExecuteReader(StoredProcedureName, null);
+        }
+        //select all employees
+        public DataTable SelectEmployees()
+        {
+            String StoredProcedureName = StoredProcedures.GetEmps;
+            return dbMan.ExecuteReader(StoredProcedureName, null);
+        }
+        //select all patients and diagnoses
+        public DataTable SelectPatientsDiag()
+        {
+            String StoredProcedureName = StoredProcedures.GetAllPatDiag;
+            return dbMan.ExecuteReader(StoredProcedureName, null);
+        }
+        //delete emlopyee using ESSN
+        public int DeleteEmployee(int id)
+        {
+            String StoredProcedureName = StoredProcedures.DeleteEmp;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@Essn", id);
+            return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
+        }
+        //delete doctor using DSSN
+        public int DeleteDoctor(int id)
+        {
+            String StoredProcedureName = StoredProcedures.DeleteDoc;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@Dssn", id);
+            return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
+        }
+        //Delete nurse using NSSN 
+        public int DeleteNurse(int id)
+        {
+            String StoredProcedureName = StoredProcedures.DeleteNurse;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@Nssn", id);
+            return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
+        }
+
     }
 }

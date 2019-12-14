@@ -21,5 +21,10 @@ namespace Hospital_ISA
         {
 
         }
+
+        private void textBox7_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

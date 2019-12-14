@@ -26,5 +26,10 @@ namespace Hospital_ISA
         {
 
         }
+
+        private void Pharmacist_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -9,7 +9,7 @@ namespace DBapplication
 {
     public class DBManager
     {
-        static string DB_Connection_String= @"Data Source=(localdb\FirstDB;Initial Catalog=CompanyDBLab7;Integrated Security=True";
+        static string DB_Connection_String= @"Data Source=(localdb)\FirstDB;Initial Catalog=Hospital;Integrated Security=True";
         SqlConnection myConnection;
 
     public DBManager()
