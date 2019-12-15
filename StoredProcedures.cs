@@ -23,5 +23,9 @@ namespace DBapplication
         public static string FindEmptyDrugs = "FindEmptyDrug";
         public static string InsertDrug = "InsertDrug";
 
+        public static string AddQuantity = "AddQuantity";
+        public static string SellDrug = "SellDrug";
+        public static string AddToSold = "AddToSold";
+
     }
 }

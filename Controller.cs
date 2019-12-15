@@ -107,7 +107,29 @@ namespace DBapplication
             Parameters.Add("@p", p);
             return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
         }
-
-
+        //increase drug quantity
+        public int AddQuantity(int c)
+        {
+            String StoredProcedureName = StoredProcedures.AddQuantity;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@code", c);
+            return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
+        }         
+        //sell one item of drug 
+        public int SellDrug(int c)
+        {
+            String StoredProcedureName = StoredProcedures.SellDrug;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@code", c);
+            return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
+        }
+        //Add To List of sold drugs
+        public int AddToSold(int c)
+        {
+            String StoredProcedureName = StoredProcedures.AddToSold;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@code", c);
+            return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
+        }
     }
 }

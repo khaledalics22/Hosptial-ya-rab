@@ -28,17 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.splitter1 = new System.Windows.Forms.Splitter();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button2 = new System.Windows.Forms.Button();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.button3 = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label4 = new System.Windows.Forms.Label();
             this.textBox5 = new System.Windows.Forms.TextBox();
@@ -51,7 +48,6 @@
             this.button4 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -72,7 +68,6 @@
             this.splitter1.Size = new System.Drawing.Size(1102, 63);
             this.splitter1.TabIndex = 14;
             this.splitter1.TabStop = false;
-            this.splitter1.SplitterMoved += new System.Windows.Forms.SplitterEventHandler(this.splitter1_SplitterMoved);
             // 
             // comboBox1
             // 
@@ -99,31 +94,32 @@
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.DodgerBlue;
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle17.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.DodgerBlue;
-            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.DodgerBlue;
-            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle12;
             this.dataGridView1.GridColor = System.Drawing.Color.White;
             this.dataGridView1.Location = new System.Drawing.Point(24, 155);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(624, 497);
+            this.dataGridView1.Size = new System.Drawing.Size(638, 511);
             this.dataGridView1.TabIndex = 30;
+            this.dataGridView1.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseClick);
             // 
             // button2
             // 
@@ -131,80 +127,30 @@
             this.button2.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(21, 45);
+            this.button2.Location = new System.Drawing.Point(194, 91);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(146, 49);
+            this.button2.Size = new System.Drawing.Size(108, 40);
             this.button2.TabIndex = 32;
             this.button2.Text = "Add";
             this.button2.UseVisualStyleBackColor = false;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.BackColor = System.Drawing.Color.DodgerBlue;
-            this.comboBox2.DisplayMember = "kd";
-            this.comboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.ForeColor = System.Drawing.Color.White;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "All",
-            "Empty"});
-            this.comboBox2.Location = new System.Drawing.Point(210, 122);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(154, 37);
-            this.comboBox2.TabIndex = 33;
-            this.comboBox2.Text = "Medicine";
-            this.comboBox2.ValueMember = "kd";
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.BackColor = System.Drawing.Color.DodgerBlue;
-            this.comboBox3.DisplayMember = "kd";
-            this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox3.ForeColor = System.Drawing.Color.White;
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
-            "All",
-            "Empty"});
-            this.comboBox3.Location = new System.Drawing.Point(21, 122);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(145, 37);
-            this.comboBox3.TabIndex = 34;
-            this.comboBox3.ValueMember = "kd";
-            this.comboBox3.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.DodgerBlue;
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(210, 45);
+            this.button3.Location = new System.Drawing.Point(308, 91);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(154, 49);
+            this.button3.Size = new System.Drawing.Size(122, 41);
             this.button3.TabIndex = 35;
-            this.button3.Text = "Decrement";
+            this.button3.Text = "Sell";
             this.button3.UseVisualStyleBackColor = false;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.groupBox1.Controls.Add(this.comboBox3);
-            this.groupBox1.Controls.Add(this.button3);
-            this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Controls.Add(this.comboBox2);
-            this.groupBox1.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.groupBox1.Location = new System.Drawing.Point(702, 78);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(381, 203);
-            this.groupBox1.TabIndex = 36;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "purchaseing";
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // groupBox2
             // 
@@ -219,13 +165,12 @@
             this.groupBox2.Controls.Add(this.textBox2);
             this.groupBox2.Controls.Add(this.button4);
             this.groupBox2.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.groupBox2.Location = new System.Drawing.Point(689, 345);
+            this.groupBox2.Location = new System.Drawing.Point(680, 175);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(394, 309);
             this.groupBox2.TabIndex = 37;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Add Medicine";
-            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
             // label4
             // 
@@ -241,11 +186,11 @@
             // 
             // textBox5
             // 
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.ForeColor = System.Drawing.Color.Blue;
+            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox5.ForeColor = System.Drawing.Color.DodgerBlue;
             this.textBox5.Location = new System.Drawing.Point(104, 197);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(264, 28);
+            this.textBox5.Size = new System.Drawing.Size(264, 32);
             this.textBox5.TabIndex = 45;
             // 
             // label3
@@ -262,11 +207,11 @@
             // 
             // textBox4
             // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.ForeColor = System.Drawing.Color.Blue;
+            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox4.ForeColor = System.Drawing.Color.DodgerBlue;
             this.textBox4.Location = new System.Drawing.Point(104, 146);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(264, 28);
+            this.textBox4.Size = new System.Drawing.Size(264, 32);
             this.textBox4.TabIndex = 43;
             // 
             // label1
@@ -283,11 +228,11 @@
             // 
             // textBox3
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.ForeColor = System.Drawing.Color.Blue;
+            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox3.ForeColor = System.Drawing.Color.DodgerBlue;
             this.textBox3.Location = new System.Drawing.Point(104, 98);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(264, 28);
+            this.textBox3.Size = new System.Drawing.Size(264, 32);
             this.textBox3.TabIndex = 41;
             // 
             // label13
@@ -304,11 +249,11 @@
             // 
             // textBox2
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.ForeColor = System.Drawing.Color.Blue;
+            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.ForeColor = System.Drawing.Color.DodgerBlue;
             this.textBox2.Location = new System.Drawing.Point(104, 43);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(264, 28);
+            this.textBox2.Size = new System.Drawing.Size(264, 32);
             this.textBox2.TabIndex = 36;
             // 
             // button4
@@ -322,7 +267,7 @@
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(146, 42);
             this.button4.TabIndex = 35;
-            this.button4.Text = "Add";
+            this.button4.Text = "Insert";
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
@@ -349,17 +294,16 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1096, 668);
             this.Controls.Add(this.button1);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.splitter1);
             this.Name = "Pharmacist";
             this.Text = "Pharmacist";
-            this.Load += new System.EventHandler(this.Pharmacist_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
@@ -373,10 +317,7 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button button4;

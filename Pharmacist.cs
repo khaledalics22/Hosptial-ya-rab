@@ -13,6 +13,7 @@ namespace Hospital_ISA
 {
     public partial class Pharmacist : Form
     {
+        int SelectedCode = -1;
         Controller controllerObj;
         public Pharmacist()
         {
@@ -21,37 +22,21 @@ namespace Hospital_ISA
             comboBox1.SelectedItem = "All";
         }
 
-        private void groupBox2_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void splitter1_SplitterMoved(object sender, SplitterEventArgs e)
-        {
-
-        }
-
-        private void Pharmacist_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
+        //fill gridView as chosen in comboBox
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (comboBox1.SelectedItem.ToString() == "All")
             {
                 dataGridView1.DataSource = controllerObj.SelectAllDrugs();
                 dataGridView1.Refresh();
+                button3.Enabled = true;
             }
             else if (comboBox1.SelectedItem.ToString() == "Empty")
             {
                 dataGridView1.DataSource = controllerObj.SelectEmptyDrugs();
                 dataGridView1.Refresh();
+                //if this is empty list >> user can't sell any one; so we turn off this button for being useless
+                button3.Enabled = false;
             }
 
         }
@@ -59,12 +44,12 @@ namespace Hospital_ISA
         //search button
         private void button1_Click(object sender, EventArgs e)
         {
-            if(comboBox1.SelectedItem.ToString()=="All")
+            if (comboBox1.SelectedItem.ToString() == "All")
             {
                 dataGridView1.DataSource = controllerObj.SearchDrugs(textBox1.Text.ToString());
                 dataGridView1.Refresh();
             }
-            else if(comboBox1.SelectedItem.ToString() == "Empty")
+            else if (comboBox1.SelectedItem.ToString() == "Empty")
             {
                 dataGridView1.DataSource = controllerObj.SearchEmptyDrugs(textBox1.Text.ToString());
                 dataGridView1.Refresh();
@@ -94,10 +79,83 @@ namespace Hospital_ISA
                     dataGridView1.DataSource = controllerObj.SelectEmptyDrugs();
                     dataGridView1.Refresh();
                 }
-
             }
             else
                 MessageBox.Show("Insertion Falied");
+
+            //clear input textBoxes
+            textBox2.Text = "";
+            textBox3.Text = "";
+            textBox4.Text = "";
+            textBox5.Text = "";
+        }
+
+        private void dataGridView1_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            //check if comboBox has value Doctor
+            if (comboBox1.SelectedItem.ToString() == "All")
+            {
+                int indexi = e.RowIndex;     //get clicked row index
+                if (indexi >= 0)               //check if this row in table
+                {
+                    DataGridViewRow selRow = dataGridView1.Rows[indexi];    //store row
+                    SelectedCode = Convert.ToInt32(selRow.Cells[0].Value.ToString());    //get cel[0] >> which is location of DSSN
+                }
+                //if there's no selected drug >> make code=-1 (to avoid manipulation the previous selected row)
+                else
+                    SelectedCode = -1;
+            }
+
+            else if (comboBox1.SelectedItem.ToString() == "Empty")
+            {
+                int indexi = e.RowIndex;
+                if (indexi >= 0)
+                {
+                    DataGridViewRow selRow = dataGridView1.Rows[indexi];
+                    SelectedCode = Convert.ToInt32(selRow.Cells[0].Value.ToString());
+                }
+                //if there's no selected drug >> make code=-1 (to avoid manipulation the previous selected row)
+                else
+                    SelectedCode = -1;
+            }
+
+        }
+
+
+        //add quantity button
+        private void button2_Click(object sender, EventArgs e)
+        {
+            int r = controllerObj.AddQuantity(SelectedCode);
+            if (r <= 0)
+                MessageBox.Show("Failed");
+            //update gridView data
+            if (comboBox1.SelectedItem.ToString() == "All")
+            {
+                dataGridView1.DataSource = controllerObj.SelectAllDrugs();
+                dataGridView1.Refresh();
+            }
+            else if (comboBox1.SelectedItem.ToString() == "Empty")
+            {
+                dataGridView1.DataSource = controllerObj.SelectEmptyDrugs();
+                dataGridView1.Refresh();
+            }
+
+        }
+
+        //if button sell is clicked
+        private void button3_Click(object sender, EventArgs e)
+        {
+            int r = controllerObj.SellDrug(SelectedCode);
+            //check if it's valid to be sold
+            if (r > 0)
+            {
+                int r2 = controllerObj.AddToSold(SelectedCode);
+            }
+            else
+                MessageBox.Show("Not Sold");
+            //update gridView Data finally
+            dataGridView1.DataSource = controllerObj.SelectAllDrugs();
+            dataGridView1.Refresh();
         }
     }
 }
