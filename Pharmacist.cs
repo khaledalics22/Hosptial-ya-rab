@@ -1,5 +1,4 @@
-﻿using DBapplication;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -156,6 +155,11 @@ namespace Hospital_ISA
             //update gridView Data finally
             dataGridView1.DataSource = controllerObj.SelectAllDrugs();
             dataGridView1.Refresh();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

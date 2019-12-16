@@ -29,7 +29,7 @@ namespace Hospital_ISA
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Pharmacist m = new Pharmacist();
+            Manager m = new Manager();
             m.Show();
             
         }

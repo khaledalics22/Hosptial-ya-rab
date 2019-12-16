@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace DBapplication
+namespace Hospital_ISA
 {
     public class StoredProcedures
     {
@@ -26,6 +26,8 @@ namespace DBapplication
         public static string AddQuantity = "AddQuantity";
         public static string SellDrug = "SellDrug";
         public static string AddToSold = "AddToSold";
-
+        public static string getAllDepartments = "getAllDepartments";
+        public static string InsertEmployee = "InsertEmployee";
+        public static string getDepartmentNumber = "getDepartmentNumber";
     }
 }

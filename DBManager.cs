@@ -5,11 +5,11 @@ using System.Text;
 using System.Data.SqlClient;
 using System.Data;
 
-namespace DBapplication
+namespace Hospital_ISA
 {
     public class DBManager
     {
-        static string DB_Connection_String= @"Data Source=(localdb)\FirstDB;Initial Catalog=Hospital;Integrated Security=True";
+        static string DB_Connection_String= @"Data Source=(localdb)\IslamAhmed;Initial Catalog=Hospital;Integrated Security=True";
         SqlConnection myConnection;
 
     public DBManager()
