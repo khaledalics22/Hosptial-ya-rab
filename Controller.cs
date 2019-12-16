@@ -158,11 +158,45 @@ namespace Hospital_ISA
             Parameters.Add("@Dname", Dname);
             return dbMan.ExecuteScalar(StoredProcedureName, Parameters);
         }
+        public object getDepartmentName(int Dnum)
+        {
+            String StoredProcedureName = StoredProcedures.getDepartmentName;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@Dnum", Dnum);
+            return dbMan.ExecuteScalar(StoredProcedureName, Parameters);
+        }
         public DataTable getAllDepartments()
         {
             String StoredProcedureName = StoredProcedures.getAllDepartments;
             Dictionary<string, object> Parameters = new Dictionary<string, object>();
             return dbMan.ExecuteReader(StoredProcedureName, Parameters);
+        }
+        public DataTable selectEmployee(int ESSN)
+        {
+            String StoredProcedureName = StoredProcedures.selectEmployee;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@ESSN", ESSN);
+            return dbMan.ExecuteReader(StoredProcedureName, Parameters);
+        }
+        public int EditEmployee(int ESSN, string Fname, string Lname, int Age, string Gender,
+                                int Salary, string Certificate, string Job,
+                                string Phone, string Shift_From, int Dno)
+        {
+            String StoredProcedureName = StoredProcedures.EditEmployee;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@ESSN", ESSN);
+            Parameters.Add("@Fname", Fname);
+            Parameters.Add("@Lname", Lname);
+            Parameters.Add("@Age", Age);
+            Parameters.Add("@Gender", Gender);
+            Parameters.Add("@Salary", Salary);
+            Parameters.Add("@Certificate", Certificate == "" ? Convert.DBNull : Certificate);
+            Parameters.Add("@Job", Job);
+            Parameters.Add("@Phone", Phone);
+            Shift_From = new DateTime(1, 1, 1, Convert.ToInt32(Shift_From.Substring(0, 2)), 0, 0).ToString("HH:mm:ss");
+            Parameters.Add("@Shift_From", Shift_From);
+            Parameters.Add("@Dno", Dno == -1 ? Convert.DBNull : Dno);
+            return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
         }
     }
 }

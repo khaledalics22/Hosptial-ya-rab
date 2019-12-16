@@ -29,5 +29,8 @@ namespace Hospital_ISA
         public static string getAllDepartments = "getAllDepartments";
         public static string InsertEmployee = "InsertEmployee";
         public static string getDepartmentNumber = "getDepartmentNumber";
+        public static string getDepartmentName = "getDepartmentName";
+        public static string selectEmployee = "selectEmployee";
+        public static string EditEmployee = "EditEmployee";
     }
 }

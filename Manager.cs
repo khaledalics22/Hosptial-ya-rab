@@ -22,6 +22,8 @@ namespace Hospital_ISA
             InitializeComponent();
             controllerObj = new Controller();
             comboBox1.SelectedItem = "Doctors";     //initially set comboBox with doctors
+            button4.Enabled = false;
+            dataGridView1.ClearSelection();
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -77,7 +79,7 @@ namespace Hospital_ISA
                 
             else if (comboBox1.SelectedItem.ToString() == "Employees")
             {
-                EditEmp ee = new EditEmp();
+                EditEmp ee = new EditEmp(SelcetedEssn);
                 ee.Show();
             }
 
@@ -85,7 +87,7 @@ namespace Hospital_ISA
 
         private void Manager_Load(object sender, EventArgs e)
         {
-
+            dataGridView1.Refresh();
         }
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
@@ -95,6 +97,7 @@ namespace Hospital_ISA
         //check if comboBox item is chnaged
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            dataGridView1.ClearSelection();
             //if doctor >> fill gridView with all doctors
             //make all buttons enable to provide manager his functionalities 
             if (comboBox1.SelectedItem.ToString() == "Doctors")
@@ -102,7 +105,7 @@ namespace Hospital_ISA
                 dataGridView1.DataSource = controllerObj.SelectDoctors();
                 dataGridView1.Refresh();
                 button2.Enabled = true;
-                button4.Enabled = true;
+                button4.Enabled = false;
                 button1.Enabled = true;
                 button5.Enabled = false;
 
@@ -112,7 +115,7 @@ namespace Hospital_ISA
                 dataGridView1.DataSource = controllerObj.SelectNurses();
                 dataGridView1.Refresh();
                 button2.Enabled = true;
-                button4.Enabled = true;
+                button4.Enabled = false;
                 button1.Enabled = true;
                 button5.Enabled = false;
             }
@@ -123,7 +126,7 @@ namespace Hospital_ISA
                 dataGridView1.Refresh();
 
                 button2.Enabled = true;
-                button4.Enabled = true;
+                button4.Enabled = false;
                 button1.Enabled = true;
                 button5.Enabled = false;
             }
@@ -143,6 +146,7 @@ namespace Hospital_ISA
         //if any row is clicked in dataGridView 
         private void dataGridView1_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
+            button4.Enabled = true;
             //check if comboBox has value Doctor
             if (comboBox1.SelectedItem.ToString() == "Doctors")
             {

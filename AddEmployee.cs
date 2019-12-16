@@ -40,19 +40,34 @@ namespace Hospital_ISA
 
         private void AddButton_Click(object sender, EventArgs e)
         {
-             
-                int Dno;
-                if (!NoDepartment) Dno = (int)controllerObj.getDepartmentNumber(DepartmentComboBox.Text);
-                else Dno = -1;
-                 int r =  controllerObj.InsertEmployee(Convert.ToInt32(SSNTextBox.Text), FnameTextBox.Text,
-                     LnameTextBox.Text, Convert.ToInt32(AgeTextBox.Text),
-                    GenderComboBox.Text, Convert.ToInt32(SalaryTextBox.Text), CertificateTextBox.Text, JobTextBox.Text,
-                    PhoneTextBox.Text, ShiftComboBox.Text, Dno);
-                    
-            if (r > 0)
-                MessageBox.Show("Inserted Successfully");
-            else
+
+            int Dno = (NoDepartment) ? -1 : (int)controllerObj.getDepartmentNumber(DepartmentComboBox.Text);
+            try
+            {
+                if (!(SalaryTextBox.Text == "" || FnameTextBox.Text == "" || LnameTextBox.Text == ""
+                    || AgeTextBox.Text == "" || JobTextBox.Text == "" || PhoneTextBox.Text == ""))
+                {
+                    int r = controllerObj.InsertEmployee(Convert.ToInt32(SSNTextBox.Text), FnameTextBox.Text,
+                        LnameTextBox.Text, Convert.ToInt32(AgeTextBox.Text),
+                       GenderComboBox.Text, Convert.ToInt32(SalaryTextBox.Text), CertificateTextBox.Text, JobTextBox.Text,
+                       PhoneTextBox.Text, ShiftComboBox.Text, Dno);
+
+                    if (r > 0)
+                    {
+                        MessageBox.Show("Inserted Successfully");
+                        Close();
+                    }
+                    else
+                        MessageBox.Show("Please Enter Valid Values");
+                }
+                else
+                    MessageBox.Show("Please Enter Valid Values");
+            }
+            catch
+            {
                 MessageBox.Show("Please Enter Valid Values");
+            }
+
         }
     }
 }

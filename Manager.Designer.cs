@@ -44,9 +44,10 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 35F);
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(-6, -2);
+            this.button3.Location = new System.Drawing.Point(-5, -2);
+            this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(1065, 123);
+            this.button3.Size = new System.Drawing.Size(947, 98);
             this.button3.TabIndex = 8;
             this.button3.Text = "Staff Information";
             this.button3.UseVisualStyleBackColor = false;
@@ -59,15 +60,16 @@
             this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F);
             this.comboBox1.ForeColor = System.Drawing.Color.DodgerBlue;
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.ItemHeight = 52;
+            this.comboBox1.ItemHeight = 42;
             this.comboBox1.Items.AddRange(new object[] {
             "Doctors",
             "Nurses",
             "Employees",
             "Patients"});
-            this.comboBox1.Location = new System.Drawing.Point(3, 134);
+            this.comboBox1.Location = new System.Drawing.Point(3, 107);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(282, 60);
+            this.comboBox1.Size = new System.Drawing.Size(251, 50);
             this.comboBox1.TabIndex = 9;
             this.comboBox1.Tag = "";
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
@@ -79,12 +81,14 @@
             this.dataGridView1.BackgroundColor = System.Drawing.Color.DodgerBlue;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.GridColor = System.Drawing.Color.White;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 200);
+            this.dataGridView1.Location = new System.Drawing.Point(3, 160);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(839, 469);
+            this.dataGridView1.Size = new System.Drawing.Size(746, 375);
             this.dataGridView1.TabIndex = 12;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseClick);
@@ -95,9 +99,10 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(861, 592);
+            this.button1.Location = new System.Drawing.Point(765, 474);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(130, 68);
+            this.button1.Size = new System.Drawing.Size(116, 54);
             this.button1.TabIndex = 13;
             this.button1.Text = "Add";
             this.button1.UseVisualStyleBackColor = false;
@@ -109,9 +114,10 @@
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(473, 127);
+            this.button4.Location = new System.Drawing.Point(420, 102);
+            this.button4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(146, 68);
+            this.button4.Size = new System.Drawing.Size(130, 54);
             this.button4.TabIndex = 15;
             this.button4.Text = "Update";
             this.button4.UseVisualStyleBackColor = false;
@@ -123,9 +129,10 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(311, 126);
+            this.button2.Location = new System.Drawing.Point(276, 101);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(146, 68);
+            this.button2.Size = new System.Drawing.Size(130, 54);
             this.button2.TabIndex = 17;
             this.button2.Text = "Delete";
             this.button2.UseVisualStyleBackColor = false;
@@ -137,9 +144,10 @@
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(625, 127);
+            this.button5.Location = new System.Drawing.Point(556, 102);
+            this.button5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(142, 68);
+            this.button5.Size = new System.Drawing.Size(126, 54);
             this.button5.TabIndex = 18;
             this.button5.Text = "View";
             this.button5.UseVisualStyleBackColor = false;
@@ -147,10 +155,10 @@
             // 
             // Manager
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1004, 672);
+            this.ClientSize = new System.Drawing.Size(892, 538);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button4);
@@ -160,6 +168,7 @@
             this.Controls.Add(this.button3);
             this.DoubleBuffered = true;
             this.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Manager";
             this.Text = "Manager1";
             this.Load += new System.EventHandler(this.Manager_Load);
