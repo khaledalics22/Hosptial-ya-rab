@@ -73,7 +73,7 @@ namespace Hospital_ISA
 
             else if (comboBox1.SelectedItem.ToString() == "Nurses")
             {
-                EditNurse en = new EditNurse();
+                EditNurse en = new EditNurse(SelcetedNssn);
                 en.Show();
             }
                 
