@@ -14,13 +14,14 @@ namespace Hospital_ISA
     {
         Controller controllerObj;
         int Nssn;
-        int SelectedAssignRoom;
-        int SelectedRemoveRoom;
+        int SelectedAssignRoom;      //store the selected room from AssignRoomGridView
+        int SelectedRemoveRoom;      //store the selected room from RemoveRoomGridView
         public NurseAssignRoom(int Nssn)
         {
             InitializeComponent();
             controllerObj = new Controller();
             this.Nssn = Nssn;
+            // initialize the components
             SSNTextBox.Text = Nssn.ToString();
             AssignRoomGridView.DataSource = controllerObj.AvailableNurseRooms(Nssn);
             RemoveRoomGridView.DataSource = controllerObj.getNurseRooms(Nssn);
@@ -28,6 +29,7 @@ namespace Hospital_ISA
             RemoveButton.Enabled = false;
         }
 
+        //when the user click on any room put it in SelectedAssignRoom
         private void AssignRoomGridView_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             AssignButton.Enabled = true;
@@ -38,6 +40,8 @@ namespace Hospital_ISA
                 SelectedAssignRoom = Convert.ToInt32(selRow.Cells[0].Value.ToString());    //get cel[0] >> which is location of RID
             }
         }
+
+        //when the user click on any room put it in SelectedRemoveRoom
         private void RemoveRoomGridView_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             RemoveButton.Enabled = true;

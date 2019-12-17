@@ -131,6 +131,8 @@ namespace Hospital_ISA
             Parameters.Add("@code", c);
             return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
         }
+
+        // insert the employee
         public int InsertEmployee(int ESSN, string Fname, string Lname, int Age, string Gender,
                                 int Salary, string Certificate, string Job,
                                 string Phone, string Shift_From, int Dno)
@@ -146,11 +148,13 @@ namespace Hospital_ISA
             Parameters.Add("@Certificate", Certificate == "" ? Convert.DBNull:Certificate);
             Parameters.Add("@Job", Job);
             Parameters.Add("@Phone", Phone);
-            Shift_From = new DateTime(1, 1, 1, Convert.ToInt32(Shift_From.Substring(0, 2)), 0, 0).ToString("HH:mm:ss");
+            // just for the error
+            Shift_From = new DateTime(1, 1, 1, Convert.ToInt32(Shift_From.Substring(0, 2)), 0, 0).ToString("HH:mm:ss"); 
             Parameters.Add("@Shift_From", Shift_From);
             Parameters.Add("@Dno", Dno == -1 ? Convert.DBNull:Dno);
             return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
         }
+        //takes the name of the department and return the number
         public object getDepartmentNumber(string Dname)
         {
             String StoredProcedureName = StoredProcedures.getDepartmentNumber;
@@ -158,6 +162,7 @@ namespace Hospital_ISA
             Parameters.Add("@Dname", Dname);
             return dbMan.ExecuteScalar(StoredProcedureName, Parameters);
         }
+        //takes the number of the department and return the name
         public object getDepartmentName(int Dnum)
         {
             String StoredProcedureName = StoredProcedures.getDepartmentName;
@@ -165,12 +170,15 @@ namespace Hospital_ISA
             Parameters.Add("@Dnum", Dnum);
             return dbMan.ExecuteScalar(StoredProcedureName, Parameters);
         }
+        // return all the departments names
         public DataTable getAllDepartments()
         {
             String StoredProcedureName = StoredProcedures.getAllDepartments;
             Dictionary<string, object> Parameters = new Dictionary<string, object>();
             return dbMan.ExecuteReader(StoredProcedureName, Parameters);
         }
+
+        // return all the data for an employee
         public DataTable selectEmployee(int ESSN)
         {
             String StoredProcedureName = StoredProcedures.selectEmployee;
@@ -178,6 +186,7 @@ namespace Hospital_ISA
             Parameters.Add("@ESSN", ESSN);
             return dbMan.ExecuteReader(StoredProcedureName, Parameters);
         }
+        // update employee data
         public int EditEmployee(int ESSN, string Fname, string Lname, int Age, string Gender,
                                 int Salary, string Certificate, string Job,
                                 string Phone, string Shift_From, int Dno)
@@ -199,6 +208,7 @@ namespace Hospital_ISA
             return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
         }
 
+        // return the rooms that can be assigned to the nurse
         public DataTable AvailableNurseRooms(int Nssn)
         {
             String StoredProcedureName = StoredProcedures.AvailableNurseRooms;
@@ -207,6 +217,7 @@ namespace Hospital_ISA
             return dbMan.ExecuteReader(StoredProcedureName, Parameters);
         }
 
+        // return all the data of the nurse
         public DataTable selectNurse(int Nssn)
         {
             String StoredProcedureName = StoredProcedures.selectNurse;
@@ -215,6 +226,7 @@ namespace Hospital_ISA
             return dbMan.ExecuteReader(StoredProcedureName, Parameters);
         }
 
+        // return the nurse rooms
         public DataTable getNurseRooms(int Nssn)
         {
             String StoredProcedureName = StoredProcedures.getNurseRooms;
@@ -222,6 +234,7 @@ namespace Hospital_ISA
             Parameters.Add("@Nssn", Nssn);
             return dbMan.ExecuteReader(StoredProcedureName, Parameters);
         }
+        // return the nurse clinic
         public Object getNurseClinic(int Nssn)
         {
             String StoredProcedureName = StoredProcedures.getNurseClinic;
@@ -229,6 +242,7 @@ namespace Hospital_ISA
             Parameters.Add("@Nssn", Nssn);
             return dbMan.ExecuteScalar(StoredProcedureName, Parameters);
         }
+        // assign a room to the nurse
         public int AddNurseRoom(int Nssn, int RID)
         { 
             String StoredProcedureName = StoredProcedures.AddNurseRoom;
@@ -237,6 +251,7 @@ namespace Hospital_ISA
             Parameters.Add("@RID", RID);
             return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
         }
+        // remove a room from the nurse
         public int RemoveNurseRoom(int Nssn, int RID)
         {
             String StoredProcedureName = StoredProcedures.RemoveNurseRoom;
@@ -245,6 +260,7 @@ namespace Hospital_ISA
             Parameters.Add("@RID", RID);
             return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
         }
+        // return the available shifts of the clinic according to nurse shift and clinic empty shifts
         public DataTable NurseAvailableClinicShifts(int CID, string Shift, int Nssn = -1)
         {
             String StoredProcedureName = StoredProcedures.NurseAvailableClinicShifts;
@@ -257,6 +273,7 @@ namespace Hospital_ISA
             return dbMan.ExecuteReader(StoredProcedureName, Parameters);
         }
 
+        // return the Ids of all clinics
         public DataTable getAllClinicsId()
         {
             String StoredProcedureName = StoredProcedures.getAllClinicsId;
@@ -264,6 +281,7 @@ namespace Hospital_ISA
             return dbMan.ExecuteReader(StoredProcedureName, Parameters);
         }
 
+        // update the nurse data
         public int EditNurse(int Nssn, string Fname, string Lname, string Phone, int Age, int Salary, string Shift_From)
         {
             String StoredProcedureName = StoredProcedures.EditNurse;
@@ -278,6 +296,7 @@ namespace Hospital_ISA
             Parameters.Add("@Shift_From", Shift_From);
             return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
         }
+        // assign a clinic to the nurse and if there is  a clinic assigned to nurse remove it first
         public int AddNurseClinic(int Nssn, string StartTime, int CID)
         {
             String StoredProcedureName = StoredProcedures.AddNurseClinic;
@@ -289,6 +308,7 @@ namespace Hospital_ISA
             return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
         }
 
+        // add a new nurse to the data
         public int AddNurse(int Nssn, string Fname, string Lname, string Phone, int Age, int Salary, string Shift_From)
         {
             String StoredProcedureName = StoredProcedures.AddNurse;

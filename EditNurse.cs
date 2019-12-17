@@ -13,15 +13,17 @@ namespace Hospital_ISA
     public partial class EditNurse : Form
     {
         Controller controllerObj;
-        DataTable dt;
+        DataTable dt;               //store the old data of the nurse
         int Nssn;
-        int SelectedAssignRoom;
-        int SelectedRemoveRoom;
+        int SelectedAssignRoom;     //store the selected room from AssignRoomGridView
+        int SelectedRemoveRoom;     //store the selected room from RemoveRoomGridView
         public EditNurse(int Nssn)
         {
             InitializeComponent();
             controllerObj = new Controller();
             this.Nssn = Nssn;
+
+            // initialize the GUI with the old data of the nurse
             SSNTextBox.Text = Nssn.ToString();
             dt = controllerObj.selectNurse(this.Nssn);
             FnameTextBox.Text = dt.Rows[0]["Fname"].ToString();
@@ -32,8 +34,9 @@ namespace Hospital_ISA
             ShiftComboBox.SelectedItem = dt.Rows[0]["Shift_From"].ToString();
             ClinicGridView.DataSource = controllerObj.getAllClinicsId();
             int CID = (int)controllerObj.getNurseClinic(Nssn);
+            
+            // just to initially select the old value of the clinic from the gridView
             ClinicGridView.ClearSelection();
-
             foreach (DataGridViewRow row in ClinicGridView.Rows)
             {
                 foreach (DataGridViewCell cell in row.Cells)
@@ -42,11 +45,15 @@ namespace Hospital_ISA
                         cell.Selected = true;
                 }
             }
+            // initially fill the combobox with the shifts of the clinic which can be selected
             ClinicShiftComboBox.DataSource = controllerObj.NurseAvailableClinicShifts(CID, dt.Rows[0]["Shift_From"].ToString(), Nssn);
             ClinicShiftComboBox.DisplayMember = "StartTime";
-
+            
+            // initially fill the Nurse rooms and the rooms that can be assigned to the nurse
             AssignRoomGridView.DataSource = controllerObj.AvailableNurseRooms(Nssn);
             RemoveRoomGridView.DataSource = controllerObj.getNurseRooms(Nssn);
+            
+            // disable the buttons till the user select any room
             AssignButton.Enabled = false;
             RemoveButton.Enabled = false;
         }
@@ -70,9 +77,10 @@ namespace Hospital_ISA
         }
 
 
+        //when the user click on any room put it in SelectedAssignRoom
         private void AssignRoomGridView_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            AssignButton.Enabled = true;
+            AssignButton.Enabled = true;    //Enable the AssignButton
             int indexi = e.RowIndex;     //get clicked row index
             if (indexi >= 0)               //check if this row in table
             {
@@ -80,6 +88,7 @@ namespace Hospital_ISA
                 SelectedAssignRoom = Convert.ToInt32(selRow.Cells[0].Value.ToString());    //get cel[0] >> which is location of RID
             }
         }
+        //when the user click on any room put it in SelectedRemoveRoom
         private void RemoveRoomGridView_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             RemoveButton.Enabled = true;
@@ -91,6 +100,7 @@ namespace Hospital_ISA
             }
         }
 
+        //Refresh the ClinicShiftComboBox when the user change the selected cell
         private void ClinicGridView_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             int indexi = e.RowIndex;     //get clicked row index
@@ -105,7 +115,8 @@ namespace Hospital_ISA
 
         private void AssignButton_Click(object sender, EventArgs e)
         {
-            int r = controllerObj.AddNurseRoom(Nssn, SelectedAssignRoom);
+            int r = controllerObj.AddNurseRoom(Nssn, SelectedAssignRoom);   //assign room to the nurse
+            // if done successfully refresh the GridViews and disable the buttons
             if (r > 0)
             {
                 AssignRoomGridView.DataSource = controllerObj.AvailableNurseRooms(Nssn);
@@ -121,7 +132,8 @@ namespace Hospital_ISA
 
         private void RemoveButton_Click(object sender, EventArgs e)
         {
-            int r = controllerObj.RemoveNurseRoom(Nssn, SelectedRemoveRoom);
+            int r = controllerObj.RemoveNurseRoom(Nssn, SelectedRemoveRoom);    //remove room from the nurse
+            // if done successfully refresh the GridViews and disable the buttons
             if (r > 0)
             {
                 AssignRoomGridView.DataSource = controllerObj.AvailableNurseRooms(Nssn);
@@ -135,6 +147,7 @@ namespace Hospital_ISA
                 MessageBox.Show("Remove Failed");
         }
 
+        // update the ClinicShiftComboBox when the shift changes
         private void ShiftComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             if(ClinicGridView.CurrentCell != null)
@@ -148,6 +161,8 @@ namespace Hospital_ISA
 
         private void SaveButton_Click(object sender, EventArgs e)
         {
+            // validate the data and Edit the nurse
+            // try-catch for convertion from string to int
             try
             {
                 if (!(SalaryTextBox.Text == "" || FnameTextBox.Text == "" || LnameTextBox.Text == ""
@@ -159,6 +174,7 @@ namespace Hospital_ISA
 
                     if (r > 0)
                     {
+                        // assign clinic to the nurse when updated
                         controllerObj.AddNurseClinic(Nssn, ClinicShiftComboBox.Text, Convert.ToInt32(ClinicGridView.CurrentCell.Value.ToString()));
                         MessageBox.Show("Updated Successfully");
                         Close();
