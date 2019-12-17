@@ -108,7 +108,6 @@ namespace Hospital_ISA
             int r = controllerObj.AddNurseRoom(Nssn, SelectedAssignRoom);
             if (r > 0)
             {
-                MessageBox.Show("Assigned Succesfully");
                 AssignRoomGridView.DataSource = controllerObj.AvailableNurseRooms(Nssn);
                 RemoveRoomGridView.DataSource = controllerObj.getNurseRooms(Nssn);
                 AssignRoomGridView.Refresh();
@@ -125,7 +124,6 @@ namespace Hospital_ISA
             int r = controllerObj.RemoveNurseRoom(Nssn, SelectedRemoveRoom);
             if (r > 0)
             {
-                MessageBox.Show("Removed Succesfully");
                 AssignRoomGridView.DataSource = controllerObj.AvailableNurseRooms(Nssn);
                 RemoveRoomGridView.DataSource = controllerObj.getNurseRooms(Nssn);
                 AssignRoomGridView.Refresh();

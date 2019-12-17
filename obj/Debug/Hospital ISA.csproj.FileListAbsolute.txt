@@ -167,3 +167,4 @@ C:\Users\IslamAhmed\Desktop\Projects\DB_Project\Hosptial-ya-rab\obj\Debug\Hospit
 C:\Users\IslamAhmed\Desktop\Projects\DB_Project\Hosptial-ya-rab\obj\Debug\Hospital ISA.csproj.GenerateResource.cache
 C:\Users\IslamAhmed\Desktop\Projects\DB_Project\Hosptial-ya-rab\obj\Debug\Hospital ISA.exe
 C:\Users\IslamAhmed\Desktop\Projects\DB_Project\Hosptial-ya-rab\obj\Debug\Hospital ISA.pdb
+C:\Users\IslamAhmed\Desktop\Projects\DB_Project\Hosptial-ya-rab\obj\Debug\Hospital_ISA.NurseAssignRoom.resources

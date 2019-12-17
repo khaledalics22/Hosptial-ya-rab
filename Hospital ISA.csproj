@@ -164,6 +164,12 @@
     <Compile Include="ManagerMain.Designer.cs">
       <DependentUpon>ManagerMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="NurseAssignRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NurseAssignRoom.Designer.cs">
+      <DependentUpon>NurseAssignRoom.cs</DependentUpon>
+    </Compile>
     <Compile Include="Patient.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -289,6 +295,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ManagerMain.resx">
       <DependentUpon>ManagerMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NurseAssignRoom.resx">
+      <DependentUpon>NurseAssignRoom.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Patient.resx">
       <DependentUpon>Patient.cs</DependentUpon>
