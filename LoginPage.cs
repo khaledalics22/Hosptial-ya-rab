@@ -27,17 +27,18 @@ namespace Hospital_ISA
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Manager m = new Manager();
-            m.Show();
-            
-        }
-
         private void button2_Click(object sender, EventArgs e)
         {
             Patient p = new Patient();
             p.Show();          
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+            login_with_pass lwp = new login_with_pass(comboBox1.SelectedItem.ToString().ToLower());
+            lwp.Show();
+
         }
     }
 }

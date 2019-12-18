@@ -348,5 +348,20 @@ namespace Hospital_ISA
             Parameters.Add("@AID", aID);
             return (dbMan.ExecuteScalar(StoredProcedureName, Parameters)).ToString();
         }
+        //get pass of certian SSN
+        public string getPassOf(int ssn, string type)
+        {
+            string storedProcedure = StoredProcedures.checkPass;
+            Dictionary<string, object> parameters = new Dictionary<string, object>();
+            parameters.Add("@SSN", ssn);
+            parameters.Add("@Type", type);
+            object o = dbMan.ExecuteScalar(storedProcedure, parameters);
+            if (o != null)
+            {
+                return o.ToString();
+            }
+            else
+                return "";
+        }
     }
 }

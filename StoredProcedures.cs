@@ -51,6 +51,9 @@ namespace Hospital_ISA
         public static string GetAppointMed = "GetAppointMed";
         public static string GetAppDiagnose = "GetAppDiag";
 
+        //khaled
+        public static string checkPass = "checkPass";
+        public static string storePass = "storePass";
 
 
     }
