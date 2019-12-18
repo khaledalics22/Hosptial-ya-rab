@@ -22,12 +22,12 @@ namespace Hospital_ISA
             InitializeComponent();
             controllerObj = new Controller();
             this.ESSN = ESSN;
+            // initialize the GUI with the old data of the Employee
             dt = controllerObj.selectEmployee(this.ESSN);
             DepartmentComboBox.DataSource = controllerObj.getAllDepartments();
             DepartmentComboBox.DisplayMember = "Dname";
             DepartmentComboBox.ValueMember = "Dname";
             SSNTextBox.Text = ESSN.ToString();
-
             FnameTextBox.Text = dt.Rows[0]["Fname"].ToString();
             LnameTextBox.Text = dt.Rows[0]["Lname"].ToString();
             AgeTextBox.Text = dt.Rows[0]["Age"].ToString();
@@ -50,81 +50,8 @@ namespace Hospital_ISA
                 DepartmentComboBox.SelectedValue = Dname;
         }
 
-        private void EditEmp_Load(object sender, EventArgs e)
-        {
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox6_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox9_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox7_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox6_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label10_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label9_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox8_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        
+        // when the NoDepartmentCheckBox is Enabled -> disable the ComboBox
         private void DepartmentCheckBox_CheckedChanged(object sender, EventArgs e)
         {
             NoDepartment = DepartmentCheckBox.Checked;
@@ -133,12 +60,16 @@ namespace Hospital_ISA
                 DepartmentComboBox.Text = null;
             else
             {
-                DepartmentComboBox.SelectedValue = Dname;
+                if (Dname != null)
+                    DepartmentComboBox.SelectedValue = Dname;
+                else
+                    DepartmentComboBox.SelectedIndex = 0;
             }
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
+            //validate the data and update the employee
             int Dno = (NoDepartment)? -1: (int)controllerObj.getDepartmentNumber(DepartmentComboBox.Text);
             try
             {

@@ -13,11 +13,12 @@ namespace Hospital_ISA
     public partial class AddEmployee : Form
     {
         Controller controllerObj;
-        Boolean NoDepartment;
+        Boolean NoDepartment;           //to store the value of the checkbox
         public AddEmployee()
         {
             InitializeComponent();
             controllerObj = new Controller();
+            // initialize components
             DepartmentComboBox.DataSource = controllerObj.getAllDepartments();
             DepartmentComboBox.DisplayMember = "Dname";
             GenderComboBox.SelectedIndex = 0;
@@ -25,6 +26,7 @@ namespace Hospital_ISA
 
         }
 
+        // if checkbox changed -> change the state of the DepartmentComboBox
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
             NoDepartment = DepartmentCheckBox.Checked;
@@ -40,7 +42,7 @@ namespace Hospital_ISA
 
         private void AddButton_Click(object sender, EventArgs e)
         {
-
+            // validate the data and add the employee
             int Dno = (NoDepartment) ? -1 : (int)controllerObj.getDepartmentNumber(DepartmentComboBox.Text);
             try
             {
