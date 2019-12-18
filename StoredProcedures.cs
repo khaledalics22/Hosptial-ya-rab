@@ -47,5 +47,7 @@ namespace Hospital_ISA
         public static string selectNurse = "selectNurse";
 
 
+        public static string GetPrevAppoint = "ViewPrevAppoint";
+
     }
 }

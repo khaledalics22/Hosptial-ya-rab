@@ -323,5 +323,13 @@ namespace Hospital_ISA
             Parameters.Add("@Shift_From", Shift_From);
             return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
         }
+
+        public DataTable GetPrevAppoint(int pssn)
+        {
+            String StoredProcedureName = StoredProcedures.GetPrevAppoint;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@PSSN", pssn);
+            return dbMan.ExecuteReader(StoredProcedureName, Parameters);
+        }
     }
 }
