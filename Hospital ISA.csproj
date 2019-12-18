@@ -188,12 +188,6 @@
     <Compile Include="Prescription.Designer.cs">
       <DependentUpon>Prescription.cs</DependentUpon>
     </Compile>
-    <Compile Include="PriscInfo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PriscInfo.Designer.cs">
-      <DependentUpon>PriscInfo.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RecepionistBook.cs">
@@ -307,9 +301,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Prescription.resx">
       <DependentUpon>Prescription.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PriscInfo.resx">
-      <DependentUpon>PriscInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

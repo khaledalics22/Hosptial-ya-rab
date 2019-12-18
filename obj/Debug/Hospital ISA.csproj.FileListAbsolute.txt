@@ -94,7 +94,6 @@ D:\mahmoudamrnabil\github\myprojects\Hosptial-ya-rab\obj\Debug\Hospital_ISA.Room
 C:\Users\user\Desktop\DB Project\Hosptial-ya-rab\bin\Debug\Hospital ISA.exe.config
 C:\Users\user\Desktop\DB Project\Hosptial-ya-rab\bin\Debug\Hospital ISA.exe
 C:\Users\user\Desktop\DB Project\Hosptial-ya-rab\bin\Debug\Hospital ISA.pdb
-C:\Users\user\Desktop\DB Project\Hosptial-ya-rab\obj\Debug\Hospital ISA.csprojAssemblyReference.cache
 C:\Users\user\Desktop\DB Project\Hosptial-ya-rab\obj\Debug\Hospital_ISA.AddDoctor.resources
 C:\Users\user\Desktop\DB Project\Hosptial-ya-rab\obj\Debug\Hospital_ISA.AddEmployee.resources
 C:\Users\user\Desktop\DB Project\Hosptial-ya-rab\obj\Debug\Hospital_ISA.AddNurse.resources
@@ -117,7 +116,6 @@ C:\Users\user\Desktop\DB Project\Hosptial-ya-rab\obj\Debug\Hospital_ISA.ManagerM
 C:\Users\user\Desktop\DB Project\Hosptial-ya-rab\obj\Debug\Hospital_ISA.Patient.resources
 C:\Users\user\Desktop\DB Project\Hosptial-ya-rab\obj\Debug\Hospital_ISA.Pharmacist.resources
 C:\Users\user\Desktop\DB Project\Hosptial-ya-rab\obj\Debug\Hospital_ISA.Prescription.resources
-C:\Users\user\Desktop\DB Project\Hosptial-ya-rab\obj\Debug\Hospital_ISA.PriscInfo.resources
 C:\Users\user\Desktop\DB Project\Hosptial-ya-rab\obj\Debug\Hospital_ISA.Properties.Resources.resources
 C:\Users\user\Desktop\DB Project\Hosptial-ya-rab\obj\Debug\Hospital_ISA.RecepionistBook.resources
 C:\Users\user\Desktop\DB Project\Hosptial-ya-rab\obj\Debug\Hospital_ISA.ReceptionistDoctorInfo.resources
@@ -169,3 +167,4 @@ C:\Users\IslamAhmed\Desktop\Projects\DB_Project\Hosptial-ya-rab\obj\Debug\Hospit
 C:\Users\IslamAhmed\Desktop\Projects\DB_Project\Hosptial-ya-rab\obj\Debug\Hospital ISA.pdb
 C:\Users\IslamAhmed\Desktop\Projects\DB_Project\Hosptial-ya-rab\obj\Debug\Hospital_ISA.NurseAssignRoom.resources
 C:\Users\user\Desktop\DB Project\Hosptial-ya-rab\obj\Debug\Hospital_ISA.NurseAssignRoom.resources
+C:\Users\user\Desktop\DB Project\Hosptial-ya-rab\obj\Debug\Hospital ISA.csprojAssemblyReference.cache

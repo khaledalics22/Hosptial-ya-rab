@@ -48,6 +48,10 @@ namespace Hospital_ISA
 
 
         public static string GetPrevAppoint = "ViewPrevAppoint";
+        public static string GetAppointMed = "GetAppointMed";
+        public static string GetAppDiagnose = "GetAppDiag";
+
+
 
     }
 }

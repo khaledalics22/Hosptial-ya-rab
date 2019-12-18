@@ -24,12 +24,15 @@ namespace Hospital_ISA
             dataGridView1.Refresh();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            PriscInfo prI = new PriscInfo();
-            prI.Show();
-            Close(); 
-        }
+        //private void button1_Click(object sender, EventArgs e)
+        //{
+        //    if(AppointID!=-1)
+        //    {
+        //        PriscInfo prI = new PriscInfo(AppointID);
+        //        prI.Show();
+        //    }
+            
+        //}
 
         private void dataGridView1_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
@@ -38,9 +41,22 @@ namespace Hospital_ISA
             {
                 DataGridViewRow selRow = dataGridView1.Rows[indexi];
                 AppointID = Convert.ToInt32(selRow.Cells[0].Value.ToString());
+                dataGridView2.DataSource = ctr.GetApointMed(AppointID);
+                dataGridView2.Refresh();
+                textBox1.Text = ctr.GetAppDiag(AppointID).ToString();
             }
             else
+            {
                 AppointID = -1;
+                dataGridView2.DataSource = null;
+                textBox1.Text = " ";
+            }
+              
+        }
+
+        private void splitter1_SplitterMoved(object sender, SplitterEventArgs e)
+        {
+
         }
     }
 }

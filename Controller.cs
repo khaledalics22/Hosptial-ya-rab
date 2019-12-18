@@ -324,12 +324,29 @@ namespace Hospital_ISA
             return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
         }
 
+        //Get all patient appointments with diagnoses(old diagnosis)
         public DataTable GetPrevAppoint(int pssn)
         {
             String StoredProcedureName = StoredProcedures.GetPrevAppoint;
             Dictionary<string, object> Parameters = new Dictionary<string, object>();
             Parameters.Add("@PSSN", pssn);
             return dbMan.ExecuteReader(StoredProcedureName, Parameters);
+        }
+        //Get all appoinment medicines
+        public DataTable GetApointMed(int aID)
+        {
+            String StoredProcedureName = StoredProcedures.GetAppointMed;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@AID", aID);
+            return dbMan.ExecuteReader(StoredProcedureName, Parameters);
+        }
+
+        public string GetAppDiag(int aID)
+        {
+            String StoredProcedureName = StoredProcedures.GetAppDiagnose;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@AID", aID);
+            return (dbMan.ExecuteScalar(StoredProcedureName, Parameters)).ToString();
         }
     }
 }
