@@ -54,7 +54,9 @@ namespace Hospital_ISA
         //khaled
         public static string checkPass = "checkPass";
         public static string storePass = "storePass";
-
-
+        public static string getAllRoomsID = "getAllRoomsID";
+        public static string DoctorAvailableClinicShifts = "DoctorAvailableClinicShifts";
+        public static string AddDoctorRoom = "AddDoctorRoom";
+        public static string AddDoctor ="AddDoctor";
     }
 }

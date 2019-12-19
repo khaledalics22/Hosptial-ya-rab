@@ -363,5 +363,83 @@ namespace Hospital_ISA
             else
                 return "";
         }
+        public DataTable getAllRoomsID()
+        {
+            string storedProcedure = StoredProcedures.getAllRoomsID;
+            Dictionary<string, object> parameters = new Dictionary<string, object>();
+            DataTable o = dbMan.ExecuteReader(storedProcedure, parameters);
+            if (o != null)
+            {
+                return o;
+            }
+            else
+                return null;
+        }
+        public DataTable DoctorAvailableClinicShifts(int CID)
+        {
+            string storedProcedure = StoredProcedures.DoctorAvailableClinicShifts;
+            Dictionary<string, object> parameters = new Dictionary<string, object>();
+            parameters.Add("@CID", CID);
+            DataTable o = dbMan.ExecuteReader(storedProcedure, parameters);
+            if (o != null)
+            {
+                return o;
+            }
+            else
+                return null;
+        }
+        public void AddDoctorRoom(int DSSN, int RID)
+        {
+            string storedProcedure = StoredProcedures.AddDoctorRoom;
+            Dictionary<string, object> parameters = new Dictionary<string, object>();
+            parameters.Add("@DSSN", DSSN);
+            parameters.Add("@RID", RID);
+            if (dbMan.ExecuteNonQuery(storedProcedure, parameters) == 0)
+            {
+                    // return error 
+                    // messageBox
+            }
+        }
+        /* @Dssn int,
+	@Fname varchar(50),
+	@Lname varchar(50),
+	@Phone varchar(50),
+	@Age int,
+	@Salary int,
+	@City varchar(50),
+	@street varchar(50),
+	@houseNum int,
+	@Shift_From time(0),
+	@Dno int  */
+        public int AddDoctor(int Dssn, string Fname, string Lname, string Phone, int Age, int Salary,string city , 
+            string street,string houseNum,  string Shift_From, int Dno)
+        {
+            String StoredProcedureName = StoredProcedures.AddDoctor;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@Dssn", Dssn);
+            Parameters.Add("@Fname", Fname);
+            Parameters.Add("@Lname", Lname);
+            Parameters.Add("@Phone", Phone);
+            Parameters.Add("@Age", Age);
+            Parameters.Add("@Salary", Salary);
+            Parameters.Add("@City", city);
+            Parameters.Add("@street", street);
+            Parameters.Add("@houseNum", houseNum);
+            Shift_From = new DateTime(1, 1, 1, Convert.ToInt32(Shift_From.Substring(0, 2)), 0, 0).ToString("HH:mm:ss");
+            Parameters.Add("@Shift_From", Shift_From);
+            Parameters.Add("@Dno", Dno);
+            return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
+        }
+        public int AddDoctorClinic(int Dssn,int CID,string StartTime)
+        {
+            String StoredProcedureName = StoredProcedures.AddNurseClinic;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@Dssn", Dssn);
+            StartTime = new DateTime(1, 1, 1, Convert.ToInt32(StartTime.Substring(0, 2)), 0, 0).ToString("HH:mm:ss");
+            Parameters.Add("@StartTime", StartTime);
+            Parameters.Add("@CID", CID);
+            return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
+        }
+
     }
 }

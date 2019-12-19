@@ -12,9 +12,34 @@ namespace Hospital_ISA
 {
     public partial class AddDoctor : Form
     {
+        Controller c;
         public AddDoctor()
         {
             InitializeComponent();
+            c = new Controller();
+            // set list of departments
+            depCombo.DataSource = c.getAllDepartments();
+            depCombo.DisplayMember = "Dname";
+            depCombo.ValueMember = "Dnum";
+            depCombo.Refresh();
+
+            // set list of clinic numbers 
+            comboBox3.DataSource = c.getAllClinicsId();
+            comboBox3.DisplayMember = "CID";
+            comboBox3.ValueMember = "CID";
+            comboBox3.Refresh();
+
+            //set list of rooms 
+
+            DataTable rooms = c.getAllRoomsID();
+            if (rooms != null)
+            {
+                comboBox4.DataSource = rooms;
+                comboBox4.DisplayMember = "RID";
+                comboBox4.ValueMember = "RID";
+                comboBox4.Refresh();
+            }
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -150,12 +175,41 @@ namespace Hospital_ISA
 
         private void button5_Click(object sender, EventArgs e)
         {
+            try
+            {
+                if (!(DocSalary.Text == "" || DocFName.Text == "" || DocLName.Text == ""
+                    || DocAge.Text == "" || DocPhone.Text == "" 
+                   || DocCity.Text== "" || DocStreet.Text == "" ||DocHouseNum.Text ==""||comboBox3.SelectedValue==null
+                   || comboBox5.SelectedValue==null))
+                {
+                   
+                    int r = c.AddDoctor(Convert.ToInt32(DocSSN.Text.ToString()), DocFName.Text.ToString(),
+                        DocLName.Text.ToString(), DocPhone.Text.ToString(), Convert.ToInt32(DocAge.Text.ToString()),
+                        Convert.ToInt32(DocSalary.Text.ToString()),DocCity.Text.ToString(),DocStreet.Text.ToString(),
+                        DocHouseNum.Text.ToString(),
+                        DocShiftFrom.SelectedItem.ToString(),Convert.ToInt32(depCombo.SelectedValue.ToString()));
 
+                    if (r > 0)
+                    {
+                        // assign clinic to the nurse
+                        c.AddDoctorClinic(Convert.ToInt32(DocSSN.Text), Convert.ToInt32(comboBox3.SelectedValue.ToString()),
+                            comboBox5.SelectedValue.ToString());
+                    }
+                    else
+                        MessageBox.Show("Please Enter Valid Values");
+                }
+                else
+                    MessageBox.Show("Please Enter Valid Values");
+            }
+            catch
+            {
+                MessageBox.Show("Please Enter Valid Values");
+            }
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-
+            c.AddDoctorRoom(Convert.ToInt32(DocSSN.Text.ToString()), Convert.ToInt32(comboBox4.SelectedValue.ToString()));
         }
 
         private void comboBox4_SelectedIndexChanged(object sender, EventArgs e)
@@ -170,6 +224,18 @@ namespace Hospital_ISA
 
         private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
         {
+            ////////////////////////////////////////////
+            comboBox3.DisplayMember = "CID";
+            comboBox3.ValueMember = "CID";
+            comboBox3.Refresh();
+            DataTable  shifts  = c.DoctorAvailableClinicShifts(Convert.ToInt32(comboBox3.SelectedValue.ToString()));
+            if (shifts != null)
+            {
+                comboBox5.DataSource = shifts;
+                comboBox5.DisplayMember = "StartTime";
+                comboBox5.ValueMember = "StartTime";
+                comboBox5.Refresh();
+            }
 
         }
 

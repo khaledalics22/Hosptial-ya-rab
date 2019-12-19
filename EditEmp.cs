@@ -97,5 +97,10 @@ namespace Hospital_ISA
                 MessageBox.Show("Please Enter Valid Values");
             }
         }
+
+        private void EditEmp_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
