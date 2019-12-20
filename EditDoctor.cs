@@ -208,5 +208,10 @@ namespace Hospital_ISA
                 removeButton.Enabled = true;
             }
         }
+
+        private void EditDoctor_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

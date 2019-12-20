@@ -66,5 +66,11 @@ namespace Hospital_ISA
         public static string removeDoctorClinic="removeDoctorClinic";
         public static string removeDoctorRoom="removeDoctorRoom";
         public static string DoctorAvailableRooms ="DoctorAvailableRooms";
+        public static string getDocsAtDep="getDocsAtDep";
+        public static string getavailableAppointment="getavailableAppointment";
+        public static string selectPatient = "selectPatient";
+        public static string insertPatient="insertPatient";
+        public static string AddNewAppointment="AddNewAppointment";
+        public static string selectDocByName="selectDocByName";
     }
 }

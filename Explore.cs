@@ -12,9 +12,22 @@ namespace Hospital_ISA
 {
     public partial class Explore : Form
     {
+        Controller c;
+        private int DSSN;
         public Explore()
         {
             InitializeComponent();
+            c = new Controller();
+            comboBox1.DataSource =c.getAllDepartments();
+            comboBox1.DisplayMember = "Dname";
+            comboBox1.ValueMember = "Dnum";
+            comboBox1.Refresh();
+
+            dataGridView1.DataSource = c.getDocsAtDep(Convert.ToInt32(comboBox1.SelectedValue.ToString()));
+            dataGridView1.Refresh();
+
+            button2.Enabled = false;
+            
         }
 
         private void Explore_Load(object sender, EventArgs e)
@@ -36,9 +49,51 @@ namespace Hospital_ISA
 
         private void button3_Click(object sender, EventArgs e)
         {
-            DoctorInfo dI = new DoctorInfo();
+            DoctorInfo dI = new DoctorInfo(DSSN);
             dI.Show();
             Close(); 
+        }
+
+        private void dataGridView1_CellMouseClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int indexi = e.RowIndex;     //get clicked row index
+            if (indexi >= 0)               //check if this row in table
+            {
+                DataGridViewRow selRow = dataGridView1.Rows[indexi];    //store row
+                DSSN = Convert.ToInt32(selRow.Cells[0].Value.ToString());
+                button2.Enabled = true;
+              
+            }
+        }
+
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            comboBox1.DisplayMember = "Dname";
+            comboBox1.ValueMember = "Dnum";
+            comboBox1.Refresh();
+            DataTable docs = c.getDocsAtDep(Convert.ToInt32(comboBox1.SelectedValue.ToString()));
+                dataGridView1.DataSource = docs;
+                dataGridView1.Refresh();
+         
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            DoctorInfo di = new DoctorInfo(DSSN);
+            di.Show();
+            
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+           dataGridView1.DataSource= c.selectDocByName(textBox1.Text.ToString());
+           dataGridView1.Refresh(); 
         }
     }
 }

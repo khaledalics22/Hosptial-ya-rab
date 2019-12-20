@@ -603,6 +603,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "EditDoctor";
             this.Text = "EditDoctor";
+            this.Load += new System.EventHandler(this.EditDoctor_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DocCurrRoomsGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DocClinicShiftsGrid)).EndInit();
             this.ResumeLayout(false);

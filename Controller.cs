@@ -463,6 +463,13 @@ namespace Hospital_ISA
             Parameters.Add("@Dssn", Dssn);
             return dbMan.ExecuteReader(StoredProcedureName, Parameters);
         }
+        public DataTable getDocsAtDep(int Dno)
+        {
+            string StoredProcedureName = StoredProcedures.getDocsAtDep;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@Dno", Dno);
+            return dbMan.ExecuteReader(StoredProcedureName, Parameters);
+        }
         public DataTable getDoctorRooms(int Dssn)
         {
             string StoredProcedureName = StoredProcedures.getDoctorRooms;
@@ -522,5 +529,48 @@ namespace Hospital_ISA
             else
                 return null;
         }
+        public DataTable getavailableAppointment(int Dssn)
+        {
+            String StoredProcedureName = StoredProcedures.getavailableAppointment;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@Dssn", Dssn);
+            return dbMan.ExecuteReader(StoredProcedureName, Parameters);
+        }
+        public object selectPatient(int pssn)
+        {
+            String StoredProcedureName = StoredProcedures.selectPatient;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@Pssn", pssn);
+            return dbMan.ExecuteScalar(StoredProcedureName, Parameters);
+        }
+        
+       public object insertPatient(int pssn,string fname, string lname ,string phone)
+        {
+            String StoredProcedureName = StoredProcedures.insertPatient;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@PSSN", pssn);
+            Parameters.Add("@Fname", fname);
+            Parameters.Add("@Lname", lname);
+            Parameters.Add("@phone", phone);
+            return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
+        }
+        
+              public int AddNewAppointment(int DSSN, int Pssn ,string date)
+        {
+            String StoredProcedureName = StoredProcedures.AddNewAppointment;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@DSSN", DSSN);
+            Parameters.Add("@PSSN", Pssn);
+            Parameters.Add("@Date_time", date);
+            return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
+        }
+        public DataTable selectDocByName(string lname)
+        {
+            String StoredProcedureName = StoredProcedures.selectDocByName;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@Lname", lname);
+            return dbMan.ExecuteReader(StoredProcedureName, Parameters);
+        }
+
     }
 }
