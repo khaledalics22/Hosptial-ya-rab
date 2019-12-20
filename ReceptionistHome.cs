@@ -37,7 +37,11 @@ namespace Hospital_ISA
 
         private void button5_Click(object sender, EventArgs e)
         {
-            // there exists stored procedure called changePass takes three inputs (SSN , newPass,TYPE)
+           
+            changePass cp = new changePass("E");
+            cp.Show();
+            Close(); 
+            
         }
     }
 }

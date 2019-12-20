@@ -240,5 +240,12 @@ namespace Hospital_ISA
             ViewPatient vp = new ViewPatient();
             vp.Show();
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            changePass cp = new changePass("E");
+            cp.Show();
+            Close();
+        }
     }
 }

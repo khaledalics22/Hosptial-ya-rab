@@ -113,14 +113,15 @@
             // button4
             // 
             this.button4.BackColor = System.Drawing.Color.Blue;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(686, 106);
+            this.button4.Location = new System.Drawing.Point(689, 20);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(102, 50);
+            this.button4.Size = new System.Drawing.Size(99, 60);
             this.button4.TabIndex = 25;
-            this.button4.Text = "change my password";
+            this.button4.Text = "change password";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click_1);
             // 
             // Patient
             // 
@@ -136,7 +137,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.splitter1);
             this.Name = "Patient";
-            this.Text = "p";
+            this.Text = "b";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -574,6 +574,16 @@ namespace Hospital_ISA
             Parameters.Add("@Lname", lname);
             return dbMan.ExecuteReader(StoredProcedureName, Parameters);
         }
+        public int changePass(int ssn, string oldpass ,string newPass,string type)
+        {
+            String StoredProcedureName = StoredProcedures.changePass;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@SSN", ssn);
+            Parameters.Add("@oldPass", oldpass);
+            Parameters.Add("@newPass", newPass);
+            Parameters.Add("@TYPE", type);
+            return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
+        }
 
     }
 }

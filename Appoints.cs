@@ -30,5 +30,13 @@ namespace Hospital_ISA
             ai.Show();
             Close(); 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+            changePass cp = new changePass("D");
+            cp.Show();
+            Close();
+        }
     }
 }

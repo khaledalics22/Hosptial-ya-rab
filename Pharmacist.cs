@@ -161,5 +161,13 @@ namespace Hospital_ISA
         {
 
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+
+            changePass cp = new changePass("E");
+            cp.Show();
+            Close();
+        }
     }
 }

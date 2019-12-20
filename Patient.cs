@@ -44,5 +44,17 @@ namespace Hospital_ISA
             lp.Show();
             Close(); 
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click_1(object sender, EventArgs e)
+        {
+            changePass cp = new changePass("P");
+            cp.Show();
+            Close();
+        }
     }
 }

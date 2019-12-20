@@ -207,3 +207,4 @@ E:\ENGINEERING\CMP2-1\DB\project\project code\Hosptial-ya-rab\obj\Debug\Hospital
 E:\ENGINEERING\CMP2-1\DB\project\project code\Hosptial-ya-rab\obj\Debug\Hospital ISA.csproj.GenerateResource.cache
 E:\ENGINEERING\CMP2-1\DB\project\project code\Hosptial-ya-rab\obj\Debug\Hospital ISA.exe
 E:\ENGINEERING\CMP2-1\DB\project\project code\Hosptial-ya-rab\obj\Debug\Hospital ISA.pdb
+E:\ENGINEERING\CMP2-1\DB\project\project code\Hosptial-ya-rab\obj\Debug\Hospital_ISA.changePass.resources

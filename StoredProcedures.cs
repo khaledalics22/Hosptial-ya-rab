@@ -72,5 +72,6 @@ namespace Hospital_ISA
         public static string insertPatient="insertPatient";
         public static string AddNewAppointment="AddNewAppointment";
         public static string selectDocByName="selectDocByName";
+        public static string changePass="changePass";
     }
 }
