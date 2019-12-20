@@ -56,6 +56,7 @@
             this.DocLName = new System.Windows.Forms.TextBox();
             this.DocStreet = new System.Windows.Forms.TextBox();
             this.DocHouseNum = new System.Windows.Forms.TextBox();
+            this.roomsAssigned = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button3
@@ -415,12 +416,24 @@
             this.DocHouseNum.Size = new System.Drawing.Size(138, 41);
             this.DocHouseNum.TabIndex = 102;
             // 
+            // roomsAssigned
+            // 
+            this.roomsAssigned.AutoSize = true;
+            this.roomsAssigned.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roomsAssigned.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.roomsAssigned.Location = new System.Drawing.Point(656, 479);
+            this.roomsAssigned.MaximumSize = new System.Drawing.Size(100, 0);
+            this.roomsAssigned.Name = "roomsAssigned";
+            this.roomsAssigned.Size = new System.Drawing.Size(0, 20);
+            this.roomsAssigned.TabIndex = 103;
+            // 
             // AddDoctor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(948, 660);
+            this.Controls.Add(this.roomsAssigned);
             this.Controls.Add(this.DocHouseNum);
             this.Controls.Add(this.DocStreet);
             this.Controls.Add(this.DocLName);
@@ -488,5 +501,6 @@
         private System.Windows.Forms.TextBox DocLName;
         private System.Windows.Forms.TextBox DocStreet;
         private System.Windows.Forms.TextBox DocHouseNum;
+        private System.Windows.Forms.Label roomsAssigned;
     }
 }

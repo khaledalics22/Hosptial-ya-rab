@@ -440,6 +440,87 @@ namespace Hospital_ISA
             Parameters.Add("@CID", CID);
             return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
         }
+        public DataTable selectDoctor(int Dssn)
+        {
+            string StoredProcedureName = StoredProcedures.selectDoctor;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@Dssn", Dssn);
+            return dbMan.ExecuteReader(StoredProcedureName, Parameters);
+        }
+        
+        public DataTable  getDoctorClinic(int Dssn)
+        {
+            string StoredProcedureName = StoredProcedures.getDoctorClinic;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@Dssn", Dssn);
+            return  dbMan.ExecuteReader(StoredProcedureName, Parameters);
+        }
+        
+        public DataTable getDocDepartment(int Dssn)
+        {
+            string StoredProcedureName = StoredProcedures.getDocDepartment;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@Dssn", Dssn);
+            return dbMan.ExecuteReader(StoredProcedureName, Parameters);
+        }
+        public DataTable getDoctorRooms(int Dssn)
+        {
+            string StoredProcedureName = StoredProcedures.getDoctorRooms;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@Dssn", Dssn);
+            return dbMan.ExecuteReader(StoredProcedureName, Parameters);
+        }
+        
+    public int editDoctor(int Dssn, string Fname, string Lname, string Phone, int Age, int Salary, string city,
+            string street, string houseNum, string Shift_From, int Dno)
+        {
+            string StoredProcedureName = StoredProcedures.AddDoctor;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@Dssn", Dssn);
+            Parameters.Add("@Fname", Fname);
+            Parameters.Add("@Lname", Lname);
+            Parameters.Add("@Phone", Phone);
+            Parameters.Add("@Age", Age);
+            Parameters.Add("@Salary", Salary);
+            Parameters.Add("@City", city);
+            Parameters.Add("@street", street);
+            Parameters.Add("@houseNum", houseNum);
+            Shift_From = new DateTime(1, 1, 1, Convert.ToInt32(Shift_From.Substring(0, 2)), 0, 0).ToString("HH:mm:ss");
+            Parameters.Add("@Shift_From", Shift_From);
+            Parameters.Add("@Dno", Dno);
+            return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
+        }
+        
+              public int removeDoctorClinic(int Nssn, int CID,string shift_start)
+        {
+            String StoredProcedureName = StoredProcedures.removeDoctorClinic;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@DSSN", Nssn);
+            Parameters.Add("@CID", CID);
+            Parameters.Add("@Shift_start", shift_start);
+            return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
+        }
+        public int removeDoctorRoom(int Nssn, int RID)
+        {
+            String StoredProcedureName = StoredProcedures.removeDoctorRoom;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@DSSN", Nssn);
+            Parameters.Add("@RID", RID);
+            return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
+        }
 
+        public DataTable DoctorAvailableRooms(int DSSN)
+        {
+            string storedProcedure = StoredProcedures.DoctorAvailableRooms;
+            Dictionary<string, object> parameters = new Dictionary<string, object>();
+            parameters.Add("@DSSN", DSSN);
+            DataTable o = dbMan.ExecuteReader(storedProcedure, parameters);
+            if (o != null)
+            {
+                return o;
+            }
+            else
+                return null;
+        }
     }
 }

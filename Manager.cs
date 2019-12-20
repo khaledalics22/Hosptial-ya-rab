@@ -67,7 +67,7 @@ namespace Hospital_ISA
             //check all comboBox, then go to corespondant SSN to update
             if (comboBox1.SelectedItem.ToString() == "Doctors")
             {
-                EditDoctor ed = new EditDoctor();
+                EditDoctor ed = new EditDoctor(SelcetedDssn);
                 ed.Show();
             }
 
@@ -234,7 +234,7 @@ namespace Hospital_ISA
         {
 
         }
-
+       
         private void button5_Click(object sender, EventArgs e)
         {
             ViewPatient vp = new ViewPatient();

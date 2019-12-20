@@ -58,5 +58,13 @@ namespace Hospital_ISA
         public static string DoctorAvailableClinicShifts = "DoctorAvailableClinicShifts";
         public static string AddDoctorRoom = "AddDoctorRoom";
         public static string AddDoctor ="AddDoctor";
+        public static string getDoctorClinic ="getDoctorClinic";
+        public static string selectDoctor ="selectDoctor";
+        public static string getDoctorRooms = "getDoctorRooms";
+        public static string getDocDepartment = "getDocDepartment";
+        public static string editDoctor = "editDoctor";
+        public static string removeDoctorClinic="removeDoctorClinic";
+        public static string removeDoctorRoom="removeDoctorRoom";
+        public static string DoctorAvailableRooms ="DoctorAvailableRooms";
     }
 }

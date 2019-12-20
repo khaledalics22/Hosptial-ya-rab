@@ -13,6 +13,7 @@ namespace Hospital_ISA
     public partial class AddDoctor : Form
     {
         Controller c;
+        Queue<string> rooms = new Queue<string>();
         public AddDoctor()
         {
             InitializeComponent();
@@ -188,12 +189,15 @@ namespace Hospital_ISA
                         Convert.ToInt32(DocSalary.Text.ToString()),DocCity.Text.ToString(),DocStreet.Text.ToString(),
                         DocHouseNum.Text.ToString(),
                         DocShiftFrom.SelectedItem.ToString(),Convert.ToInt32(depCombo.SelectedValue.ToString()));
-
                     if (r > 0)
                     {
                         // assign clinic to the nurse
                         c.AddDoctorClinic(Convert.ToInt32(DocSSN.Text), Convert.ToInt32(comboBox3.SelectedValue.ToString()),
                             comboBox5.SelectedValue.ToString());
+                        while (rooms.Count > 0)
+                        {
+                            c.AddDoctorRoom(Convert.ToInt32(DocSSN.Text.ToString()), Convert.ToInt32(rooms.Dequeue()));
+                        }
                     }
                     else
                         MessageBox.Show("Please Enter Valid Values");
@@ -209,7 +213,14 @@ namespace Hospital_ISA
 
         private void button4_Click(object sender, EventArgs e)
         {
-            c.AddDoctorRoom(Convert.ToInt32(DocSSN.Text.ToString()), Convert.ToInt32(comboBox4.SelectedValue.ToString()));
+            if (!rooms.Contains(comboBox4.SelectedValue.ToString()))
+            {
+                rooms.Enqueue(comboBox4.SelectedValue.ToString());
+                roomsAssigned.Text += comboBox4.SelectedValue.ToString() + ",";
+            }
+            else {
+                MessageBox.Show("room is already assigned");            
+            }
         }
 
         private void comboBox4_SelectedIndexChanged(object sender, EventArgs e)
