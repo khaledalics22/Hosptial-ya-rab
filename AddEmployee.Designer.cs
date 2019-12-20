@@ -53,6 +53,8 @@
             this.label8 = new System.Windows.Forms.Label();
             this.LnameTextBox = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
+            this.pass = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // GenderComboBox
@@ -67,7 +69,7 @@
             this.GenderComboBox.Items.AddRange(new object[] {
             "M",
             "F"});
-            this.GenderComboBox.Location = new System.Drawing.Point(794, 262);
+            this.GenderComboBox.Location = new System.Drawing.Point(807, 321);
             this.GenderComboBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.GenderComboBox.Name = "GenderComboBox";
             this.GenderComboBox.Size = new System.Drawing.Size(114, 39);
@@ -80,7 +82,7 @@
             this.AgeTextBox.Location = new System.Drawing.Point(780, 118);
             this.AgeTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.AgeTextBox.Name = "AgeTextBox";
-            this.AgeTextBox.Size = new System.Drawing.Size(95, 41);
+            this.AgeTextBox.Size = new System.Drawing.Size(157, 41);
             this.AgeTextBox.TabIndex = 70;
             // 
             // PhoneTextBox
@@ -100,7 +102,7 @@
             this.SalaryTextBox.Location = new System.Drawing.Point(780, 185);
             this.SalaryTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.SalaryTextBox.Name = "SalaryTextBox";
-            this.SalaryTextBox.Size = new System.Drawing.Size(129, 41);
+            this.SalaryTextBox.Size = new System.Drawing.Size(157, 41);
             this.SalaryTextBox.TabIndex = 68;
             // 
             // SSNTextBox
@@ -150,7 +152,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label7.Location = new System.Drawing.Point(671, 268);
+            this.label7.Location = new System.Drawing.Point(684, 327);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(112, 31);
             this.label7.TabIndex = 58;
@@ -262,7 +264,7 @@
             this.ShiftComboBox.Items.AddRange(new object[] {
             "06:00",
             "15:00"});
-            this.ShiftComboBox.Location = new System.Drawing.Point(692, 320);
+            this.ShiftComboBox.Location = new System.Drawing.Point(705, 379);
             this.ShiftComboBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ShiftComboBox.Name = "ShiftComboBox";
             this.ShiftComboBox.Size = new System.Drawing.Size(232, 39);
@@ -273,7 +275,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label2.Location = new System.Drawing.Point(607, 323);
+            this.label2.Location = new System.Drawing.Point(620, 382);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(77, 31);
             this.label2.TabIndex = 79;
@@ -349,12 +351,35 @@
             this.label11.TabIndex = 106;
             this.label11.Text = "Last Name:";
             // 
+            // pass
+            // 
+            this.pass.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pass.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.pass.Location = new System.Drawing.Point(780, 252);
+            this.pass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pass.Name = "pass";
+            this.pass.Size = new System.Drawing.Size(157, 41);
+            this.pass.TabIndex = 109;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label12.Location = new System.Drawing.Point(636, 258);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(134, 31);
+            this.label12.TabIndex = 108;
+            this.label12.Text = "Password";
+            // 
             // AddEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(949, 603);
+            this.Controls.Add(this.pass);
+            this.Controls.Add(this.label12);
             this.Controls.Add(this.LnameTextBox);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.JobTextBox);
@@ -415,5 +440,7 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox LnameTextBox;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox pass;
+        private System.Windows.Forms.Label label12;
     }
 }

@@ -34,5 +34,10 @@ namespace Hospital_ISA
             Rooms R = new Rooms();
             R.Show();
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            // there exists stored procedure called changePass takes three inputs (SSN , newPass,TYPE)
+        }
     }
 }

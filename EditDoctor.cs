@@ -71,7 +71,6 @@ namespace Hospital_ISA
             AssignButton.Enabled = false;
             removeButton.Enabled = false;
             button1.Enabled = false;
-            removeButton.Enabled = false;
         }
 
         private void label12_Click(object sender, EventArgs e)
@@ -90,7 +89,7 @@ namespace Hospital_ISA
                         DocLName.Text.ToString(), DocPhone.Text.ToString(), Convert.ToInt32(DocAge.Text.ToString()),
                         Convert.ToInt32(DocSalary.Text.ToString()), DocCity.Text.ToString(), DocStreet.Text.ToString(),
                         DocHouseNum.Text.ToString(),
-                        DocShiftCombo.Text, Convert.ToInt32(DocDepCombo.SelectedValue.ToString()));
+                        DocShiftCombo.Text, Convert.ToInt32(DocDepCombo.SelectedValue.ToString()),null);
                     if (r > 0)
                     {
                         // assign clinic to the nurse
@@ -145,6 +144,7 @@ namespace Hospital_ISA
             {
                 MessageBox.Show("room is already assigned");
             }
+            AssignButton.Enabled = false; 
         }
         
 
@@ -166,6 +166,7 @@ namespace Hospital_ISA
             }
             else
                 MessageBox.Show("Remove Failed");
+            button1.Enabled = false; 
         }
 
         private void DocClinicShiftsGrid_CellMouseClick(object sender, DataGridViewCellEventArgs e)
@@ -196,6 +197,7 @@ namespace Hospital_ISA
             }
             else
                 MessageBox.Show("Remove Failed");
+            removeButton.Enabled = false; 
         }
 
         private void DocCurrRoomsGrid_CellMouseClick(object sender, DataGridViewCellEventArgs e)

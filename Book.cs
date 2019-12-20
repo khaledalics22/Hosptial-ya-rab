@@ -38,17 +38,21 @@ namespace Hospital_ISA
         private void button1_Click(object sender, EventArgs e)
         {
             if (!(patiendFName.Text == "" || PatientPhone.Text == "" || patiendLName.Text == ""
-                || patientSSn.Text == ""))
+                || patientSSn.Text == "" || Pass.Text == ""))
             {
 
                 if (c.selectPatient(Convert.ToInt32(patientSSn.Text.ToString())) == null)
                 {
                     c.insertPatient(Convert.ToInt32(patientSSn.Text.ToString()), patiendFName.Text,
-                       patiendLName.Text, PatientPhone.Text,Pass.Text);
-                   
-                }
-                c.AddNewAppointment(DSSN, Convert.ToInt32(patientSSn.Text.ToString()),date);
+                       patiendLName.Text, PatientPhone.Text, Pass.Text);
 
+                }
+                c.AddNewAppointment(DSSN, Convert.ToInt32(patientSSn.Text.ToString()), date);
+
+            }
+            else
+            {
+                MessageBox.Show("please enter valid data");
             }
         }
     }

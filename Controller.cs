@@ -135,7 +135,7 @@ namespace Hospital_ISA
         // insert the employee
         public int InsertEmployee(int ESSN, string Fname, string Lname, int Age, string Gender,
                                 int Salary, string Certificate, string Job,
-                                string Phone, string Shift_From, int Dno)
+                                string Phone, string Shift_From, int Dno,string pass)
         {
             String StoredProcedureName = StoredProcedures.InsertEmployee;
             Dictionary<string, object> Parameters = new Dictionary<string, object>();
@@ -148,6 +148,7 @@ namespace Hospital_ISA
             Parameters.Add("@Certificate", Certificate == "" ? Convert.DBNull:Certificate);
             Parameters.Add("@Job", Job);
             Parameters.Add("@Phone", Phone);
+            Parameters.Add("@PASS", pass);
             // just for the error
             Shift_From = new DateTime(1, 1, 1, Convert.ToInt32(Shift_From.Substring(0, 2)), 0, 0).ToString("HH:mm:ss"); 
             Parameters.Add("@Shift_From", Shift_From);
@@ -412,7 +413,7 @@ namespace Hospital_ISA
 	@Shift_From time(0),
 	@Dno int  */
         public int AddDoctor(int Dssn, string Fname, string Lname, string Phone, int Age, int Salary,string city , 
-            string street,string houseNum,  string Shift_From, int Dno)
+            string street,string houseNum,  string Shift_From, int Dno,string pass)
         {
             String StoredProcedureName = StoredProcedures.AddDoctor;
             Dictionary<string, object> Parameters = new Dictionary<string, object>();
@@ -428,6 +429,7 @@ namespace Hospital_ISA
             Shift_From = new DateTime(1, 1, 1, Convert.ToInt32(Shift_From.Substring(0, 2)), 0, 0).ToString("HH:mm:ss");
             Parameters.Add("@Shift_From", Shift_From);
             Parameters.Add("@Dno", Dno);
+            Parameters.Add("@PASS", pass);
             return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
         }
         public int AddDoctorClinic(int Dssn,int CID,string StartTime)

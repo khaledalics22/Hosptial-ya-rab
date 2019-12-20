@@ -47,12 +47,12 @@ namespace Hospital_ISA
             try
             {
                 if (!(SalaryTextBox.Text == "" || FnameTextBox.Text == "" || LnameTextBox.Text == ""
-                    || AgeTextBox.Text == "" || JobTextBox.Text == "" || PhoneTextBox.Text == ""))
+                    || AgeTextBox.Text == "" || JobTextBox.Text == "" || PhoneTextBox.Text == ""||pass.Text==""))
                 {
                     int r = controllerObj.InsertEmployee(Convert.ToInt32(SSNTextBox.Text), FnameTextBox.Text,
                         LnameTextBox.Text, Convert.ToInt32(AgeTextBox.Text),
                        GenderComboBox.Text, Convert.ToInt32(SalaryTextBox.Text), CertificateTextBox.Text, JobTextBox.Text,
-                       PhoneTextBox.Text, ShiftComboBox.Text, Dno);
+                       PhoneTextBox.Text, ShiftComboBox.Text, Dno,pass.Text.ToString());
 
                     if (r > 0)
                     {

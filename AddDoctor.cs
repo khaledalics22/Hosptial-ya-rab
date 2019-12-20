@@ -181,14 +181,15 @@ namespace Hospital_ISA
                 if (!(DocSalary.Text == "" || DocFName.Text == "" || DocLName.Text == ""
                     || DocAge.Text == "" || DocPhone.Text == "" 
                    || DocCity.Text== "" || DocStreet.Text == "" ||DocHouseNum.Text ==""||comboBox3.SelectedValue==null
-                   || comboBox5.SelectedValue==null))
+                   || comboBox5.SelectedValue==null||pass.Text==""))
                 {
-                   
+
                     int r = c.AddDoctor(Convert.ToInt32(DocSSN.Text.ToString()), DocFName.Text.ToString(),
                         DocLName.Text.ToString(), DocPhone.Text.ToString(), Convert.ToInt32(DocAge.Text.ToString()),
-                        Convert.ToInt32(DocSalary.Text.ToString()),DocCity.Text.ToString(),DocStreet.Text.ToString(),
+                        Convert.ToInt32(DocSalary.Text.ToString()), DocCity.Text.ToString(), DocStreet.Text.ToString(),
                         DocHouseNum.Text.ToString(),
-                        DocShiftFrom.SelectedItem.ToString(),Convert.ToInt32(depCombo.SelectedValue.ToString()));
+                        DocShiftFrom.SelectedItem.ToString(), Convert.ToInt32(depCombo.SelectedValue.ToString()),
+                        pass.Text.ToString()) ;
                     if (r > 0)
                     {
                         // assign clinic to the nurse
