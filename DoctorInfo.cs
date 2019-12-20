@@ -32,16 +32,17 @@ namespace Hospital_ISA
                 string age = doctor[4].ToString();
                 string shift_from = doctor[9].ToString();
                 string shift_to = doctor[10].ToString();
-                string department = c.getDocDepartment(Dssn).Rows[0].ToString();
+                string department = c.getDocDepartment(Dssn).Rows[0][0].ToString();
 
                 DocAge.Text = age;
                 DocDep.Text = department;
                 DrName.Text = Fname + " " + Lname;
                 DocPhone.Text = phone;
                 DocShiftFromTo.Text = "From: " + shift_from + " To: " + shift_to;
+                dataGridView1.DataSource = c.getavailableAppointment(Dssn);
+                dataGridView1.Refresh();
             }
-            dataGridView1.DataSource = c.getavailableAppointment(Dssn) ;
-            dataGridView1.Refresh();
+            
             button2.Enabled = false;
         }
 
@@ -54,6 +55,7 @@ namespace Hospital_ISA
 
         private void button2_Click(object sender, EventArgs e)
         {
+            button2.Enabled= false; 
             Book b = new Book(Dssn,shiftAppoints);
             b.Show();
             Close();

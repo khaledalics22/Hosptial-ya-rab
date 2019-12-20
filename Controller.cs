@@ -544,7 +544,7 @@ namespace Hospital_ISA
             return dbMan.ExecuteScalar(StoredProcedureName, Parameters);
         }
         
-       public object insertPatient(int pssn,string fname, string lname ,string phone)
+       public object insertPatient(int pssn,string fname, string lname ,string phone,string pass)
         {
             String StoredProcedureName = StoredProcedures.insertPatient;
             Dictionary<string, object> Parameters = new Dictionary<string, object>();
@@ -552,6 +552,7 @@ namespace Hospital_ISA
             Parameters.Add("@Fname", fname);
             Parameters.Add("@Lname", lname);
             Parameters.Add("@phone", phone);
+            Parameters.Add("@PASS", pass);
             return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
         }
         

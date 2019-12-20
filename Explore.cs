@@ -69,13 +69,20 @@ namespace Hospital_ISA
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (comboBox1.SelectedIndex == -1) return; 
             comboBox1.DisplayMember = "Dname";
             comboBox1.ValueMember = "Dnum";
             comboBox1.Refresh();
             DataTable docs = c.getDocsAtDep(Convert.ToInt32(comboBox1.SelectedValue.ToString()));
                 dataGridView1.DataSource = docs;
                 dataGridView1.Refresh();
-         
+            if (docs == null)
+            {
+                MessageBox.Show("sorry there are no available doctors in this department");
+                comboBox1.SelectedIndex = 0; 
+            }
+            button1.Enabled = false;
+
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -92,8 +99,21 @@ namespace Hospital_ISA
 
         private void button1_Click(object sender, EventArgs e)
         {
-           dataGridView1.DataSource= c.selectDocByName(textBox1.Text.ToString());
-           dataGridView1.Refresh(); 
+            if (textBox1.Text == "") {
+                MessageBox.Show("you can't leave the search box empty.please, enter the last name of the doctor you want");
+
+                return;
+            }
+            DataTable dt = c.selectDocByName(textBox1.Text.ToString());
+            dataGridView1.DataSource= dt;
+            dataGridView1.Refresh();
+            if (dt == null)
+            {
+                MessageBox.Show("sorry, there are no available doctors whith last name \""+textBox1.Text.ToString()+"\"");
+                comboBox1.SelectedIndex = 0;
+            }
+            else
+            comboBox1.SelectedIndex = -1;
         }
     }
 }

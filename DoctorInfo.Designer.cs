@@ -38,9 +38,10 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button2 = new System.Windows.Forms.Button();
-            this.DocGender = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.DocAge = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -85,11 +86,11 @@
             this.DocPhone.BackColor = System.Drawing.Color.White;
             this.DocPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DocPhone.ForeColor = System.Drawing.Color.Blue;
-            this.DocPhone.Location = new System.Drawing.Point(12, 184);
+            this.DocPhone.Location = new System.Drawing.Point(63, 194);
             this.DocPhone.Name = "DocPhone";
-            this.DocPhone.Size = new System.Drawing.Size(122, 20);
+            this.DocPhone.Size = new System.Drawing.Size(36, 20);
             this.DocPhone.TabIndex = 11;
-            this.DocPhone.Text = "Phone number:";
+            this.DocPhone.Text = "age";
             // 
             // DocDep
             // 
@@ -97,7 +98,7 @@
             this.DocDep.BackColor = System.Drawing.Color.White;
             this.DocDep.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DocDep.ForeColor = System.Drawing.Color.Blue;
-            this.DocDep.Location = new System.Drawing.Point(12, 254);
+            this.DocDep.Location = new System.Drawing.Point(133, 257);
             this.DocDep.Name = "DocDep";
             this.DocDep.Size = new System.Drawing.Size(113, 20);
             this.DocDep.TabIndex = 12;
@@ -109,11 +110,11 @@
             this.label4.BackColor = System.Drawing.Color.White;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Blue;
-            this.label4.Location = new System.Drawing.Point(14, 408);
+            this.label4.Location = new System.Drawing.Point(14, 323);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(43, 20);
+            this.label4.Size = new System.Drawing.Size(48, 20);
             this.label4.TabIndex = 13;
-            this.label4.Text = "Shift";
+            this.label4.Text = "Shift:";
             // 
             // DocShiftFromTo
             // 
@@ -121,7 +122,7 @@
             this.DocShiftFromTo.BackColor = System.Drawing.Color.White;
             this.DocShiftFromTo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DocShiftFromTo.ForeColor = System.Drawing.Color.Blue;
-            this.DocShiftFromTo.Location = new System.Drawing.Point(106, 408);
+            this.DocShiftFromTo.Location = new System.Drawing.Point(106, 323);
             this.DocShiftFromTo.Name = "DocShiftFromTo";
             this.DocShiftFromTo.Size = new System.Drawing.Size(151, 20);
             this.DocShiftFromTo.TabIndex = 14;
@@ -161,18 +162,6 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // DocGender
-            // 
-            this.DocGender.AutoSize = true;
-            this.DocGender.BackColor = System.Drawing.Color.White;
-            this.DocGender.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DocGender.ForeColor = System.Drawing.Color.Blue;
-            this.DocGender.Location = new System.Drawing.Point(12, 323);
-            this.DocGender.Name = "DocGender";
-            this.DocGender.Size = new System.Drawing.Size(64, 20);
-            this.DocGender.TabIndex = 20;
-            this.DocGender.Text = "Gender";
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Hospital_ISA.Properties.Resources.arrow;
@@ -196,14 +185,39 @@
             this.DocAge.TabIndex = 21;
             this.DocAge.Text = "Phone number:";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.White;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Blue;
+            this.label2.Location = new System.Drawing.Point(14, 194);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(43, 20);
+            this.label2.TabIndex = 22;
+            this.label2.Text = "Age:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.White;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Blue;
+            this.label3.Location = new System.Drawing.Point(14, 257);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(113, 20);
+            this.label3.TabIndex = 23;
+            this.label3.Text = "Specialization";
+            // 
             // DoctorInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 491);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.DocAge);
-            this.Controls.Add(this.DocGender);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.comboBox1);
@@ -238,7 +252,8 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label DocGender;
         private System.Windows.Forms.Label DocAge;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }

@@ -44,7 +44,8 @@ namespace Hospital_ISA
                 if (c.selectPatient(Convert.ToInt32(patientSSn.Text.ToString())) == null)
                 {
                     c.insertPatient(Convert.ToInt32(patientSSn.Text.ToString()), patiendFName.Text,
-                       patiendLName.Text, PatientPhone.Text);
+                       patiendLName.Text, PatientPhone.Text,Pass.Text);
+                   
                 }
                 c.AddNewAppointment(DSSN, Convert.ToInt32(patientSSn.Text.ToString()),date);
 

@@ -39,6 +39,8 @@
             this.patiendLName = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.PatientPhone = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.Pass = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -79,7 +81,7 @@
             this.patientSSn.BackColor = System.Drawing.Color.White;
             this.patientSSn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.patientSSn.ForeColor = System.Drawing.Color.Blue;
-            this.patientSSn.Location = new System.Drawing.Point(201, 162);
+            this.patientSSn.Location = new System.Drawing.Point(201, 155);
             this.patientSSn.Name = "patientSSn";
             this.patientSSn.Size = new System.Drawing.Size(309, 36);
             this.patientSSn.TabIndex = 14;
@@ -90,11 +92,11 @@
             this.label2.BackColor = System.Drawing.Color.White;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Blue;
-            this.label2.Location = new System.Drawing.Point(32, 162);
+            this.label2.Location = new System.Drawing.Point(32, 212);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(148, 29);
+            this.label2.Size = new System.Drawing.Size(132, 29);
             this.label2.TabIndex = 15;
-            this.label2.Text = "National ID";
+            this.label2.Text = "Password";
             // 
             // label3
             // 
@@ -148,7 +150,7 @@
             this.label4.BackColor = System.Drawing.Color.White;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Blue;
-            this.label4.Location = new System.Drawing.Point(32, 223);
+            this.label4.Location = new System.Drawing.Point(32, 266);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(91, 29);
             this.label4.TabIndex = 19;
@@ -159,10 +161,32 @@
             this.PatientPhone.BackColor = System.Drawing.Color.White;
             this.PatientPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PatientPhone.ForeColor = System.Drawing.Color.Blue;
-            this.PatientPhone.Location = new System.Drawing.Point(143, 223);
+            this.PatientPhone.Location = new System.Drawing.Point(133, 266);
             this.PatientPhone.Name = "PatientPhone";
             this.PatientPhone.Size = new System.Drawing.Size(309, 36);
             this.PatientPhone.TabIndex = 20;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.White;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Blue;
+            this.label5.Location = new System.Drawing.Point(32, 162);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(148, 29);
+            this.label5.TabIndex = 21;
+            this.label5.Text = "National ID";
+            // 
+            // Pass
+            // 
+            this.Pass.BackColor = System.Drawing.Color.White;
+            this.Pass.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Pass.ForeColor = System.Drawing.Color.Blue;
+            this.Pass.Location = new System.Drawing.Point(183, 209);
+            this.Pass.Name = "Pass";
+            this.Pass.Size = new System.Drawing.Size(309, 36);
+            this.Pass.TabIndex = 22;
             // 
             // Book
             // 
@@ -170,6 +194,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.Pass);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.PatientPhone);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.patiendLName);
@@ -203,5 +229,7 @@
         private System.Windows.Forms.TextBox patiendLName;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox PatientPhone;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox Pass;
     }
 }
