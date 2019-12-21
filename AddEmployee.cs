@@ -19,7 +19,7 @@ namespace Hospital_ISA
             InitializeComponent();
             controllerObj = new Controller();
             // initialize components
-            DepartmentComboBox.DataSource = controllerObj.getAllDepartments();
+            DepartmentComboBox.DataSource = controllerObj.getNonMedicineDeps();
             DepartmentComboBox.DisplayMember = "Dname";
             GenderComboBox.SelectedIndex = 0;
             ShiftComboBox.SelectedIndex = 0;
@@ -69,6 +69,11 @@ namespace Hospital_ISA
             {
                 MessageBox.Show("Please Enter Valid Values");
             }
+
+        }
+
+        private void DepartmentComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
         }
     }

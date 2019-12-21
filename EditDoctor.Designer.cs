@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.button3 = new System.Windows.Forms.Button();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.DocDepCombo = new System.Windows.Forms.ComboBox();
             this.DocCity = new System.Windows.Forms.TextBox();
             this.DocAge = new System.Windows.Forms.TextBox();
@@ -39,7 +38,6 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -83,24 +81,6 @@
             this.button3.Text = "Edit Doctor";
             this.button3.UseVisualStyleBackColor = false;
             // 
-            // comboBox2
-            // 
-            this.comboBox2.BackColor = System.Drawing.Color.White;
-            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox2.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.ItemHeight = 31;
-            this.comboBox2.Items.AddRange(new object[] {
-            "Male",
-            "Female"});
-            this.comboBox2.Location = new System.Drawing.Point(1073, 262);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(114, 39);
-            this.comboBox2.TabIndex = 47;
-            // 
             // DocDepCombo
             // 
             this.DocDepCombo.BackColor = System.Drawing.Color.White;
@@ -120,6 +100,7 @@
             this.DocDepCombo.Name = "DocDepCombo";
             this.DocDepCombo.Size = new System.Drawing.Size(273, 39);
             this.DocDepCombo.TabIndex = 46;
+            this.DocDepCombo.SelectedIndexChanged += new System.EventHandler(this.DocDepCombo_SelectedIndexChanged);
             // 
             // DocCity
             // 
@@ -204,17 +185,6 @@
             this.label8.TabIndex = 38;
             this.label8.Text = "Address:";
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label7.Location = new System.Drawing.Point(958, 264);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(112, 31);
-            this.label7.TabIndex = 37;
-            this.label7.Text = "Gender:";
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -263,7 +233,7 @@
             "18:00 : 24:00",
             "",
             ""});
-            this.DocShiftCombo.Location = new System.Drawing.Point(956, 380);
+            this.DocShiftCombo.Location = new System.Drawing.Point(961, 251);
             this.DocShiftCombo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.DocShiftCombo.Name = "DocShiftCombo";
             this.DocShiftCombo.Size = new System.Drawing.Size(232, 39);
@@ -274,7 +244,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label2.Location = new System.Drawing.Point(870, 384);
+            this.label2.Location = new System.Drawing.Point(878, 259);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(77, 31);
             this.label2.TabIndex = 58;
@@ -319,11 +289,6 @@
             this.DocAvailableRoomsCombo.ForeColor = System.Drawing.Color.DodgerBlue;
             this.DocAvailableRoomsCombo.FormattingEnabled = true;
             this.DocAvailableRoomsCombo.ItemHeight = 31;
-            this.DocAvailableRoomsCombo.Items.AddRange(new object[] {
-            "Doctors",
-            "Nurses",
-            "Employees",
-            "Patients"});
             this.DocAvailableRoomsCombo.Location = new System.Drawing.Point(674, 627);
             this.DocAvailableRoomsCombo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.DocAvailableRoomsCombo.Name = "DocAvailableRoomsCombo";
@@ -336,7 +301,7 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label12.Location = new System.Drawing.Point(938, 445);
+            this.label12.Location = new System.Drawing.Point(939, 382);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(224, 31);
             this.label12.TabIndex = 52;
@@ -375,7 +340,7 @@
             this.DocNewSSN.Enabled = false;
             this.DocNewSSN.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DocNewSSN.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.DocNewSSN.Location = new System.Drawing.Point(113, 472);
+            this.DocNewSSN.Location = new System.Drawing.Point(137, 381);
             this.DocNewSSN.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.DocNewSSN.Name = "DocNewSSN";
             this.DocNewSSN.Size = new System.Drawing.Size(239, 38);
@@ -398,7 +363,7 @@
             this.removeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.removeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.removeButton.ForeColor = System.Drawing.Color.White;
-            this.removeButton.Location = new System.Drawing.Point(883, 627);
+            this.removeButton.Location = new System.Drawing.Point(884, 564);
             this.removeButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.removeButton.Name = "removeButton";
             this.removeButton.Size = new System.Drawing.Size(110, 40);
@@ -413,7 +378,7 @@
             this.DocCurrRoomsGrid.AllowUserToDeleteRows = false;
             this.DocCurrRoomsGrid.BackgroundColor = System.Drawing.Color.DodgerBlue;
             this.DocCurrRoomsGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DocCurrRoomsGrid.Location = new System.Drawing.Point(883, 485);
+            this.DocCurrRoomsGrid.Location = new System.Drawing.Point(884, 422);
             this.DocCurrRoomsGrid.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.DocCurrRoomsGrid.Name = "DocCurrRoomsGrid";
             this.DocCurrRoomsGrid.ReadOnly = true;
@@ -585,7 +550,6 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.DocNewSSN);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.DocDepCombo);
             this.Controls.Add(this.DocCity);
             this.Controls.Add(this.DocAge);
@@ -595,7 +559,6 @@
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
@@ -614,7 +577,6 @@
         #endregion
 
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.ComboBox DocDepCombo;
         private System.Windows.Forms.TextBox DocCity;
         private System.Windows.Forms.TextBox DocAge;
@@ -624,7 +586,6 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label1;

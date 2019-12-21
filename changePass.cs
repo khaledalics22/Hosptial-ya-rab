@@ -27,7 +27,7 @@ namespace Hospital_ISA
         {
             if (!(textBox1.Text == "" || textBox2.Text == "" || textBox3.Text == ""))
             {
-                if (c.changePass(Convert.ToInt32(textBox1.Text.ToString()), textBox2.Text, textBox3.Text, Type) == 0)
+                if (c.changePass(Convert.ToInt32(textBox1.Text.ToString()), textBox2.Text.ToString(), textBox3.Text, Type) == 0)
                 {
                     MessageBox.Show("faild");
                 }

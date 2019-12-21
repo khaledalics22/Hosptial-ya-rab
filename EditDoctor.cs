@@ -35,10 +35,20 @@ namespace Hospital_ISA
             DocStreet.Text = dt.Rows[0]["Street"].ToString();
             DocHouseNum.Text = dt.Rows[0]["House_Num"].ToString();
             DocSalary.Text = dt.Rows[0]["Salary"].ToString();
-            DocShiftCombo.SelectedItem = dt.Rows[0]["Shift_From"].ToString();
+            if (dt.Rows[0]["Shift_From"].ToString() == "06:00:00")
+            {
+                DocShiftCombo.SelectedIndex = 0;
+            }
+            else if (dt.Rows[0]["Shift_From"].ToString() == "12:00:00")
+            {
+                DocShiftCombo.SelectedIndex = 1;
+            }
+            else {
+                DocShiftCombo.SelectedIndex = 2;
+            }
             DocClinicShiftsGrid.DataSource = c.getDoctorClinic(Dssn);
 
-            DocDepCombo.DataSource = c.getAllDepartments();
+            DocDepCombo.DataSource = c.getMedicineDeps();
             DocDepCombo.DisplayMember = "Dname";
             DocDepCombo.ValueMember = "Dnum";
             DocDepCombo.Refresh();
@@ -55,14 +65,18 @@ namespace Hospital_ISA
             // initially fill the combobox with the shifts of the clinic which can be selected
             DocClinicCombo.DataSource = c.getAllClinicsId();
             DocClinicCombo.DisplayMember = "CID";
+            DocClinicCombo.ValueMember = "CID";
+            DocClinicCombo.SelectedIndex = 0; 
 
             DocAvailableClinicShiftsCombo.DataSource = c.DoctorAvailableClinicShifts(Dssn);
             DocAvailableClinicShiftsCombo.DisplayMember = "StartTime";
-           
+         
+
+
 
             // initially fill the Nurse rooms and the rooms that can be assigned to the nurse
             DocCurrRoomsGrid.DataSource = c.getDoctorRooms(Dssn);
-            DocAvailableRoomsCombo.DataSource = c.getAllRoomsID();
+            DocAvailableRoomsCombo.DataSource = c.DoctorAvailableRooms(Dssn);
             DocAvailableRoomsCombo.DisplayMember = "RID";
             DocAvailableRoomsCombo.ValueMember = "RID";
             
@@ -96,9 +110,10 @@ namespace Hospital_ISA
                         DocShiftCombo.Text, Convert.ToInt32(DocDepCombo.SelectedValue.ToString()));
                     if (r > 0)
                     {
+                       
                         // assign clinic to the nurse
                         c.AddDoctorClinic(Convert.ToInt32(DocNewSSN.Text), Convert.ToInt32(DocClinicCombo.SelectedValue.ToString()),
-                            DocAvailableClinicShiftsCombo.SelectedValue.ToString());
+                            DocAvailableClinicShiftsCombo.SelectedItem.ToString());
                         while (rooms.Count > 0)
                         {
                             c.AddDoctorRoom(Convert.ToInt32(DocNewSSN.Text.ToString()), Convert.ToInt32(rooms.Dequeue()));
@@ -114,6 +129,7 @@ namespace Hospital_ISA
             {
                 MessageBox.Show("Please Enter Valid Values");
             }
+            MessageBox.Show("New data has been saved successfully");
         }
 
         private void DocClinicCombo_SelectedIndexChanged(object sender, EventArgs e)
@@ -214,12 +230,17 @@ namespace Hospital_ISA
             if (indexi >= 0)               //check if this row in table
             {
                 DataGridViewRow selRow = DocCurrRoomsGrid.Rows[indexi];    //store row
-                SelectedRemoveRoom = Convert.ToInt32(selRow.Cells[0].Value.ToString());
+                SelectedRemoveRoom = Convert.ToInt32(selRow.Cells[1].Value.ToString());
                 removeButton.Enabled = true;
             }
         }
 
         private void EditDoctor_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DocDepCombo_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

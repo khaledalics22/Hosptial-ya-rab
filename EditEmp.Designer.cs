@@ -153,6 +153,7 @@
             this.DepartmentComboBox.Name = "DepartmentComboBox";
             this.DepartmentComboBox.Size = new System.Drawing.Size(213, 39);
             this.DepartmentComboBox.TabIndex = 125;
+            this.DepartmentComboBox.SelectedIndexChanged += new System.EventHandler(this.DepartmentComboBox_SelectedIndexChanged);
             // 
             // ShiftComboBox
             // 

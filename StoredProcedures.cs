@@ -22,7 +22,7 @@ namespace Hospital_ISA
         public static string FindDrugs = "FindDrug";
         public static string FindEmptyDrugs = "FindEmptyDrug";
         public static string InsertDrug = "InsertDrug";
-
+        public static string patientAppoints = "patientAppoints";
         public static string AddQuantity = "AddQuantity";
         public static string SellDrug = "SellDrug";
         public static string AddToSold = "AddToSold";
@@ -67,13 +67,15 @@ namespace Hospital_ISA
         public static string removeDoctorRoom="removeDoctorRoom";
         public static string DoctorAvailableRooms ="DoctorAvailableRooms";
         public static string getDocsAtDep="getDocsAtDep";
-        public static string getavailableAppointment="getavailableAppointment";
+        public static string availableappointments = "availableappointments";
         public static string selectPatient = "selectPatient";
         public static string insertPatient="insertPatient";
         public static string AddNewAppointment="AddNewAppointment";
         public static string selectDocByName="selectDocByName";
         public static string changePass="changePass";
         public static string updateDoc = "updateDoc";
+        public static string getMedicineDeps = "getMedicineDeps";
+        public static string getNonMedicineDeps = "getNonMedicineDeps";
 
         public static string SelectDoctorbyDep = "SelectDoctorbyDep";
         public static string GetAllDep = "GetAllDep";
@@ -89,5 +91,6 @@ namespace Hospital_ISA
         public static string getavailablerooms = "getavailablerooms";
         public static string AddReservation = "InsertReservation";
         public static string Book = "insertappointment";
+        public static string cancelAppoint="cancelAppoint";
     }
 }

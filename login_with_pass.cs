@@ -27,9 +27,9 @@ namespace Hospital_ISA
             if (textBox1.Text.Length == 0 ||
              textBox2.Text.Length == 0)
             {
+                MessageBox.Show("invalid ESSN or Password");
                 return; 
             }
-            
             int ssn = Convert.ToInt32(textBox1.Text.ToString());
             string pass = textBox2.Text.ToString();
             if (type == "doctor")
@@ -40,6 +40,11 @@ namespace Hospital_ISA
                     m.Show();
                     Close();
                 }
+                else
+                {
+                    MessageBox.Show("invalid ESSN or Password");
+                    return;
+                }
             }
             else if (type == "manager")
             {
@@ -48,6 +53,11 @@ namespace Hospital_ISA
                     Manager m = new Manager();
                     m.Show();
                     Close();
+                }
+                else
+                {
+                    MessageBox.Show("invalid ESSN or Password");
+                    return;
                 }
 
             }
@@ -59,6 +69,11 @@ namespace Hospital_ISA
                     rh.Show();
                     Close();
                 }
+                else
+                {
+                    MessageBox.Show("invalid ESSN or Password");
+                    return;
+                }
             }
             else if (type == "pharmacist")
             {
@@ -67,6 +82,11 @@ namespace Hospital_ISA
                     Pharmacist m = new Pharmacist();
                     m.Show();
                     Close();
+                }
+                else
+                {
+                    MessageBox.Show("invalid ESSN or Password");
+                    return;
                 }
             }
         }

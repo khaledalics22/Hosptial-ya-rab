@@ -58,6 +58,7 @@ namespace Hospital_ISA
             String StoredProcedureName = StoredProcedures.DeleteDoc;
             Dictionary<string, object> Parameters = new Dictionary<string, object>();
             Parameters.Add("@Dssn", id);
+            Parameters.Add("@EndDate", DateTime.Today.ToString("yyyy-MM-dd"));
             return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
         }
         //Delete nurse using NSSN 
@@ -338,6 +339,14 @@ namespace Hospital_ISA
             Parameters.Add("@CID", CID);
             return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
         }
+        
+              public int cancelAppoint(int AID)
+        {
+            String StoredProcedureName = StoredProcedures.cancelAppoint;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@AID", AID);
+             return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
+        }
 
         // add a new nurse to the data
         public int AddNurse(int Nssn, string Fname, string Lname, string Phone, int Age, int Salary, string Shift_From)
@@ -399,6 +408,14 @@ namespace Hospital_ISA
             }
             else
                 return "";
+        }
+        
+       public DataTable patientAppoints(int ssn)
+        {
+            string storedProcedure = StoredProcedures.patientAppoints;
+            Dictionary<string, object> parameters = new Dictionary<string, object>();
+            parameters.Add("@PSSN", ssn);
+            return  dbMan.ExecuteReader(storedProcedure, parameters);
         }
         public DataTable getAllRoomsID()
         {
@@ -472,7 +489,7 @@ namespace Hospital_ISA
         public int updateDoc(int Dssn, string Fname, string Lname, string Phone, int Age, int Salary, string city,
             string street, string houseNum, string Shift_From, int Dno)
         {
-            String StoredProcedureName = StoredProcedures.AddDoctor;
+            String StoredProcedureName = StoredProcedures.updateDoc;
             Dictionary<string, object> Parameters = new Dictionary<string, object>();
             Parameters.Add("@Dssn", Dssn);
             Parameters.Add("@Fname", Fname);
@@ -589,11 +606,14 @@ namespace Hospital_ISA
             else
                 return null;
         }
-        public DataTable getavailableAppointment(int Dssn)
+        public DataTable availableappointments(string from , string to ,string date , int Dssn)
         {
-            String StoredProcedureName = StoredProcedures.getavailableAppointment;
+            String StoredProcedureName = StoredProcedures.availableappointments;
             Dictionary<string, object> Parameters = new Dictionary<string, object>();
-            Parameters.Add("@Dssn", Dssn);
+            Parameters.Add("@from", from);
+            Parameters.Add("@to", to);
+            Parameters.Add("@date", date);
+            Parameters.Add("@ssn", Dssn);
             return dbMan.ExecuteReader(StoredProcedureName, Parameters);
         }
         public object selectPatient(int pssn)
@@ -617,13 +637,14 @@ namespace Hospital_ISA
             return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
         }
         
-              public int AddNewAppointment(int DSSN, int Pssn ,string date)
+              public int AddNewAppointment(int DSSN, int Pssn ,string date,string start)
         {
             String StoredProcedureName = StoredProcedures.AddNewAppointment;
             Dictionary<string, object> Parameters = new Dictionary<string, object>();
             Parameters.Add("@DSSN", DSSN);
             Parameters.Add("@PSSN", Pssn);
-            Parameters.Add("@Date_time", date);
+            Parameters.Add("@date", date);
+            Parameters.Add("@startTime", start);
             return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
         }
         public DataTable selectDocByName(string lname)
@@ -651,6 +672,18 @@ namespace Hospital_ISA
         public DataTable SelectDep()
         {
             String StoredProcedureName = StoredProcedures.GetAllDep;
+            return dbMan.ExecuteReader(StoredProcedureName, null);
+        }
+        
+         public DataTable getMedicineDeps()
+        {
+            String StoredProcedureName = StoredProcedures.getMedicineDeps;
+            return dbMan.ExecuteReader(StoredProcedureName, null);
+        }
+        
+              public DataTable getNonMedicineDeps()
+        {
+            String StoredProcedureName = StoredProcedures.getNonMedicineDeps;
             return dbMan.ExecuteReader(StoredProcedureName, null);
         }
         //select week dates
