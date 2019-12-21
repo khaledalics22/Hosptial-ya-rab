@@ -24,7 +24,7 @@ namespace Hospital_ISA
             this.ESSN = ESSN;
             // initialize the GUI with the old data of the Employee
             dt = controllerObj.selectEmployee(this.ESSN);
-            DepartmentComboBox.DataSource = controllerObj.getAllDepartments();
+            DepartmentComboBox.DataSource = controllerObj.getNonMedicineDeps();
             DepartmentComboBox.DisplayMember = "Dname";
             DepartmentComboBox.ValueMember = "Dname";
             SSNTextBox.Text = ESSN.ToString();
@@ -99,6 +99,11 @@ namespace Hospital_ISA
         }
 
         private void EditEmp_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DepartmentComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

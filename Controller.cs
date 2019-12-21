@@ -58,6 +58,7 @@ namespace Hospital_ISA
             String StoredProcedureName = StoredProcedures.DeleteDoc;
             Dictionary<string, object> Parameters = new Dictionary<string, object>();
             Parameters.Add("@Dssn", id);
+            Parameters.Add("@EndDate", DateTime.Today.ToString("yyyy-MM-dd"));
             return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
         }
         //Delete nurse using NSSN 

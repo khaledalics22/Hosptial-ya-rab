@@ -152,7 +152,6 @@ C:\Users\IslamAhmed\Desktop\Projects\DB_Project\Hosptial-ya-rab\obj\Debug\Hospit
 C:\Users\IslamAhmed\Desktop\Projects\DB_Project\Hosptial-ya-rab\obj\Debug\Hospital_ISA.Patient.resources
 C:\Users\IslamAhmed\Desktop\Projects\DB_Project\Hosptial-ya-rab\obj\Debug\Hospital_ISA.Pharmacist.resources
 C:\Users\IslamAhmed\Desktop\Projects\DB_Project\Hosptial-ya-rab\obj\Debug\Hospital_ISA.Prescription.resources
-C:\Users\IslamAhmed\Desktop\Projects\DB_Project\Hosptial-ya-rab\obj\Debug\Hospital_ISA.PriscInfo.resources
 C:\Users\IslamAhmed\Desktop\Projects\DB_Project\Hosptial-ya-rab\obj\Debug\Hospital_ISA.Properties.Resources.resources
 C:\Users\IslamAhmed\Desktop\Projects\DB_Project\Hosptial-ya-rab\obj\Debug\Hospital_ISA.RecepionistBook.resources
 C:\Users\IslamAhmed\Desktop\Projects\DB_Project\Hosptial-ya-rab\obj\Debug\Hospital_ISA.ReceptionistDoctorInfo.resources
@@ -250,3 +249,5 @@ E:\ENGINEERING\CMP2-1\DB\project\project code\v6 git clone\Hosptial-ya-rab\obj\D
 E:\ENGINEERING\CMP2-1\DB\project\project code\v6 git clone\Hosptial-ya-rab\obj\Debug\Hospital ISA.csproj.GenerateResource.cache
 E:\ENGINEERING\CMP2-1\DB\project\project code\v6 git clone\Hosptial-ya-rab\obj\Debug\Hospital ISA.exe
 E:\ENGINEERING\CMP2-1\DB\project\project code\v6 git clone\Hosptial-ya-rab\obj\Debug\Hospital ISA.pdb
+C:\Users\IslamAhmed\Desktop\Projects\DB_Project\Hosptial-ya-rab\obj\Debug\Hospital_ISA.changePass.resources
+C:\Users\IslamAhmed\Desktop\Projects\DB_Project\Hosptial-ya-rab\obj\Debug\Hospital_ISA.login_with_pass.resources
