@@ -29,7 +29,18 @@ namespace Hospital_ISA
             comboBox3.DisplayMember = "CID";
             comboBox3.ValueMember = "CID";
             comboBox3.Refresh();
+            DateTime today = DateTime.Today;
+            today = today.AddDays(1);
+            comboBox1.Items.Add
+                  (today.ToString("yyyy-MM-dd"));
+            for (int i = 0; i < 6; i++)
+            {
+                today = today.AddDays(1);
+                comboBox1.Items.Add
+                      (today.ToString("yyyy-MM-dd"));
 
+            }
+            comboBox1.SelectedIndex = 0;
             //set list of rooms 
 
             DataTable rooms = c.getAllRoomsID();
@@ -179,9 +190,9 @@ namespace Hospital_ISA
             try
             {
                 if (!(DocSalary.Text == "" || DocFName.Text == "" || DocLName.Text == ""
-                    || DocAge.Text == "" || DocPhone.Text == "" 
-                   || DocCity.Text== "" || DocStreet.Text == "" ||DocHouseNum.Text ==""||comboBox3.SelectedValue==null
-                   || comboBox5.SelectedValue==null||pass.Text==""))
+                    || DocAge.Text == "" || DocPhone.Text == "" || DocShiftFrom.Text == ""
+                   || DocCity.Text == "" || DocStreet.Text == "" || DocHouseNum.Text == "" || comboBox3.Text == ""
+                   || comboBox5.Text == "" || pass.Text == ""))
                 {
 
                     int r = c.AddDoctor(Convert.ToInt32(DocSSN.Text.ToString()), DocFName.Text.ToString(),
@@ -189,27 +200,43 @@ namespace Hospital_ISA
                         Convert.ToInt32(DocSalary.Text.ToString()), DocCity.Text.ToString(), DocStreet.Text.ToString(),
                         DocHouseNum.Text.ToString(),
                         DocShiftFrom.SelectedItem.ToString(), Convert.ToInt32(depCombo.SelectedValue.ToString()),
-                        pass.Text.ToString()) ;
+                        pass.Text.ToString());
                     if (r > 0)
                     {
                         // assign clinic to the nurse
-                        c.AddDoctorClinic(Convert.ToInt32(DocSSN.Text), Convert.ToInt32(comboBox3.SelectedValue.ToString()),
-                            comboBox5.SelectedValue.ToString());
+                        if (c.AddDoctorClinic(Convert.ToInt32(DocSSN.Text), Convert.ToInt32(comboBox3.SelectedValue.ToString()),
+                            comboBox5.Text.ToString(), comboBox1.SelectedItem.ToString()) == 0)
+                        {
+                            MessageBox.Show("failed to add clinics  and rooms go to edit doctor to add it");
+                            return; 
+                        }
                         while (rooms.Count > 0)
                         {
-                            c.AddDoctorRoom(Convert.ToInt32(DocSSN.Text.ToString()), Convert.ToInt32(rooms.Dequeue()));
+                            if (c.AddDoctorRoom(Convert.ToInt32(DocSSN.Text.ToString()), Convert.ToInt32(rooms.Dequeue())) == 0)
+                            {
+                                MessageBox.Show("failed to add rooms go to edit doctor to add it");
+                                return; 
+                            }
                         }
                     }
                     else
-                        MessageBox.Show("Please Enter Valid Values");
+                    {
+                        MessageBox.Show("doctor already exists with this ssn");
+                        return;
+                    }
                 }
                 else
+                {
                     MessageBox.Show("Please Enter Valid Values");
+                    return;
+                }
             }
             catch
             {
                 MessageBox.Show("Please Enter Valid Values");
+                return;
             }
+            MessageBox.Show("doctor added successfully");
         }
 
         private void button4_Click(object sender, EventArgs e)

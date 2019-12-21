@@ -63,6 +63,10 @@
             this.label11 = new System.Windows.Forms.Label();
             this.roomsAssigned = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.DocCurrRoomsGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DocClinicShiftsGrid)).BeginInit();
             this.SuspendLayout();
@@ -256,7 +260,7 @@
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(1089, 677);
+            this.button5.Location = new System.Drawing.Point(1094, 762);
             this.button5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(141, 68);
@@ -317,7 +321,7 @@
             this.DocClinicCombo.ForeColor = System.Drawing.Color.DodgerBlue;
             this.DocClinicCombo.FormattingEnabled = true;
             this.DocClinicCombo.ItemHeight = 31;
-            this.DocClinicCombo.Location = new System.Drawing.Point(124, 443);
+            this.DocClinicCombo.Location = new System.Drawing.Point(116, 443);
             this.DocClinicCombo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.DocClinicCombo.Name = "DocClinicCombo";
             this.DocClinicCombo.Size = new System.Drawing.Size(111, 39);
@@ -394,7 +398,7 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(21, 563);
+            this.button2.Location = new System.Drawing.Point(21, 652);
             this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(110, 52);
@@ -408,7 +412,7 @@
             this.DocClinicShiftsGrid.AllowUserToDeleteRows = false;
             this.DocClinicShiftsGrid.BackgroundColor = System.Drawing.Color.DodgerBlue;
             this.DocClinicShiftsGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DocClinicShiftsGrid.Location = new System.Drawing.Point(137, 563);
+            this.DocClinicShiftsGrid.Location = new System.Drawing.Point(137, 652);
             this.DocClinicShiftsGrid.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.DocClinicShiftsGrid.MultiSelect = false;
             this.DocClinicShiftsGrid.Name = "DocClinicShiftsGrid";
@@ -424,7 +428,7 @@
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label13.Location = new System.Drawing.Point(24, 494);
+            this.label13.Location = new System.Drawing.Point(29, 549);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(77, 31);
             this.label13.TabIndex = 99;
@@ -449,7 +453,7 @@
             "",
             "",
             ""});
-            this.DocAvailableClinicShiftsCombo.Location = new System.Drawing.Point(124, 494);
+            this.DocAvailableClinicShiftsCombo.Location = new System.Drawing.Point(124, 549);
             this.DocAvailableClinicShiftsCombo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.DocAvailableClinicShiftsCombo.Name = "DocAvailableClinicShiftsCombo";
             this.DocAvailableClinicShiftsCombo.Size = new System.Drawing.Size(232, 39);
@@ -513,7 +517,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(302, 705);
+            this.button1.Location = new System.Drawing.Point(400, 798);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(110, 40);
@@ -522,12 +526,69 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // comboBox1
+            // 
+            this.comboBox1.BackColor = System.Drawing.Color.White;
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.ItemHeight = 31;
+            this.comboBox1.Location = new System.Drawing.Point(116, 495);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(240, 39);
+            this.comboBox1.TabIndex = 109;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label7.Location = new System.Drawing.Point(29, 498);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(63, 31);
+            this.label7.TabIndex = 108;
+            this.label7.Text = "Day";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label14.Location = new System.Drawing.Point(21, 799);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(67, 31);
+            this.label14.TabIndex = 111;
+            this.label14.Text = "date";
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.BackColor = System.Drawing.Color.White;
+            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox2.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox2.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.ItemHeight = 31;
+            this.comboBox2.Location = new System.Drawing.Point(116, 799);
+            this.comboBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(232, 39);
+            this.comboBox2.TabIndex = 110;
+            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
+            // 
             // EditDoctor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1283, 849);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.roomsAssigned);
             this.Controls.Add(this.label11);
@@ -611,5 +672,9 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label roomsAssigned;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.ComboBox comboBox2;
     }
 }

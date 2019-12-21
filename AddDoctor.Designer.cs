@@ -59,6 +59,8 @@
             this.roomsAssigned = new System.Windows.Forms.Label();
             this.pass = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button3
@@ -367,7 +369,7 @@
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label13.Location = new System.Drawing.Point(14, 533);
+            this.label13.Location = new System.Drawing.Point(14, 591);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(77, 31);
             this.label13.TabIndex = 99;
@@ -382,7 +384,16 @@
             this.comboBox5.ForeColor = System.Drawing.Color.DodgerBlue;
             this.comboBox5.FormattingEnabled = true;
             this.comboBox5.ItemHeight = 31;
-            this.comboBox5.Location = new System.Drawing.Point(120, 533);
+            this.comboBox5.Items.AddRange(new object[] {
+            "06:00 : 09:00",
+            "09:00 : 12:00",
+            "12:00 : 15:00",
+            "15:00 : 18:00",
+            "18:00 : 21:00",
+            "21:00 : 24:00",
+            "",
+            ""});
+            this.comboBox5.Location = new System.Drawing.Point(120, 583);
             this.comboBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBox5.Name = "comboBox5";
             this.comboBox5.Size = new System.Drawing.Size(232, 39);
@@ -450,12 +461,40 @@
             this.label7.TabIndex = 104;
             this.label7.Text = "Password";
             // 
+            // comboBox1
+            // 
+            this.comboBox1.BackColor = System.Drawing.Color.White;
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.ItemHeight = 31;
+            this.comboBox1.Location = new System.Drawing.Point(120, 525);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(232, 39);
+            this.comboBox1.TabIndex = 106;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label11.Location = new System.Drawing.Point(14, 533);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(63, 31);
+            this.label11.TabIndex = 107;
+            this.label11.Text = "Day";
+            // 
             // AddDoctor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(948, 660);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.pass);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.roomsAssigned);
@@ -529,5 +568,7 @@
         private System.Windows.Forms.Label roomsAssigned;
         private System.Windows.Forms.TextBox pass;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label11;
     }
 }

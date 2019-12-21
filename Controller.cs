@@ -442,17 +442,13 @@ namespace Hospital_ISA
             else
                 return null;
         }
-        public void AddDoctorRoom(int DSSN, int RID)
+        public int AddDoctorRoom(int DSSN, int RID)
         {
             string storedProcedure = StoredProcedures.AddDoctorRoom;
             Dictionary<string, object> parameters = new Dictionary<string, object>();
             parameters.Add("@DSSN", DSSN);
             parameters.Add("@RID", RID);
-            if (dbMan.ExecuteNonQuery(storedProcedure, parameters) == 0)
-            {
-                    // return error 
-                    // messageBox
-            }
+            return dbMan.ExecuteNonQuery(storedProcedure, parameters);   
         }
         /* @Dssn int,
 	@Fname varchar(50),
@@ -505,14 +501,15 @@ namespace Hospital_ISA
             Parameters.Add("@Dno", Dno);
             return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
         }
-        public int AddDoctorClinic(int Dssn,int CID,string StartTime)
+        public int AddDoctorClinic(int Dssn,int CID,string StartTime,string date)
         {
-            String StoredProcedureName = StoredProcedures.AddNurseClinic;
+            String StoredProcedureName = StoredProcedures.AddDoctorClinic;
             Dictionary<string, object> Parameters = new Dictionary<string, object>();
             Parameters.Add("@Dssn", Dssn);
             StartTime = new DateTime(1, 1, 1, Convert.ToInt32(StartTime.Substring(0, 2)), 0, 0).ToString("HH:mm:ss");
             Parameters.Add("@StartTime", StartTime);
             Parameters.Add("@CID", CID);
+            Parameters.Add("@Date_time", date);
             return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
         }
         public DataTable selectDoctor(int Dssn)
@@ -574,16 +571,19 @@ namespace Hospital_ISA
         }
         
  
-              public int removeDoctorClinic(int Nssn, int CID,string shift_start)
+              public int removeDoctorClinic(int Dssn, int CID,string shift_start,string date)
  
         {
             String StoredProcedureName = StoredProcedures.removeDoctorClinic;
             Dictionary<string, object> Parameters = new Dictionary<string, object>();
-            Parameters.Add("@DSSN", Nssn);
+            Parameters.Add("@DSSN", Dssn);
             Parameters.Add("@CID", CID);
+            shift_start = new DateTime(1, 1, 1, Convert.ToInt32(shift_start.Substring(0, 2)), 0, 0).ToString("HH:mm:ss");
             Parameters.Add("@Shift_start", shift_start);
+            Parameters.Add("@date_time", date);
             return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
         }
+        
         public int removeDoctorRoom(int Nssn, int RID)
         {
             String StoredProcedureName = StoredProcedures.removeDoctorRoom;
@@ -624,7 +624,16 @@ namespace Hospital_ISA
             return dbMan.ExecuteScalar(StoredProcedureName, Parameters);
         }
         
-       public object insertPatient(int pssn,string fname, string lname ,string phone,string pass)
+        public DataTable getDocClinicsAtDate(int Dssn,string date)
+        {
+            String StoredProcedureName = StoredProcedures.selectPatient;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@DSSN", Dssn);
+            Parameters.Add("@Date_time", date);
+            return dbMan.ExecuteReader(StoredProcedureName, Parameters);
+        }
+
+        public object insertPatient(int pssn,string fname, string lname ,string phone,string pass)
         {
             String StoredProcedureName = StoredProcedures.insertPatient;
  

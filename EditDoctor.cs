@@ -24,6 +24,25 @@ namespace Hospital_ISA
             InitializeComponent();
             c = new Controller();
             this.Dssn = Dssn;
+            DateTime today = DateTime.Today;
+            comboBox1.Items.Add
+                      (today.ToString("yyyy-MM-dd"));
+
+            comboBox2.Items.Add
+                 (today.ToString("yyyy-MM-dd"));
+            for (int i = 0; i < 6; i++)
+            {
+                today = today.AddDays(1);
+                comboBox1.Items.Add
+                      (today.ToString("yyyy-MM-dd"));
+
+                comboBox2.Items.Add
+                     (today.ToString("yyyy-MM-dd"));
+
+            }
+            comboBox1.SelectedIndex = 0;
+            comboBox2.SelectedIndex = 0;
+
             // initialize the GUI with the old data of the nurse
             DocNewSSN.Text = Dssn.ToString();
             dt = c.selectDoctor(this.Dssn);
@@ -46,7 +65,7 @@ namespace Hospital_ISA
             else {
                 DocShiftCombo.SelectedIndex = 2;
             }
-            DocClinicShiftsGrid.DataSource = c.getDoctorClinic(Dssn);
+            DocClinicShiftsGrid.DataSource = c.getDocClinicsAtDate(Dssn, comboBox2.SelectedItem.ToString());
 
             DocDepCombo.DataSource = c.getMedicineDeps();
             DocDepCombo.DisplayMember = "Dname";
@@ -70,7 +89,8 @@ namespace Hospital_ISA
 
             DocAvailableClinicShiftsCombo.DataSource = c.DoctorAvailableClinicShifts(Dssn);
             DocAvailableClinicShiftsCombo.DisplayMember = "StartTime";
-         
+            DocAvailableClinicShiftsCombo.SelectedIndex = 0;
+
 
 
 
@@ -101,7 +121,7 @@ namespace Hospital_ISA
             try
             {
                 if (!(DocSalary.Text == "" || DocFName.Text == "" || DocLName.Text == ""
-                    || DocAge.Text == "" || DocPhone.Text == "" ))
+                    || DocAge.Text == "" || DocPhone.Text == ""))
                 {
                     int r = c.updateDoc(Convert.ToInt32(DocNewSSN.Text.ToString()), DocFName.Text.ToString(),
                         DocLName.Text.ToString(), DocPhone.Text.ToString(), Convert.ToInt32(DocAge.Text.ToString()),
@@ -110,24 +130,38 @@ namespace Hospital_ISA
                         DocShiftCombo.Text, Convert.ToInt32(DocDepCombo.SelectedValue.ToString()));
                     if (r > 0)
                     {
-                       
                         // assign clinic to the nurse
-                        c.AddDoctorClinic(Convert.ToInt32(DocNewSSN.Text), Convert.ToInt32(DocClinicCombo.SelectedValue.ToString()),
-                            DocAvailableClinicShiftsCombo.SelectedItem.ToString());
+                        if (c.AddDoctorClinic(Dssn,Convert.ToInt32(DocClinicCombo.SelectedValue.ToString()),DocAvailableClinicShiftsCombo.Text.ToString()
+                            ,comboBox1.SelectedItem.ToString())==0)
+                        {
+                            MessageBox.Show("doctor updated , fialed to add clinics");
+                            return;
+                        }
                         while (rooms.Count > 0)
                         {
-                            c.AddDoctorRoom(Convert.ToInt32(DocNewSSN.Text.ToString()), Convert.ToInt32(rooms.Dequeue()));
+                            if (c.AddDoctorRoom(Convert.ToInt32(DocNewSSN.Text.ToString()), Convert.ToInt32(rooms.Dequeue())) == 0)
+                            {
+                                MessageBox.Show("doctor and clinic updated , failed to add rooms. !");
+                                return;
+                            }
                         }
                     }
                     else
+                    {
                         MessageBox.Show("Please Enter Valid Values");
+                        return;
+                    }
                 }
                 else
+                {
                     MessageBox.Show("Please Enter Valid Values");
+                    return;
+                }
             }
             catch
             {
                 MessageBox.Show("Please Enter Valid Values");
+                return; 
             }
             MessageBox.Show("New data has been saved successfully");
         }
@@ -173,22 +207,21 @@ namespace Hospital_ISA
 #pragma warning restore IDE1006 // Naming Styles
         {
             // needs to get the selected 
-            int r = c.removeDoctorClinic(Dssn, SelectedremoveClinic,SelectedRemoveClinicSHift);    //remove room from the nurse
+            int r = c.removeDoctorClinic(Dssn, SelectedremoveClinic,SelectedRemoveClinicSHift,comboBox2.SelectedItem.ToString());    //remove room from the nurse
             // if done successfully refresh the GridViews and disable the buttons
             if (r > 0)
             {
-                DocClinicShiftsGrid.DataSource = c.getDoctorClinic(Dssn);
-                DocClinicCombo.DataSource = c.getDoctorClinic(Dssn);
+                DocClinicShiftsGrid.DataSource = c.getDocClinicsAtDate(Dssn,comboBox2.SelectedItem.ToString());
+                DocClinicCombo.DataSource = c.getDocClinicsAtDate(Dssn, comboBox2.SelectedItem.ToString());
                 DocClinicCombo.DisplayMember = "CID";
                 DocClinicCombo.ValueMember = "CID";
-
                 DocClinicCombo.Refresh();
                 DocClinicShiftsGrid.Refresh();
                 AssignButton.Enabled = false;
             }
             else
                 MessageBox.Show("Remove Failed");
-            button1.Enabled = false; 
+           button1.Enabled = false; 
         }
 
         private void DocClinicShiftsGrid_CellMouseClick(object sender, DataGridViewCellEventArgs e)
@@ -211,7 +244,7 @@ namespace Hospital_ISA
             // if done successfully refresh the GridViews and disable the buttons
             if (r > 0)
             {
-                DocCurrRoomsGrid.DataSource = c.getDoctorClinic(Dssn);
+                DocCurrRoomsGrid.DataSource = c.getDoctorRooms(Dssn);
                 DocAvailableRoomsCombo.DataSource = c.DoctorAvailableRooms(Dssn);
                 DocAvailableRoomsCombo.DisplayMember = "RID";
                 DocAvailableRoomsCombo.ValueMember = "RID";
@@ -220,7 +253,12 @@ namespace Hospital_ISA
                 AssignButton.Enabled = false;
             }
             else
+            {
                 MessageBox.Show("Remove Failed");
+                removeButton.Enabled = false;
+
+            }
+                MessageBox.Show("room removed");
             removeButton.Enabled = false; 
         }
 
@@ -243,6 +281,20 @@ namespace Hospital_ISA
         private void DocDepCombo_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBox1.SelectedIndex == -1) return;
+            comboBox1.Refresh();
+            DataTable docs = c.getDocClinicsAtDate(Dssn,comboBox2.SelectedItem.ToString());
+            DocClinicShiftsGrid.DataSource = docs;
+            DocClinicShiftsGrid.Refresh();
+            if (docs == null)
+            {
+                comboBox1.SelectedIndex = 0;
+            }
+          
         }
     }
 }
