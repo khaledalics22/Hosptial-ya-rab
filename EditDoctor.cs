@@ -89,11 +89,11 @@ namespace Hospital_ISA
                 if (!(DocSalary.Text == "" || DocFName.Text == "" || DocLName.Text == ""
                     || DocAge.Text == "" || DocPhone.Text == "" ))
                 {
-                    int r = c.AddDoctor(Convert.ToInt32(DocNewSSN.Text.ToString()), DocFName.Text.ToString(),
+                    int r = c.updateDoc(Convert.ToInt32(DocNewSSN.Text.ToString()), DocFName.Text.ToString(),
                         DocLName.Text.ToString(), DocPhone.Text.ToString(), Convert.ToInt32(DocAge.Text.ToString()),
                         Convert.ToInt32(DocSalary.Text.ToString()), DocCity.Text.ToString(), DocStreet.Text.ToString(),
                         DocHouseNum.Text.ToString(),
-                        DocShiftCombo.Text, Convert.ToInt32(DocDepCombo.SelectedValue.ToString()),null);
+                        DocShiftCombo.Text, Convert.ToInt32(DocDepCombo.SelectedValue.ToString()));
                     if (r > 0)
                     {
                         // assign clinic to the nurse

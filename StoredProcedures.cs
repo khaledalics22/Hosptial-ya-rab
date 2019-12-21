@@ -73,6 +73,7 @@ namespace Hospital_ISA
         public static string AddNewAppointment="AddNewAppointment";
         public static string selectDocByName="selectDocByName";
         public static string changePass="changePass";
+        public static string updateDoc = "updateDoc";
 
         public static string SelectDoctorbyDep = "SelectDoctorbyDep";
         public static string GetAllDep = "GetAllDep";

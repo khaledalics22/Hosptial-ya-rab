@@ -468,6 +468,26 @@ namespace Hospital_ISA
             Parameters.Add("@PASS", pass);
             return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
         }
+        
+        public int updateDoc(int Dssn, string Fname, string Lname, string Phone, int Age, int Salary, string city,
+            string street, string houseNum, string Shift_From, int Dno)
+        {
+            String StoredProcedureName = StoredProcedures.AddDoctor;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@Dssn", Dssn);
+            Parameters.Add("@Fname", Fname);
+            Parameters.Add("@Lname", Lname);
+            Parameters.Add("@Phone", Phone);
+            Parameters.Add("@Age", Age);
+            Parameters.Add("@Salary", Salary);
+            Parameters.Add("@City", city);
+            Parameters.Add("@street", street);
+            Parameters.Add("@houseNum", houseNum);
+            Shift_From = new DateTime(1, 1, 1, Convert.ToInt32(Shift_From.Substring(0, 2)), 0, 0).ToString("HH:mm:ss");
+            Parameters.Add("@Shift_From", Shift_From);
+            Parameters.Add("@Dno", Dno);
+            return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
+        }
         public int AddDoctorClinic(int Dssn,int CID,string StartTime)
         {
             String StoredProcedureName = StoredProcedures.AddNurseClinic;
