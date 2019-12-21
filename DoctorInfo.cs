@@ -13,8 +13,9 @@ namespace Hospital_ISA
     public partial class DoctorInfo : Form
     {
         private int Dssn;
-        private string shiftAppoints; 
-
+        private string shiftAppoints;
+        private string shift_from;
+        private string shift_to;
         Controller c;
         public DoctorInfo(int Dssn)
         {
@@ -30,16 +31,25 @@ namespace Hospital_ISA
                 string Lname = doctor[2].ToString();
                 string phone = doctor[3].ToString();
                 string age = doctor[4].ToString();
-                string shift_from = doctor[9].ToString();
-                string shift_to = doctor[10].ToString();
+                 shift_from = doctor[9].ToString();
+                 shift_to = doctor[10].ToString();
                 string department = c.getDocDepartment(Dssn).Rows[0][0].ToString();
+                DateTime today = DateTime.Today;
+                DataTable d = new DataTable(); 
+                for (int i = 0; i<7; i++)
+                {
+                  today = today.AddDays(i);
+                  comboBox1.Items.Add
+                        (today.ToString("yyyy-MM-dd"));
 
+                }
+                comboBox1.SelectedIndex = 0;
                 DocAge.Text = age;
                 DocDep.Text = department;
                 DrName.Text = Fname + " " + Lname;
                 DocPhone.Text = phone;
                 DocShiftFromTo.Text = "From: " + shift_from + " To: " + shift_to;
-                dataGridView1.DataSource = c.getavailableAppointment(Dssn);
+                dataGridView1.DataSource = c.availableappointments(shift_from,shift_to,comboBox1.SelectedItem.ToString(), Dssn);
                 dataGridView1.Refresh();
             }
             
@@ -55,8 +65,8 @@ namespace Hospital_ISA
 
         private void button2_Click(object sender, EventArgs e)
         {
-            button2.Enabled= false; 
-            Book b = new Book(Dssn,shiftAppoints);
+            button2.Enabled= false;
+            Book b = new Book(Dssn, comboBox1.SelectedItem.ToString(), shiftAppoints);
             b.Show();
             Close();
         }
@@ -81,6 +91,12 @@ namespace Hospital_ISA
                 shiftAppoints =selRow.Cells[0].Value.ToString();
                 button2.Enabled = true;
             }
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = c.availableappointments(shift_from, shift_to, comboBox1.SelectedItem.ToString(), Dssn);
+            dataGridView1.Refresh();
         }
     }
 }

@@ -14,13 +14,16 @@ namespace Hospital_ISA
     {
         private string date; 
         private int DSSN ;
-        Controller c; 
-        public Book(int DSSN, string date)
+        Controller c;
+        private string shift_from;
+        public Book(int DSSN, string date, string f)
         {
             InitializeComponent();
             c = new Controller();
             this.date = date;
-            this.DSSN = DSSN; 
+            this.DSSN = DSSN;
+            shift_from = f;
+         
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -47,7 +50,14 @@ namespace Hospital_ISA
                        patiendLName.Text, PatientPhone.Text, Pass.Text);
 
                 }
-                c.AddNewAppointment(DSSN, Convert.ToInt32(patientSSn.Text.ToString()), date);
+                if (c.AddNewAppointment(DSSN, Convert.ToInt32(patientSSn.Text.ToString()), date, shift_from) == 0)
+                {
+                    MessageBox.Show("failed");
+                }
+                else
+                {
+                    MessageBox.Show("Done");
+                }
 
             }
             else

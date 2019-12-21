@@ -18,7 +18,7 @@ namespace Hospital_ISA
         {
             InitializeComponent();
             c = new Controller();
-            comboBox1.DataSource =c.getAllDepartments();
+            comboBox1.DataSource =c.getMedicineDeps();
             comboBox1.DisplayMember = "Dname";
             comboBox1.ValueMember = "Dnum";
             comboBox1.Refresh();
@@ -81,7 +81,7 @@ namespace Hospital_ISA
                 MessageBox.Show("sorry there are no available doctors in this department");
                 comboBox1.SelectedIndex = 0; 
             }
-            button1.Enabled = false;
+            button2.Enabled = false;
 
         }
 

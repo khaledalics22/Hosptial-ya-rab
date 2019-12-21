@@ -19,7 +19,7 @@ namespace Hospital_ISA
             InitializeComponent();
             c = new Controller();
             // set list of departments
-            depCombo.DataSource = c.getAllDepartments();
+            depCombo.DataSource = c.getMedicineDeps();
             depCombo.DisplayMember = "Dname";
             depCombo.ValueMember = "Dnum";
             depCombo.Refresh();
