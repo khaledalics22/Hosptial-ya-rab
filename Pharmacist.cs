@@ -169,5 +169,10 @@ namespace Hospital_ISA
             cp.Show();
             Close();
         }
+
+        private void Pharmacist_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

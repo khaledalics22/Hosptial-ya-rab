@@ -180,9 +180,9 @@ namespace Hospital_ISA
         }
 
         // return all the data for an employee
-#pragma warning disable IDE1006 // Naming Styles
+ 
         public DataTable selectEmployee(int ESSN)
-#pragma warning restore IDE1006 // Naming Styles
+ 
         {
             String StoredProcedureName = StoredProcedures.selectEmployee;
  
@@ -227,9 +227,9 @@ namespace Hospital_ISA
         }
 
         // return all the data of the nurse
-#pragma warning disable IDE1006 // Naming Styles
+ 
         public DataTable selectNurse(int Nssn)
-#pragma warning restore IDE1006 // Naming Styles
+ 
         {
             String StoredProcedureName = StoredProcedures.selectNurse;
  
@@ -240,9 +240,9 @@ namespace Hospital_ISA
         }
 
         // return the nurse rooms
-#pragma warning disable IDE1006 // Naming Styles
+ 
         public DataTable getNurseRooms(int Nssn)
-#pragma warning restore IDE1006 // Naming Styles
+ 
         {
             String StoredProcedureName = StoredProcedures.getNurseRooms;
  
@@ -299,9 +299,9 @@ namespace Hospital_ISA
         }
 
         // return the Ids of all clinics
-#pragma warning disable IDE1006 // Naming Styles
+ 
         public DataTable getAllClinicsId()
-#pragma warning restore IDE1006 // Naming Styles
+ 
         {
             String StoredProcedureName = StoredProcedures.getAllClinicsId;
             Dictionary<string, object> Parameters = new Dictionary<string, object>();
@@ -556,9 +556,9 @@ namespace Hospital_ISA
             return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
         }
         
-#pragma warning disable IDE1006 // Naming Styles
+ 
               public int removeDoctorClinic(int Nssn, int CID,string shift_start)
-#pragma warning restore IDE1006 // Naming Styles
+ 
         {
             String StoredProcedureName = StoredProcedures.removeDoctorClinic;
             Dictionary<string, object> Parameters = new Dictionary<string, object>();
@@ -633,9 +633,9 @@ namespace Hospital_ISA
             Parameters.Add("@Lname", lname);
             return dbMan.ExecuteReader(StoredProcedureName, Parameters);
         }
-#pragma warning disable IDE1006 // Naming Styles
+ 
         public int changePass(int ssn, string oldpass ,string newPass,string type)
-#pragma warning restore IDE1006 // Naming Styles
+ 
         {
             String StoredProcedureName = StoredProcedures.changePass;
  
@@ -654,30 +654,25 @@ namespace Hospital_ISA
             return dbMan.ExecuteReader(StoredProcedureName, null);
         }
         //select week dates
-#pragma warning disable IDE1006 // Naming Styles
         public DataTable getweekdates()
-#pragma warning restore IDE1006 // Naming Styles
         {
             String StoredProcedureName = StoredProcedures.Getdates;
             return dbMan.ExecuteReader(StoredProcedureName, null);
         }
         //get doctor information
-#pragma warning disable IDE1006 // Naming Styles
-        public DataTable getdocinfo(string s1, string s2)
-#pragma warning restore IDE1006 // Naming Styles
+        public DataTable getdocinfo(int s)
         {
             String StoredProcedureName = StoredProcedures.getdoctor;
  
             Dictionary<string, object> Parameters = new Dictionary<string, object>();
  
-            Parameters.Add("@fname", s1);
-            Parameters.Add("@lname", s2);
+            Parameters.Add("@dssn", s);
             return dbMan.ExecuteReader(StoredProcedureName, Parameters);
         }
         //get available appointments for specific doctor in specific date
-#pragma warning disable IDE1006 // Naming Styles
+ 
         public DataTable aviapps(string s1, string s2, string s3, int i)
-#pragma warning restore IDE1006 // Naming Styles
+ 
         {
             String StoredProcedureName = StoredProcedures.getdocapps;
  
@@ -690,9 +685,9 @@ namespace Hospital_ISA
             return dbMan.ExecuteReader(StoredProcedureName, Parameters);
         }
         //select all appointments with specific date
-#pragma warning disable IDE1006 // Naming Styles
+ 
         public DataTable selectappointmensbydate(string s)
-#pragma warning restore IDE1006 // Naming Styles
+ 
         {
             String StoredProcedureName = StoredProcedures.getapp;
  
@@ -702,9 +697,9 @@ namespace Hospital_ISA
             return dbMan.ExecuteReader(StoredProcedureName, Parameters);
         }
         //get available rooms in specific period
-#pragma warning disable IDE1006 // Naming Styles
+ 
         public DataTable getavailablerooms(string s, string s2)
-#pragma warning restore IDE1006 // Naming Styles
+ 
         {
             String StoredProcedureName = StoredProcedures.getavailablerooms;
  

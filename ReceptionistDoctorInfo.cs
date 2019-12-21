@@ -15,12 +15,13 @@ namespace Hospital_ISA
     {
         string time="-1";
         int dssn;
-        
-        Controller contobj = new Controller();
-        public ReceptionistDoctorInfo(string fname,string lname)
+        Controller contobj;
+
+        public ReceptionistDoctorInfo(string fname,string lname,int d)
         {
+            contobj = new Controller();
             InitializeComponent();
-            DataTable dt = contobj.getdocinfo(fname, lname);
+            DataTable dt = contobj.getdocinfo(d);
             textBox2.Text = dt.Rows[0][0].ToString();//phone
             textBox3.Text = dt.Rows[0][1].ToString();//specialization
             object ts= dt.Rows[0][2];
@@ -85,7 +86,13 @@ namespace Hospital_ISA
                 DataTable dt3 = contobj.selectdocshifts(dssn);
                 object ts = dt3.Rows[0][0];
                 object ts2 = dt3.Rows[0][1];
-                DataTable dt2 = contobj.aviapps(ts.ToString(), ts2.ToString(), comboBox1.Text, dssn);
+                string s = ts2.ToString();
+                if (s == "00:00:00") s = "23:59:00";
+                {
+                    DateTime t = DateTime.Parse(s, System.Globalization.CultureInfo.CurrentCulture);
+                    s = t.ToString("HH:mm:ss tt");
+                }
+                DataTable dt2 = contobj.aviapps(ts.ToString(), s.Substring(0,8), comboBox1.Text, dssn);
                 dataGridView1.DataSource = dt2;
                 dataGridView1.Refresh();
             }
@@ -93,7 +100,7 @@ namespace Hospital_ISA
 
         private void button2_Click(object sender, EventArgs e)
         {
-                  //      contobj.AddAppointment(dssn,pssn,comboBox1.Text,)
+                
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -115,8 +122,8 @@ namespace Hospital_ISA
                 string t = date.ToString("HH:mm:ss tt");
                 date = date + TimeSpan.Parse("00:30:00");
                 string t2 = date.ToString("HH:mm:ss tt");
-                contobj.AddAppointment(dssn, Convert.ToInt32(textBox6.Text), comboBox1.Text, t.Substring(0, 8), t2.Substring(0, 8));
-                Close();
+                if (contobj.AddAppointment(dssn, Convert.ToInt32(textBox6.Text), comboBox1.Text, t.Substring(0, 8), t2.Substring(0, 8)) == 0) MessageBox.Show("Please,enter valid values");
+                else { MessageBox.Show("Appointment was booked"); Close(); }
             }
         }
         private void textBox6_TextChanged(object sender, EventArgs e)

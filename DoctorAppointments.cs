@@ -44,9 +44,12 @@ namespace Hospital_ISA
 
         private void button2_Click(object sender, EventArgs e)
         {
-            DoctorPatientInfo DA = new DoctorPatientInfo(pssn,fname,lname,age,date,from,to);
-            DA.Show();
-
+            if (pssn == -1) MessageBox.Show("Please,choose appointment");
+            else
+            {
+                DoctorPatientInfo DA = new DoctorPatientInfo(pssn, fname, lname, age, date, from, to);
+                DA.Show();
+            }
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)

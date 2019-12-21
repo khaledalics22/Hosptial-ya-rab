@@ -48,11 +48,14 @@ namespace Hospital_ISA
 
         private void button2_Click(object sender, EventArgs e)
         {
-            contobj.Insertdiagnos(p, textBox7.Text);
-            contobj.InsertPateintMedicine(p, d, textBox5.Text, textBox6.Text, textBox8.Text);
-            ReceptionistHome RH = new ReceptionistHome();
-            RH.Show();
-            Close();
+            if (textBox7.Text == "" || textBox8.Text == "") MessageBox.Show("Please,insert data for diagnose and drugs");
+            else
+            {
+                contobj.Insertdiagnos(p, textBox7.Text);
+                contobj.InsertPateintMedicine(p, d, textBox5.Text, textBox6.Text, textBox8.Text);
+                MessageBox.Show("data is inserted");
+                Close();
+            }
         }
 
         private void textBox8_TextChanged(object sender, EventArgs e)

@@ -13,9 +13,10 @@ namespace Hospital_ISA
 {
     public partial class RecepionistBook : Form
     {
+        string fname = "-1";
+        string lname = "-1";
         Controller contobj = new Controller();
-        string Fname = "-1";
-        string Lname = "-1";
+        int dssn = -1;
         public RecepionistBook()
         {
             InitializeComponent();
@@ -37,18 +38,18 @@ namespace Hospital_ISA
             if (indexi >= 0)               //check if this row in table
             {
                 DataGridViewRow selRow = dataGridView1.Rows[indexi];    //store row
-                Fname = selRow.Cells[0].Value.ToString();    //get cel[0] >> which is location of Fname
-                Lname = selRow.Cells[1].Value.ToString();    //get cel[1] >> which is location of Lname
+                dssn = Convert.ToInt32(selRow.Cells[0].Value.ToString());    //get cel[0] >> which is location of Dssn
+                fname = selRow.Cells[1].Value.ToString();
+                lname = selRow.Cells[2].Value.ToString();
             }
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (Fname != "-1" && Lname != "-1")
+            if (dssn!=-1)
             {
-                ReceptionistDoctorInfo RDI = new ReceptionistDoctorInfo(Fname, Lname);
+                ReceptionistDoctorInfo RDI = new ReceptionistDoctorInfo(fname, lname,dssn);
                 RDI.Show();
-                Close();
             }
         }
 

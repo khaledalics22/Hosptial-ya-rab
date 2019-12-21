@@ -13,7 +13,7 @@ namespace Hospital_ISA
 {
     public partial class AddPatient : Form
     {
-        /*int age = -1;*/
+        int age = -1;
         Controller contobj = new Controller();
         public AddPatient()
         {
@@ -32,9 +32,10 @@ namespace Hospital_ISA
                 MessageBox.Show("please,enter valid values");
             else
             {
-                contobj.AddPateint(Convert.ToInt32(textBox9.Text), textBox1.Text, textBox10.Text
-                    , textBox4.Text, Convert.ToInt32(textBox2.Text), textBox5.Text, textBox6.Text, textBox11.Text);
-                Close();
+                if (textBox2.Text != "") age = Convert.ToInt32(textBox2.Text);
+                if (contobj.AddPateint(Convert.ToInt32(textBox9.Text), textBox1.Text, textBox10.Text
+                    , textBox4.Text, age, textBox5.Text, textBox6.Text, textBox11.Text) == 0) MessageBox.Show("Please,enter valid data");
+                else { MessageBox.Show("Pateint inserted successfully"); Close(); }
             }
         }
 
