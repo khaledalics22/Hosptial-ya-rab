@@ -8,7 +8,7 @@ namespace Hospital_ISA
     public class StoredProcedures
     {
         // stored procedures goes here 
-        
+        public static string removeDocClinic1="removeDocClinic1";
         public static string GetDocs = "GetAllDocs";
         public static string GetNurses = "GetAllNurse";
         public static string GetEmps = "GetAllEmp";

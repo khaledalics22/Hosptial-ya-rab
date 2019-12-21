@@ -130,6 +130,10 @@ namespace Hospital_ISA
                         DocShiftCombo.Text, Convert.ToInt32(DocDepCombo.SelectedValue.ToString()));
                     if (r > 0)
                     {
+                        if (c.getDoctorClinic(Dssn) != null)
+                        {
+                           c.removeDocClinic1(Dssn);
+                        }
                         // assign clinic to the nurse
                         if (c.AddDoctorClinic(Dssn,Convert.ToInt32(DocClinicCombo.SelectedValue.ToString()),DocAvailableClinicShiftsCombo.Text.ToString()
                             ,comboBox1.SelectedItem.ToString())==0)

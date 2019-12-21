@@ -569,9 +569,17 @@ namespace Hospital_ISA
             Parameters.Add("@Dno", Dno);
             return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
         }
+
         
- 
-              public int removeDoctorClinic(int Dssn, int CID,string shift_start,string date)
+             public int removeDocClinic1(int Dssn)
+
+        {
+            String StoredProcedureName = StoredProcedures.removeDocClinic1;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@DSSN", Dssn);
+              return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
+        }
+        public int removeDoctorClinic(int Dssn, int CID,string shift_start,string date)
  
         {
             String StoredProcedureName = StoredProcedures.removeDoctorClinic;
