@@ -33,7 +33,7 @@ namespace Hospital_ISA
             SalaryTextBox.Text = dt.Rows[0]["Salary"].ToString();
             ShiftComboBox.SelectedItem = dt.Rows[0]["Shift_From"].ToString();
             ClinicGridView.DataSource = controllerObj.getAllClinicsId();
-            int CID = (int)controllerObj.getNurseClinic(Nssn);
+            int CID = (int)controllerObj.GetNurseClinic(Nssn);
             
             // just to initially select the old value of the clinic from the gridView
             ClinicGridView.ClearSelection();

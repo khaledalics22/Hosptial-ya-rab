@@ -50,9 +50,10 @@
             // 
             this.splitter1.BackColor = System.Drawing.Color.Blue;
             this.splitter1.Location = new System.Drawing.Point(0, 0);
-            this.splitter1.MaximumSize = new System.Drawing.Size(1024, 70);
+            this.splitter1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.splitter1.MaximumSize = new System.Drawing.Size(768, 57);
             this.splitter1.Name = "splitter1";
-            this.splitter1.Size = new System.Drawing.Size(802, 70);
+            this.splitter1.Size = new System.Drawing.Size(602, 57);
             this.splitter1.TabIndex = 2;
             this.splitter1.TabStop = false;
             // 
@@ -62,9 +63,10 @@
             this.label1.BackColor = System.Drawing.Color.Blue;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(301, 9);
+            this.label1.Location = new System.Drawing.Point(226, 7);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(204, 39);
+            this.label1.Size = new System.Drawing.Size(168, 31);
             this.label1.TabIndex = 9;
             this.label1.Text = "Doctor Info.";
             // 
@@ -74,9 +76,10 @@
             this.DrName.BackColor = System.Drawing.Color.White;
             this.DrName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DrName.ForeColor = System.Drawing.Color.Blue;
-            this.DrName.Location = new System.Drawing.Point(13, 92);
+            this.DrName.Location = new System.Drawing.Point(10, 75);
+            this.DrName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.DrName.Name = "DrName";
-            this.DrName.Size = new System.Drawing.Size(93, 29);
+            this.DrName.Size = new System.Drawing.Size(75, 25);
             this.DrName.TabIndex = 10;
             this.DrName.Text = "Name:";
             // 
@@ -86,9 +89,10 @@
             this.DocPhone.BackColor = System.Drawing.Color.White;
             this.DocPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DocPhone.ForeColor = System.Drawing.Color.Blue;
-            this.DocPhone.Location = new System.Drawing.Point(63, 194);
+            this.DocPhone.Location = new System.Drawing.Point(47, 158);
+            this.DocPhone.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.DocPhone.Name = "DocPhone";
-            this.DocPhone.Size = new System.Drawing.Size(36, 20);
+            this.DocPhone.Size = new System.Drawing.Size(32, 17);
             this.DocPhone.TabIndex = 11;
             this.DocPhone.Text = "age";
             // 
@@ -98,9 +102,10 @@
             this.DocDep.BackColor = System.Drawing.Color.White;
             this.DocDep.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DocDep.ForeColor = System.Drawing.Color.Blue;
-            this.DocDep.Location = new System.Drawing.Point(133, 257);
+            this.DocDep.Location = new System.Drawing.Point(100, 209);
+            this.DocDep.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.DocDep.Name = "DocDep";
-            this.DocDep.Size = new System.Drawing.Size(113, 20);
+            this.DocDep.Size = new System.Drawing.Size(95, 17);
             this.DocDep.TabIndex = 12;
             this.DocDep.Text = "Specialization";
             // 
@@ -110,9 +115,10 @@
             this.label4.BackColor = System.Drawing.Color.White;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Blue;
-            this.label4.Location = new System.Drawing.Point(14, 323);
+            this.label4.Location = new System.Drawing.Point(10, 262);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(48, 20);
+            this.label4.Size = new System.Drawing.Size(40, 17);
             this.label4.TabIndex = 13;
             this.label4.Text = "Shift:";
             // 
@@ -122,9 +128,10 @@
             this.DocShiftFromTo.BackColor = System.Drawing.Color.White;
             this.DocShiftFromTo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DocShiftFromTo.ForeColor = System.Drawing.Color.Blue;
-            this.DocShiftFromTo.Location = new System.Drawing.Point(106, 323);
+            this.DocShiftFromTo.Location = new System.Drawing.Point(80, 262);
+            this.DocShiftFromTo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.DocShiftFromTo.Name = "DocShiftFromTo";
-            this.DocShiftFromTo.Size = new System.Drawing.Size(151, 20);
+            this.DocShiftFromTo.Size = new System.Drawing.Size(126, 17);
             this.DocShiftFromTo.TabIndex = 14;
             this.DocShiftFromTo.Text = "From 9 am to 2 pm";
             // 
@@ -133,20 +140,22 @@
             this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.ForeColor = System.Drawing.Color.Blue;
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(657, 98);
+            this.comboBox1.Location = new System.Drawing.Point(493, 80);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 26);
+            this.comboBox1.Size = new System.Drawing.Size(92, 23);
             this.comboBox1.TabIndex = 15;
             this.comboBox1.Text = "Date";
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(393, 147);
+            this.dataGridView1.Location = new System.Drawing.Point(295, 119);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(385, 240);
+            this.dataGridView1.Size = new System.Drawing.Size(289, 195);
             this.dataGridView1.TabIndex = 16;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellMouseClick);
             // 
@@ -154,9 +163,10 @@
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.Blue;
-            this.button2.Location = new System.Drawing.Point(649, 421);
+            this.button2.Location = new System.Drawing.Point(487, 342);
+            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(129, 34);
+            this.button2.Size = new System.Drawing.Size(97, 28);
             this.button2.TabIndex = 19;
             this.button2.Text = "Book";
             this.button2.UseVisualStyleBackColor = true;
@@ -165,9 +175,10 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Hospital_ISA.Properties.Resources.arrow;
-            this.pictureBox1.Location = new System.Drawing.Point(16, 9);
+            this.pictureBox1.Location = new System.Drawing.Point(12, 7);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(57, 50);
+            this.pictureBox1.Size = new System.Drawing.Size(43, 41);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
@@ -179,9 +190,10 @@
             this.DocAge.BackColor = System.Drawing.Color.White;
             this.DocAge.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DocAge.ForeColor = System.Drawing.Color.Blue;
-            this.DocAge.Location = new System.Drawing.Point(14, 147);
+            this.DocAge.Location = new System.Drawing.Point(10, 119);
+            this.DocAge.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.DocAge.Name = "DocAge";
-            this.DocAge.Size = new System.Drawing.Size(122, 20);
+            this.DocAge.Size = new System.Drawing.Size(105, 17);
             this.DocAge.TabIndex = 21;
             this.DocAge.Text = "Phone number:";
             // 
@@ -191,9 +203,10 @@
             this.label2.BackColor = System.Drawing.Color.White;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Blue;
-            this.label2.Location = new System.Drawing.Point(14, 194);
+            this.label2.Location = new System.Drawing.Point(10, 158);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(43, 20);
+            this.label2.Size = new System.Drawing.Size(37, 17);
             this.label2.TabIndex = 22;
             this.label2.Text = "Age:";
             // 
@@ -203,18 +216,19 @@
             this.label3.BackColor = System.Drawing.Color.White;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Blue;
-            this.label3.Location = new System.Drawing.Point(14, 257);
+            this.label3.Location = new System.Drawing.Point(10, 209);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(113, 20);
+            this.label3.Size = new System.Drawing.Size(95, 17);
             this.label3.TabIndex = 23;
             this.label3.Text = "Specialization";
             // 
             // DoctorInfo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(800, 491);
+            this.ClientSize = new System.Drawing.Size(600, 399);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.DocAge);
@@ -229,6 +243,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.splitter1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "DoctorInfo";
             this.Text = "DoctorInfo";
             this.Load += new System.EventHandler(this.DoctorInfo_Load);

@@ -73,5 +73,20 @@ namespace Hospital_ISA
         public static string AddNewAppointment="AddNewAppointment";
         public static string selectDocByName="selectDocByName";
         public static string changePass="changePass";
+
+        public static string SelectDoctorbyDep = "SelectDoctorbyDep";
+        public static string GetAllDep = "GetAllDep";
+        public static string Getdates = "getweekdates";
+        public static string getapp = "getappointmentbydate";
+        public static string getdoctor = "getdoctorinfo";
+        public static string getdocapps = "availableappointments";
+        public static string getdocclinicshift = "getdocclinicshift";
+        public static string GetPateintDependents = "GetPateintDependents";
+        public static string AddDiagnose = "AddDiagnose";
+        public static string AddPateintDrag = "AddPateintDrag";
+        public static string AddPateint = "AddPateint";
+        public static string getavailablerooms = "getavailablerooms";
+        public static string AddReservation = "InsertReservation";
+        public static string Book = "insertappointment";
     }
 }

@@ -9,7 +9,7 @@ namespace Hospital_ISA
 {
     public class DBManager
     {
-        static string DB_Connection_String= @"Data Source=DESKTOP-Q5L57ED\SQLEXPRESS;Initial Catalog=Hospital;Integrated Security=True";
+        static string DB_Connection_String= @"Data Source=desktop-eajqu63\sqlexpress;Initial Catalog=Hospital;Integrated Security=True";
         SqlConnection myConnection;
 
     public DBManager()
@@ -31,7 +31,9 @@ namespace Hospital_ISA
         {
             try
             {
+#pragma warning disable IDE0017 // Simplify object initialization
                 SqlCommand myCommand = new SqlCommand(storedProcedureName, myConnection);
+#pragma warning restore IDE0017 // Simplify object initialization
 
                 myCommand.CommandType = CommandType.StoredProcedure;
 
@@ -54,7 +56,9 @@ namespace Hospital_ISA
         {
             try
             {
+#pragma warning disable IDE0017 // Simplify object initialization
                 SqlCommand myCommand = new SqlCommand(storedProcedureName, myConnection);
+#pragma warning restore IDE0017 // Simplify object initialization
 
                 myCommand.CommandType = CommandType.StoredProcedure;
 
@@ -92,7 +96,9 @@ namespace Hospital_ISA
         {
             try
             {
+#pragma warning disable IDE0017 // Simplify object initialization
                 SqlCommand myCommand = new SqlCommand(storedProcedureName, myConnection);
+#pragma warning restore IDE0017 // Simplify object initialization
 
                 myCommand.CommandType = CommandType.StoredProcedure;
 

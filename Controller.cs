@@ -180,10 +180,14 @@ namespace Hospital_ISA
         }
 
         // return all the data for an employee
+#pragma warning disable IDE1006 // Naming Styles
         public DataTable selectEmployee(int ESSN)
+#pragma warning restore IDE1006 // Naming Styles
         {
             String StoredProcedureName = StoredProcedures.selectEmployee;
+ 
             Dictionary<string, object> Parameters = new Dictionary<string, object>();
+ 
             Parameters.Add("@ESSN", ESSN);
             return dbMan.ExecuteReader(StoredProcedureName, Parameters);
         }
@@ -193,7 +197,9 @@ namespace Hospital_ISA
                                 string Phone, string Shift_From, int Dno)
         {
             String StoredProcedureName = StoredProcedures.EditEmployee;
+ 
             Dictionary<string, object> Parameters = new Dictionary<string, object>();
+ 
             Parameters.Add("@ESSN", ESSN);
             Parameters.Add("@Fname", Fname);
             Parameters.Add("@Lname", Lname);
@@ -213,33 +219,45 @@ namespace Hospital_ISA
         public DataTable AvailableNurseRooms(int Nssn)
         {
             String StoredProcedureName = StoredProcedures.AvailableNurseRooms;
+ 
             Dictionary<string, object> Parameters = new Dictionary<string, object>();
+ 
             Parameters.Add("@Nssn", Nssn);
             return dbMan.ExecuteReader(StoredProcedureName, Parameters);
         }
 
         // return all the data of the nurse
+#pragma warning disable IDE1006 // Naming Styles
         public DataTable selectNurse(int Nssn)
+#pragma warning restore IDE1006 // Naming Styles
         {
             String StoredProcedureName = StoredProcedures.selectNurse;
+ 
             Dictionary<string, object> Parameters = new Dictionary<string, object>();
+ 
             Parameters.Add("@Nssn", Nssn);
             return dbMan.ExecuteReader(StoredProcedureName, Parameters);
         }
 
         // return the nurse rooms
+#pragma warning disable IDE1006 // Naming Styles
         public DataTable getNurseRooms(int Nssn)
+#pragma warning restore IDE1006 // Naming Styles
         {
             String StoredProcedureName = StoredProcedures.getNurseRooms;
+ 
             Dictionary<string, object> Parameters = new Dictionary<string, object>();
+ 
             Parameters.Add("@Nssn", Nssn);
             return dbMan.ExecuteReader(StoredProcedureName, Parameters);
         }
         // return the nurse clinic
-        public Object getNurseClinic(int Nssn)
+        public Object GetNurseClinic(int Nssn)
         {
             String StoredProcedureName = StoredProcedures.getNurseClinic;
+ 
             Dictionary<string, object> Parameters = new Dictionary<string, object>();
+ 
             Parameters.Add("@Nssn", Nssn);
             return dbMan.ExecuteScalar(StoredProcedureName, Parameters);
         }
@@ -247,7 +265,9 @@ namespace Hospital_ISA
         public int AddNurseRoom(int Nssn, int RID)
         { 
             String StoredProcedureName = StoredProcedures.AddNurseRoom;
+ 
             Dictionary<string, object> Parameters = new Dictionary<string, object>();
+ 
             Parameters.Add("@Nssn", Nssn);
             Parameters.Add("@RID", RID);
             return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
@@ -256,7 +276,9 @@ namespace Hospital_ISA
         public int RemoveNurseRoom(int Nssn, int RID)
         {
             String StoredProcedureName = StoredProcedures.RemoveNurseRoom;
+ 
             Dictionary<string, object> Parameters = new Dictionary<string, object>();
+ 
             Parameters.Add("@Nssn", Nssn);
             Parameters.Add("@RID", RID);
             return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
@@ -265,7 +287,9 @@ namespace Hospital_ISA
         public DataTable NurseAvailableClinicShifts(int CID, string Shift, int Nssn = -1)
         {
             String StoredProcedureName = StoredProcedures.NurseAvailableClinicShifts;
+ 
             Dictionary<string, object> Parameters = new Dictionary<string, object>();
+ 
             
             Parameters.Add("@Nssn", Nssn == -1 ? Convert.DBNull:Nssn);
             Parameters.Add("@CID", CID);
@@ -275,7 +299,9 @@ namespace Hospital_ISA
         }
 
         // return the Ids of all clinics
+#pragma warning disable IDE1006 // Naming Styles
         public DataTable getAllClinicsId()
+#pragma warning restore IDE1006 // Naming Styles
         {
             String StoredProcedureName = StoredProcedures.getAllClinicsId;
             Dictionary<string, object> Parameters = new Dictionary<string, object>();
@@ -286,7 +312,9 @@ namespace Hospital_ISA
         public int EditNurse(int Nssn, string Fname, string Lname, string Phone, int Age, int Salary, string Shift_From)
         {
             String StoredProcedureName = StoredProcedures.EditNurse;
+ 
             Dictionary<string, object> Parameters = new Dictionary<string, object>();
+ 
             Parameters.Add("@Nssn", Nssn);
             Parameters.Add("@Fname", Fname);
             Parameters.Add("@Lname", Lname);
@@ -301,7 +329,9 @@ namespace Hospital_ISA
         public int AddNurseClinic(int Nssn, string StartTime, int CID)
         {
             String StoredProcedureName = StoredProcedures.AddNurseClinic;
+ 
             Dictionary<string, object> Parameters = new Dictionary<string, object>();
+ 
             Parameters.Add("@Nssn", Nssn);
             StartTime = new DateTime(1, 1, 1, Convert.ToInt32(StartTime.Substring(0, 2)), 0, 0).ToString("HH:mm:ss");
             Parameters.Add("@StartTime", StartTime);
@@ -313,7 +343,9 @@ namespace Hospital_ISA
         public int AddNurse(int Nssn, string Fname, string Lname, string Phone, int Age, int Salary, string Shift_From)
         {
             String StoredProcedureName = StoredProcedures.AddNurse;
+ 
             Dictionary<string, object> Parameters = new Dictionary<string, object>();
+ 
             Parameters.Add("@Nssn", Nssn);
             Parameters.Add("@Fname", Fname);
             Parameters.Add("@Lname", Lname);
@@ -329,7 +361,9 @@ namespace Hospital_ISA
         public DataTable GetPrevAppoint(int pssn)
         {
             String StoredProcedureName = StoredProcedures.GetPrevAppoint;
+ 
             Dictionary<string, object> Parameters = new Dictionary<string, object>();
+ 
             Parameters.Add("@PSSN", pssn);
             return dbMan.ExecuteReader(StoredProcedureName, Parameters);
         }
@@ -337,7 +371,9 @@ namespace Hospital_ISA
         public DataTable GetApointMed(int aID)
         {
             String StoredProcedureName = StoredProcedures.GetAppointMed;
+ 
             Dictionary<string, object> Parameters = new Dictionary<string, object>();
+ 
             Parameters.Add("@AID", aID);
             return dbMan.ExecuteReader(StoredProcedureName, Parameters);
         }
@@ -500,7 +536,9 @@ namespace Hospital_ISA
             return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
         }
         
+#pragma warning disable IDE1006 // Naming Styles
               public int removeDoctorClinic(int Nssn, int CID,string shift_start)
+#pragma warning restore IDE1006 // Naming Styles
         {
             String StoredProcedureName = StoredProcedures.removeDoctorClinic;
             Dictionary<string, object> Parameters = new Dictionary<string, object>();
@@ -549,6 +587,7 @@ namespace Hospital_ISA
        public object insertPatient(int pssn,string fname, string lname ,string phone,string pass)
         {
             String StoredProcedureName = StoredProcedures.insertPatient;
+ 
             Dictionary<string, object> Parameters = new Dictionary<string, object>();
             Parameters.Add("@PSSN", pssn);
             Parameters.Add("@Fname", fname);
@@ -574,16 +613,177 @@ namespace Hospital_ISA
             Parameters.Add("@Lname", lname);
             return dbMan.ExecuteReader(StoredProcedureName, Parameters);
         }
+#pragma warning disable IDE1006 // Naming Styles
         public int changePass(int ssn, string oldpass ,string newPass,string type)
+#pragma warning restore IDE1006 // Naming Styles
         {
             String StoredProcedureName = StoredProcedures.changePass;
+ 
             Dictionary<string, object> Parameters = new Dictionary<string, object>();
+ 
             Parameters.Add("@SSN", ssn);
             Parameters.Add("@oldPass", oldpass);
             Parameters.Add("@newPass", newPass);
             Parameters.Add("@TYPE", type);
             return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
         }
-
+        //select all departments
+        public DataTable SelectDep()
+        {
+            String StoredProcedureName = StoredProcedures.GetAllDep;
+            return dbMan.ExecuteReader(StoredProcedureName, null);
+        }
+        //select week dates
+#pragma warning disable IDE1006 // Naming Styles
+        public DataTable getweekdates()
+#pragma warning restore IDE1006 // Naming Styles
+        {
+            String StoredProcedureName = StoredProcedures.Getdates;
+            return dbMan.ExecuteReader(StoredProcedureName, null);
+        }
+        //get doctor information
+#pragma warning disable IDE1006 // Naming Styles
+        public DataTable getdocinfo(string s1, string s2)
+#pragma warning restore IDE1006 // Naming Styles
+        {
+            String StoredProcedureName = StoredProcedures.getdoctor;
+ 
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+ 
+            Parameters.Add("@fname", s1);
+            Parameters.Add("@lname", s2);
+            return dbMan.ExecuteReader(StoredProcedureName, Parameters);
+        }
+        //get available appointments for specific doctor in specific date
+#pragma warning disable IDE1006 // Naming Styles
+        public DataTable aviapps(string s1, string s2, string s3, int i)
+#pragma warning restore IDE1006 // Naming Styles
+        {
+            String StoredProcedureName = StoredProcedures.getdocapps;
+ 
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+ 
+            Parameters.Add("@from", s1);
+            Parameters.Add("@to", s2);
+            Parameters.Add("@date", s3);
+            Parameters.Add("@ssn", i);
+            return dbMan.ExecuteReader(StoredProcedureName, Parameters);
+        }
+        //select all appointments with specific date
+#pragma warning disable IDE1006 // Naming Styles
+        public DataTable selectappointmensbydate(string s)
+#pragma warning restore IDE1006 // Naming Styles
+        {
+            String StoredProcedureName = StoredProcedures.getapp;
+ 
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+ 
+            Parameters.Add("@date", s);
+            return dbMan.ExecuteReader(StoredProcedureName, Parameters);
+        }
+        //get available rooms in specific period
+#pragma warning disable IDE1006 // Naming Styles
+        public DataTable getavailablerooms(string s, string s2)
+#pragma warning restore IDE1006 // Naming Styles
+        {
+            String StoredProcedureName = StoredProcedures.getavailablerooms;
+ 
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+ 
+            Parameters.Add("@sdate", s);
+            Parameters.Add("@edate", s2);
+            return dbMan.ExecuteReader(StoredProcedureName, Parameters);
+        }
+        //get all depaendents of pateint
+        public DataTable GetPateintDependents(int s)
+        {
+            String StoredProcedureName = StoredProcedures.GetPateintDependents;
+ 
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+ 
+            Parameters.Add("@pssn", s);
+            return dbMan.ExecuteReader(StoredProcedureName, Parameters);
+        }
+        //find doctors by dep name
+        public DataTable SelectDoctoorsbyDepname(string s)
+        {
+            String StoredProcedureName = StoredProcedures.SelectDoctorbyDep;
+ 
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+ 
+            Parameters.Add("@DepName", s);
+            return dbMan.ExecuteReader(StoredProcedureName, Parameters);
+        }
+        //insert pateint_medicine
+        public int InsertPateintMedicine(int pssn, string date, string from, string to, string med)
+        {
+            String StoredProcedureName = StoredProcedures.AddPateintDrag;
+ 
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+ 
+            Parameters.Add("@pssn", pssn);
+            Parameters.Add("@date", date);
+            Parameters.Add("@from", from);
+            Parameters.Add("@to", to);
+            Parameters.Add("@medicine", med);
+            return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
+        }
+        //insert pateint_diagnose
+        public int Insertdiagnos(int pssn, string diagnose)
+        {
+            String StoredProcedureName = StoredProcedures.AddDiagnose;
+ 
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+ 
+            Parameters.Add("@pssn", pssn);
+            Parameters.Add("@diagnose", diagnose);
+            return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
+        }
+        //insert room reservation
+        public int AddReservation(int pssn, int rid, string sd, string ed)
+        {
+            String StoredProcedureName = StoredProcedures.AddReservation;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@pssn", pssn);
+            Parameters.Add("@rid", rid);
+            Parameters.Add("@sdate", sd);
+            Parameters.Add("@edate", ed);
+            return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
+        }
+        //insert pateint
+        public int AddPateint(int pssn, string s1, string s2, string s3, int age, string s4, string s5, string s6)
+        {
+            String StoredProcedureName = StoredProcedures.AddPateint;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@pssn", pssn);
+            Parameters.Add("@fname", s1);
+            Parameters.Add("@lname", s2);
+            Parameters.Add("@ins", s3);
+            Parameters.Add("@Age", age);
+            Parameters.Add("@phone", s4);
+            Parameters.Add("@city", s5);
+            Parameters.Add("@street", s6);
+            return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
+        }
+        //insert appointment
+        public int AddAppointment(int dssn, int pssn, string s1, string s2,string s3)
+        {
+            String StoredProcedureName = StoredProcedures.Book;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@dssn", dssn);
+            Parameters.Add("@pssn", pssn);
+            Parameters.Add("@date", s1);
+            Parameters.Add("@from", s2);
+            Parameters.Add("@to", s3);
+            return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
+        }
+        //select doctor shifts in clinic
+        public DataTable selectdocshifts(int s)
+        {
+            String StoredProcedureName = StoredProcedures.getdocclinicshift;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@ssn", s);
+            return dbMan.ExecuteReader(StoredProcedureName, Parameters);
+        }
     }
 }

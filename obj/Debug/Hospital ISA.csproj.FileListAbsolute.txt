@@ -76,7 +76,6 @@ D:\mahmoudamrnabil\github\myprojects\Hosptial-ya-rab\obj\Debug\Hospital_ISA.Mana
 D:\mahmoudamrnabil\github\myprojects\Hosptial-ya-rab\obj\Debug\Hospital_ISA.Patient.resources
 D:\mahmoudamrnabil\github\myprojects\Hosptial-ya-rab\obj\Debug\Hospital_ISA.Pharmacist.resources
 D:\mahmoudamrnabil\github\myprojects\Hosptial-ya-rab\obj\Debug\Hospital_ISA.Prescription.resources
-D:\mahmoudamrnabil\github\myprojects\Hosptial-ya-rab\obj\Debug\Hospital_ISA.PriscInfo.resources
 D:\mahmoudamrnabil\github\myprojects\Hosptial-ya-rab\obj\Debug\Hospital_ISA.Properties.Resources.resources
 D:\mahmoudamrnabil\github\myprojects\Hosptial-ya-rab\obj\Debug\Hospital_ISA.Statistics.resources
 D:\mahmoudamrnabil\github\myprojects\Hosptial-ya-rab\obj\Debug\Hospital_ISA.StatisticsParent.resources
@@ -208,3 +207,6 @@ E:\ENGINEERING\CMP2-1\DB\project\project code\Hosptial-ya-rab\obj\Debug\Hospital
 E:\ENGINEERING\CMP2-1\DB\project\project code\Hosptial-ya-rab\obj\Debug\Hospital ISA.exe
 E:\ENGINEERING\CMP2-1\DB\project\project code\Hosptial-ya-rab\obj\Debug\Hospital ISA.pdb
 E:\ENGINEERING\CMP2-1\DB\project\project code\Hosptial-ya-rab\obj\Debug\Hospital_ISA.changePass.resources
+D:\mahmoudamrnabil\github\myprojects\Hosptial-ya-rab\obj\Debug\Hospital_ISA.changePass.resources
+D:\mahmoudamrnabil\github\myprojects\Hosptial-ya-rab\obj\Debug\Hospital_ISA.login_with_pass.resources
+D:\mahmoudamrnabil\github\myprojects\Hosptial-ya-rab\obj\Debug\Hospital_ISA.NurseAssignRoom.resources

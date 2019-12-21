@@ -73,12 +73,16 @@ namespace Hospital_ISA
             button1.Enabled = false;
         }
 
+#pragma warning disable IDE1006 // Naming Styles
         private void label12_Click(object sender, EventArgs e)
+#pragma warning restore IDE1006 // Naming Styles
         {
 
         }
 
+#pragma warning disable IDE1006 // Naming Styles
         private void button5_Click(object sender, EventArgs e)
+#pragma warning restore IDE1006 // Naming Styles
         {
             try
             {
@@ -148,7 +152,9 @@ namespace Hospital_ISA
         }
         
 
+#pragma warning disable IDE1006 // Naming Styles
         private void button1_Click(object sender, EventArgs e)
+#pragma warning restore IDE1006 // Naming Styles
         {
             // needs to get the selected 
             int r = c.removeDoctorClinic(Dssn, SelectedremoveClinic,SelectedRemoveClinicSHift);    //remove room from the nurse
@@ -181,7 +187,9 @@ namespace Hospital_ISA
             }
         }
 
+#pragma warning disable IDE1006 // Naming Styles
         private void removeButton_Click(object sender, EventArgs e)
+#pragma warning restore IDE1006 // Naming Styles
         {
             int r = c.removeDoctorRoom(Dssn, SelectedRemoveRoom);    //remove room from the nurse
             // if done successfully refresh the GridViews and disable the buttons
