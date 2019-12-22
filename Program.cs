@@ -16,7 +16,7 @@ namespace Hospital_ISA
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new General_Stats());
+            Application.Run(new LoginPage());
         }
     }
 }

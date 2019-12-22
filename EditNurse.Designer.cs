@@ -52,9 +52,11 @@
             this.AssignRoomGridView = new System.Windows.Forms.DataGridView();
             this.RemoveRoomGridView = new System.Windows.Forms.DataGridView();
             this.ClinicGridView = new System.Windows.Forms.DataGridView();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.AssignRoomGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RemoveRoomGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ClinicGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // ShiftComboBox
@@ -373,12 +375,25 @@
             this.ClinicGridView.TabIndex = 97;
             this.ClinicGridView.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.ClinicGridView_CellMouseClick);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Hospital_ISA.Properties.Resources.arrow;
+            this.pictureBox1.Location = new System.Drawing.Point(20, 24);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(57, 50);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 132;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // EditNurse
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(954, 616);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.ClinicGridView);
             this.Controls.Add(this.RemoveRoomGridView);
             this.Controls.Add(this.AssignRoomGridView);
@@ -410,6 +425,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.AssignRoomGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RemoveRoomGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ClinicGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -440,5 +456,6 @@
         private System.Windows.Forms.DataGridView AssignRoomGridView;
         private System.Windows.Forms.DataGridView RemoveRoomGridView;
         private System.Windows.Forms.DataGridView ClinicGridView;
+        internal System.Windows.Forms.PictureBox pictureBox1;
     }
 }

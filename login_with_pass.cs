@@ -42,7 +42,7 @@ namespace Hospital_ISA
                 }
                 else
                 {
-                    MessageBox.Show("invalid ESSN or Password");
+                    MessageBox.Show("invalid DSSN or Password");
                     return;
                 }
             }
@@ -50,13 +50,13 @@ namespace Hospital_ISA
             {
                 if (pass.Equals(c.getPassOf(ssn, "M")))
                 {
-                    Manager m = new Manager();
+                    ManagerMain m = new ManagerMain();
                     m.Show();
                     Close();
                 }
                 else
                 {
-                    MessageBox.Show("invalid ESSN or Password");
+                    MessageBox.Show("invalid MSSN or Password");
                     return;
                 }
 
@@ -71,7 +71,7 @@ namespace Hospital_ISA
                 }
                 else
                 {
-                    MessageBox.Show("invalid ESSN or Password");
+                    MessageBox.Show("invalid RSSN or Password");
                     return;
                 }
             }
@@ -85,10 +85,23 @@ namespace Hospital_ISA
                 }
                 else
                 {
-                    MessageBox.Show("invalid ESSN or Password");
+                    MessageBox.Show("invalid PH_SSN or Password");
                     return;
                 }
             }
+            else if (type == "P")
+            {
+                if (pass.Equals(c.getPassOf(ssn, "P")))
+                {
+                    Prescription pre = new Prescription(ssn);
+                    pre.Show();
+                    Close();
+                }
+                else
+                {
+                    MessageBox.Show("invalid P_SSN or Password");
+                    return;
+                }           }
         }
     }
 }

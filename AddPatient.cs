@@ -84,5 +84,12 @@ namespace Hospital_ISA
         {
 
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            ReceptionistHome r = new ReceptionistHome();
+            r.Show();
+            Close(); 
+        }
     }
 }

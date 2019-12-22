@@ -39,5 +39,12 @@ namespace Hospital_ISA
             Stats_Diseases sd = new Stats_Diseases();
             sd.Show();
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            ManagerMain m = new ManagerMain();
+            m.Show();
+            Close(); 
+        }
     }
 }

@@ -45,5 +45,12 @@ namespace Hospital_ISA
                 dataGridView1.Refresh();
             }
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            ManagerMain m = new ManagerMain();
+            m.Show();
+            Close();
+        }
     }
 }

@@ -72,5 +72,12 @@ namespace Hospital_ISA
         {
 
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            DoctorAppointments d = new DoctorAppointments();
+            d.Show();
+            Close(); 
+        }
     }
 }

@@ -43,7 +43,7 @@ namespace Hospital_ISA
 
             changePass cp = new changePass("D");
             cp.Show();
-            Close();
+            
         }
     }
 }

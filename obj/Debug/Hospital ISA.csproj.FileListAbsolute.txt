@@ -434,3 +434,50 @@ C:\Users\user\Desktop\New folder\Hosptial-ya-rab\obj\Debug\Hospital_ISA.General_
 C:\Users\user\Desktop\New folder\Hosptial-ya-rab\obj\Debug\Hospital_ISA.MedDepStats.resources
 C:\Users\user\Desktop\New folder\Hosptial-ya-rab\obj\Debug\Hospital_ISA.NonMedDepStats.resources
 C:\Users\user\Desktop\New folder\Hosptial-ya-rab\obj\Debug\Hospital ISA.csprojAssemblyReference.cache
+E:\ENGINEERING\CMP2-1\DB\project\project code\last\Hosptial-ya-rab\bin\Debug\Hospital ISA.exe.config
+E:\ENGINEERING\CMP2-1\DB\project\project code\last\Hosptial-ya-rab\bin\Debug\Hospital ISA.exe
+E:\ENGINEERING\CMP2-1\DB\project\project code\last\Hosptial-ya-rab\bin\Debug\Hospital ISA.pdb
+E:\ENGINEERING\CMP2-1\DB\project\project code\last\Hosptial-ya-rab\bin\Debug\System.Net.Http.dll
+E:\ENGINEERING\CMP2-1\DB\project\project code\last\Hosptial-ya-rab\bin\Debug\ShockwaveFlashObjects.dll
+E:\ENGINEERING\CMP2-1\DB\project\project code\last\Hosptial-ya-rab\bin\Debug\stdole.dll
+E:\ENGINEERING\CMP2-1\DB\project\project code\last\Hosptial-ya-rab\bin\Debug\System.Net.Http.xml
+E:\ENGINEERING\CMP2-1\DB\project\project code\last\Hosptial-ya-rab\obj\Debug\Hospital ISA.csprojAssemblyReference.cache
+E:\ENGINEERING\CMP2-1\DB\project\project code\last\Hosptial-ya-rab\obj\Debug\Hospital_ISA.AddDoctor.resources
+E:\ENGINEERING\CMP2-1\DB\project\project code\last\Hosptial-ya-rab\obj\Debug\Hospital_ISA.AddEmployee.resources
+E:\ENGINEERING\CMP2-1\DB\project\project code\last\Hosptial-ya-rab\obj\Debug\Hospital_ISA.AddNurse.resources
+E:\ENGINEERING\CMP2-1\DB\project\project code\last\Hosptial-ya-rab\obj\Debug\Hospital_ISA.AddPatient.resources
+E:\ENGINEERING\CMP2-1\DB\project\project code\last\Hosptial-ya-rab\obj\Debug\Hospital_ISA.Appoints.resources
+E:\ENGINEERING\CMP2-1\DB\project\project code\last\Hosptial-ya-rab\obj\Debug\Hospital_ISA.AppointsInfo.resources
+E:\ENGINEERING\CMP2-1\DB\project\project code\last\Hosptial-ya-rab\obj\Debug\Hospital_ISA.Book.resources
+E:\ENGINEERING\CMP2-1\DB\project\project code\last\Hosptial-ya-rab\obj\Debug\Hospital_ISA.changePass.resources
+E:\ENGINEERING\CMP2-1\DB\project\project code\last\Hosptial-ya-rab\obj\Debug\Hospital_ISA.DoctorAppointments.resources
+E:\ENGINEERING\CMP2-1\DB\project\project code\last\Hosptial-ya-rab\obj\Debug\Hospital_ISA.DoctorInfo.resources
+E:\ENGINEERING\CMP2-1\DB\project\project code\last\Hosptial-ya-rab\obj\Debug\Hospital_ISA.DoctorPatientInfo.resources
+E:\ENGINEERING\CMP2-1\DB\project\project code\last\Hosptial-ya-rab\obj\Debug\Hospital_ISA.EditDoctor.resources
+E:\ENGINEERING\CMP2-1\DB\project\project code\last\Hosptial-ya-rab\obj\Debug\Hospital_ISA.EditEmp.resources
+E:\ENGINEERING\CMP2-1\DB\project\project code\last\Hosptial-ya-rab\obj\Debug\Hospital_ISA.EditNurse.resources
+E:\ENGINEERING\CMP2-1\DB\project\project code\last\Hosptial-ya-rab\obj\Debug\Hospital_ISA.Explore.resources
+E:\ENGINEERING\CMP2-1\DB\project\project code\last\Hosptial-ya-rab\obj\Debug\Hospital_ISA.General_Stats.resources
+E:\ENGINEERING\CMP2-1\DB\project\project code\last\Hosptial-ya-rab\obj\Debug\Hospital_ISA.Income.resources
+E:\ENGINEERING\CMP2-1\DB\project\project code\last\Hosptial-ya-rab\obj\Debug\Hospital_ISA.LoginPage.resources
+E:\ENGINEERING\CMP2-1\DB\project\project code\last\Hosptial-ya-rab\obj\Debug\Hospital_ISA.login_with_pass.resources
+E:\ENGINEERING\CMP2-1\DB\project\project code\last\Hosptial-ya-rab\obj\Debug\Hospital_ISA.Manager.resources
+E:\ENGINEERING\CMP2-1\DB\project\project code\last\Hosptial-ya-rab\obj\Debug\Hospital_ISA.ManagerMain.resources
+E:\ENGINEERING\CMP2-1\DB\project\project code\last\Hosptial-ya-rab\obj\Debug\Hospital_ISA.MedDepStats.resources
+E:\ENGINEERING\CMP2-1\DB\project\project code\last\Hosptial-ya-rab\obj\Debug\Hospital_ISA.NonMedDepStats.resources
+E:\ENGINEERING\CMP2-1\DB\project\project code\last\Hosptial-ya-rab\obj\Debug\Hospital_ISA.NurseAssignRoom.resources
+E:\ENGINEERING\CMP2-1\DB\project\project code\last\Hosptial-ya-rab\obj\Debug\Hospital_ISA.Patient.resources
+E:\ENGINEERING\CMP2-1\DB\project\project code\last\Hosptial-ya-rab\obj\Debug\Hospital_ISA.Pharmacist.resources
+E:\ENGINEERING\CMP2-1\DB\project\project code\last\Hosptial-ya-rab\obj\Debug\Hospital_ISA.Prescription.resources
+E:\ENGINEERING\CMP2-1\DB\project\project code\last\Hosptial-ya-rab\obj\Debug\Hospital_ISA.Properties.Resources.resources
+E:\ENGINEERING\CMP2-1\DB\project\project code\last\Hosptial-ya-rab\obj\Debug\Hospital_ISA.RecepionistBook.resources
+E:\ENGINEERING\CMP2-1\DB\project\project code\last\Hosptial-ya-rab\obj\Debug\Hospital_ISA.ReceptionistDoctorInfo.resources
+E:\ENGINEERING\CMP2-1\DB\project\project code\last\Hosptial-ya-rab\obj\Debug\Hospital_ISA.ReceptionistHome.resources
+E:\ENGINEERING\CMP2-1\DB\project\project code\last\Hosptial-ya-rab\obj\Debug\Hospital_ISA.Rooms.resources
+E:\ENGINEERING\CMP2-1\DB\project\project code\last\Hosptial-ya-rab\obj\Debug\Hospital_ISA.StatisticsParent.resources
+E:\ENGINEERING\CMP2-1\DB\project\project code\last\Hosptial-ya-rab\obj\Debug\Hospital_ISA.Stats_Diseases.resources
+E:\ENGINEERING\CMP2-1\DB\project\project code\last\Hosptial-ya-rab\obj\Debug\Hospital_ISA.ViewPatient.resources
+E:\ENGINEERING\CMP2-1\DB\project\project code\last\Hosptial-ya-rab\obj\Debug\Hospital ISA.csproj.GenerateResource.cache
+E:\ENGINEERING\CMP2-1\DB\project\project code\last\Hosptial-ya-rab\obj\Debug\Hospital ISA.csproj.CopyComplete
+E:\ENGINEERING\CMP2-1\DB\project\project code\last\Hosptial-ya-rab\obj\Debug\Hospital ISA.exe
+E:\ENGINEERING\CMP2-1\DB\project\project code\last\Hosptial-ya-rab\obj\Debug\Hospital ISA.pdb

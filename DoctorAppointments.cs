@@ -49,6 +49,7 @@ namespace Hospital_ISA
             {
                 DoctorPatientInfo DA = new DoctorPatientInfo(pssn, fname, lname, age, date, from, to);
                 DA.Show();
+                Close(); 
             }
         }
 
@@ -101,7 +102,7 @@ namespace Hospital_ISA
         {
             changePass cp = new changePass("D");
             cp.Show();
-            Close();
+           
         }
     }
 }

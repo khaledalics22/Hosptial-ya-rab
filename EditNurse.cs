@@ -190,5 +190,12 @@ namespace Hospital_ISA
                 MessageBox.Show("Please Enter Valid Values");
             }
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Manager m = new Manager();
+            m.Show();
+            Close();
+        }
     }
 }

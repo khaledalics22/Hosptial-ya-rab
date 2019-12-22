@@ -91,5 +91,12 @@ namespace Hospital_ISA
             MessageBox.Show("Added Successfully");
             Close();
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            AddNurse n = new AddNurse();
+            n.Show();
+            Close(); 
+        }
     }
 }

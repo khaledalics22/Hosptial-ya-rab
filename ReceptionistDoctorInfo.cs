@@ -128,6 +128,13 @@ namespace Hospital_ISA
         }
         private void textBox6_TextChanged(object sender, EventArgs e)
         {
+            RecepionistBook r = new RecepionistBook();
+            r.Show();
+          
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
 
         }
     }

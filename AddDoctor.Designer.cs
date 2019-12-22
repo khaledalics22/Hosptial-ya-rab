@@ -61,6 +61,8 @@
             this.label7 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // button3
@@ -226,6 +228,7 @@
             this.DocCity.Name = "DocCity";
             this.DocCity.Size = new System.Drawing.Size(138, 41);
             this.DocCity.TabIndex = 31;
+            this.DocCity.Text = "city";
             this.DocCity.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // depCombo
@@ -418,6 +421,7 @@
             this.DocStreet.Name = "DocStreet";
             this.DocStreet.Size = new System.Drawing.Size(138, 41);
             this.DocStreet.TabIndex = 101;
+            this.DocStreet.Text = "street";
             // 
             // DocHouseNum
             // 
@@ -426,8 +430,9 @@
             this.DocHouseNum.Location = new System.Drawing.Point(500, 326);
             this.DocHouseNum.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.DocHouseNum.Name = "DocHouseNum";
-            this.DocHouseNum.Size = new System.Drawing.Size(138, 41);
+            this.DocHouseNum.Size = new System.Drawing.Size(156, 41);
             this.DocHouseNum.TabIndex = 102;
+            this.DocHouseNum.Text = "house num";
             // 
             // roomsAssigned
             // 
@@ -487,12 +492,25 @@
             this.label11.TabIndex = 107;
             this.label11.Text = "Day";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Hospital_ISA.Properties.Resources.arrow;
+            this.pictureBox1.Location = new System.Drawing.Point(23, 21);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(57, 50);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 108;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // AddDoctor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(948, 660);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.pass);
@@ -530,6 +548,7 @@
             this.Name = "AddDoctor";
             this.Text = "AddDoctor";
             this.Load += new System.EventHandler(this.AddDoctor_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -570,5 +589,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label11;
+        internal System.Windows.Forms.PictureBox pictureBox1;
     }
 }

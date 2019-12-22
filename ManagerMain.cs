@@ -26,7 +26,9 @@ namespace Hospital_ISA
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            Manager m = new Manager();
+            m.Show();
+            Close(); 
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -40,7 +42,7 @@ namespace Hospital_ISA
         {
             changePass cp = new changePass("E");
             cp.Show();
-            Close();
+           
         }
     }
 }

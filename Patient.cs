@@ -33,9 +33,9 @@ namespace Hospital_ISA
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Prescription pre = new Prescription();
-            pre.Show();
-            Close(); 
+            login_with_pass lwp = new login_with_pass("P");
+            lwp.Show();
+            
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -54,7 +54,7 @@ namespace Hospital_ISA
         {
             changePass cp = new changePass("P");
             cp.Show();
-            Close();
+           
         }
 
         private void button5_Click(object sender, EventArgs e)

@@ -167,7 +167,7 @@ namespace Hospital_ISA
 
             changePass cp = new changePass("E");
             cp.Show();
-            Close();
+          
         }
 
         private void Pharmacist_Load(object sender, EventArgs e)

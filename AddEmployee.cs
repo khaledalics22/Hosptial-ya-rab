@@ -81,5 +81,12 @@ namespace Hospital_ISA
         {
 
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Manager m = new Manager();
+            m.Show();
+            Close();
+        }
     }
 }

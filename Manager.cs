@@ -253,13 +253,21 @@ namespace Hospital_ISA
         {
             ViewPatient vp = new ViewPatient(SelectedPssn);
             vp.Show();
+            Close(); 
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
             changePass cp = new changePass("E");
             cp.Show();
-            Close();
+           
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            ManagerMain m = new ManagerMain();
+            m.Show();
+            Close(); 
         }
     }
 }

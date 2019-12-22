@@ -67,8 +67,10 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.DocCurrRoomsGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DocClinicShiftsGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // button3
@@ -115,6 +117,7 @@
             this.DocCity.Name = "DocCity";
             this.DocCity.Size = new System.Drawing.Size(156, 41);
             this.DocCity.TabIndex = 45;
+            this.DocCity.Text = "city";
             // 
             // DocAge
             // 
@@ -468,6 +471,7 @@
             this.DocStreet.Name = "DocStreet";
             this.DocStreet.Size = new System.Drawing.Size(140, 41);
             this.DocStreet.TabIndex = 102;
+            this.DocStreet.Text = "street";
             // 
             // DocLName
             // 
@@ -486,8 +490,9 @@
             this.DocHouseNum.Location = new System.Drawing.Point(494, 314);
             this.DocHouseNum.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.DocHouseNum.Name = "DocHouseNum";
-            this.DocHouseNum.Size = new System.Drawing.Size(78, 41);
+            this.DocHouseNum.Size = new System.Drawing.Size(158, 41);
             this.DocHouseNum.TabIndex = 104;
+            this.DocHouseNum.Text = "house num";
             // 
             // label11
             // 
@@ -579,12 +584,25 @@
             this.comboBox2.TabIndex = 110;
             this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Hospital_ISA.Properties.Resources.arrow;
+            this.pictureBox1.Location = new System.Drawing.Point(21, 20);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(57, 50);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 112;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // EditDoctor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1283, 849);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.comboBox1);
@@ -630,6 +648,7 @@
             this.Load += new System.EventHandler(this.EditDoctor_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DocCurrRoomsGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DocClinicShiftsGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -676,5 +695,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.ComboBox comboBox2;
+        internal System.Windows.Forms.PictureBox pictureBox1;
     }
 }

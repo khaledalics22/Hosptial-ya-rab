@@ -41,10 +41,9 @@
             // 
             this.splitter1.BackColor = System.Drawing.Color.DodgerBlue;
             this.splitter1.Location = new System.Drawing.Point(0, 0);
-            this.splitter1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.splitter1.MaximumSize = new System.Drawing.Size(1152, 125);
+            this.splitter1.MaximumSize = new System.Drawing.Size(1024, 100);
             this.splitter1.Name = "splitter1";
-            this.splitter1.Size = new System.Drawing.Size(902, 125);
+            this.splitter1.Size = new System.Drawing.Size(802, 100);
             this.splitter1.TabIndex = 0;
             this.splitter1.TabStop = false;
             // 
@@ -54,9 +53,9 @@
             this.label1.BackColor = System.Drawing.Color.DodgerBlue;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(168, 29);
+            this.label1.Location = new System.Drawing.Point(149, 23);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(595, 69);
+            this.label1.Size = new System.Drawing.Size(502, 58);
             this.label1.TabIndex = 1;
             this.label1.Text = "Welcome to Hospital";
             // 
@@ -67,10 +66,9 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(246, 229);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button1.Location = new System.Drawing.Point(219, 183);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(414, 70);
+            this.button1.Size = new System.Drawing.Size(368, 56);
             this.button1.TabIndex = 2;
             this.button1.Text = "Explore";
             this.button1.UseVisualStyleBackColor = false;
@@ -83,10 +81,9 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(246, 329);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button2.Location = new System.Drawing.Point(219, 263);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(414, 72);
+            this.button2.Size = new System.Drawing.Size(368, 58);
             this.button2.TabIndex = 3;
             this.button2.Text = "My Appointements";
             this.button2.UseVisualStyleBackColor = false;
@@ -99,10 +96,9 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(246, 432);
-            this.button3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button3.Location = new System.Drawing.Point(219, 346);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(414, 75);
+            this.button3.Size = new System.Drawing.Size(368, 60);
             this.button3.TabIndex = 4;
             this.button3.Text = "My Prescriptions";
             this.button3.UseVisualStyleBackColor = false;
@@ -115,10 +111,9 @@
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(24, 132);
-            this.button4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button4.Location = new System.Drawing.Point(21, 106);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(243, 62);
+            this.button4.Size = new System.Drawing.Size(216, 50);
             this.button4.TabIndex = 25;
             this.button4.Text = "change password";
             this.button4.UseVisualStyleBackColor = false;
@@ -131,10 +126,9 @@
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(731, 132);
-            this.button5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button5.Location = new System.Drawing.Point(650, 106);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(145, 62);
+            this.button5.Size = new System.Drawing.Size(129, 50);
             this.button5.TabIndex = 26;
             this.button5.Text = "Log out";
             this.button5.UseVisualStyleBackColor = false;
@@ -142,10 +136,10 @@
             // 
             // Patient
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(900, 562);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
@@ -153,7 +147,6 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.splitter1);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Patient";
             this.Text = "Patient";
             this.ResumeLayout(false);

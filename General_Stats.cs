@@ -27,5 +27,12 @@ namespace Hospital_ISA
             NonMedDepStats nd = new NonMedDepStats();
             nd.Show();
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            ManagerMain m = new ManagerMain();
+            m.Show();
+            Close();
+        }
     }
 }

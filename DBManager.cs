@@ -9,7 +9,7 @@ namespace Hospital_ISA
 {
     public class DBManager
     {
-        static string DB_Connection_String= @"Data Source=(localdb)\FirstDB;Initial Catalog=Hospital;Integrated Security=True";
+        static string DB_Connection_String= @"Data Source=DESKTOP-Q5L57ED\SQLEXPRESS;Initial Catalog=Hospital;Integrated Security=True";
         SqlConnection myConnection;
 
     public DBManager()

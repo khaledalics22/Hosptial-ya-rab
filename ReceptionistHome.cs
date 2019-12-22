@@ -27,12 +27,14 @@ namespace Hospital_ISA
         {
             AddPatient AP = new AddPatient();
             AP.Show();
+            Close(); 
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
             Rooms R = new Rooms();
             R.Show();
+            Close(); 
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -46,7 +48,7 @@ namespace Hospital_ISA
         {
             changePass cp = new changePass("E");
             cp.Show();
-            Close();
+           
         }
     }
 }
