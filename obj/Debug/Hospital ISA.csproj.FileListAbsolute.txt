@@ -371,3 +371,66 @@ E:\ENGINEERING\CMP2-1\DB\project\project code\v8\Hosptial-ya-rab\obj\Debug\Hospi
 E:\ENGINEERING\CMP2-1\DB\project\project code\v8\Hosptial-ya-rab\obj\Debug\Hospital ISA.csproj.GenerateResource.cache
 E:\ENGINEERING\CMP2-1\DB\project\project code\v8\Hosptial-ya-rab\obj\Debug\Hospital ISA.exe
 E:\ENGINEERING\CMP2-1\DB\project\project code\v8\Hosptial-ya-rab\obj\Debug\Hospital ISA.pdb
+C:\Users\user\Desktop\New folder\Hosptial-ya-rab\bin\Debug\Hospital ISA.exe.config
+C:\Users\user\Desktop\New folder\Hosptial-ya-rab\bin\Debug\Hospital ISA.exe
+C:\Users\user\Desktop\New folder\Hosptial-ya-rab\bin\Debug\Hospital ISA.pdb
+C:\Users\user\Desktop\New folder\Hosptial-ya-rab\obj\Debug\Hospital_ISA.AddDoctor.resources
+C:\Users\user\Desktop\New folder\Hosptial-ya-rab\obj\Debug\Hospital_ISA.AddEmployee.resources
+C:\Users\user\Desktop\New folder\Hosptial-ya-rab\obj\Debug\Hospital_ISA.AddNurse.resources
+C:\Users\user\Desktop\New folder\Hosptial-ya-rab\obj\Debug\Hospital_ISA.AddPatient.resources
+C:\Users\user\Desktop\New folder\Hosptial-ya-rab\obj\Debug\Hospital_ISA.Appoints.resources
+C:\Users\user\Desktop\New folder\Hosptial-ya-rab\obj\Debug\Hospital_ISA.AppointsInfo.resources
+C:\Users\user\Desktop\New folder\Hosptial-ya-rab\obj\Debug\Hospital_ISA.Book.resources
+C:\Users\user\Desktop\New folder\Hosptial-ya-rab\obj\Debug\Hospital_ISA.changePass.resources
+C:\Users\user\Desktop\New folder\Hosptial-ya-rab\obj\Debug\Hospital_ISA.DoctorAppointments.resources
+C:\Users\user\Desktop\New folder\Hosptial-ya-rab\obj\Debug\Hospital_ISA.DoctorInfo.resources
+C:\Users\user\Desktop\New folder\Hosptial-ya-rab\obj\Debug\Hospital_ISA.DoctorPatientInfo.resources
+C:\Users\user\Desktop\New folder\Hosptial-ya-rab\obj\Debug\Hospital_ISA.EditDoctor.resources
+C:\Users\user\Desktop\New folder\Hosptial-ya-rab\obj\Debug\Hospital_ISA.EditEmp.resources
+C:\Users\user\Desktop\New folder\Hosptial-ya-rab\obj\Debug\Hospital_ISA.EditNurse.resources
+C:\Users\user\Desktop\New folder\Hosptial-ya-rab\obj\Debug\Hospital_ISA.Explore.resources
+C:\Users\user\Desktop\New folder\Hosptial-ya-rab\obj\Debug\Hospital_ISA.Income.resources
+C:\Users\user\Desktop\New folder\Hosptial-ya-rab\obj\Debug\Hospital_ISA.LoginPage.resources
+C:\Users\user\Desktop\New folder\Hosptial-ya-rab\obj\Debug\Hospital_ISA.login_with_pass.resources
+C:\Users\user\Desktop\New folder\Hosptial-ya-rab\obj\Debug\Hospital_ISA.Manager.resources
+C:\Users\user\Desktop\New folder\Hosptial-ya-rab\obj\Debug\Hospital_ISA.ManagerMain.resources
+C:\Users\user\Desktop\New folder\Hosptial-ya-rab\obj\Debug\Hospital_ISA.NurseAssignRoom.resources
+C:\Users\user\Desktop\New folder\Hosptial-ya-rab\obj\Debug\Hospital_ISA.Patient.resources
+C:\Users\user\Desktop\New folder\Hosptial-ya-rab\obj\Debug\Hospital_ISA.Pharmacist.resources
+C:\Users\user\Desktop\New folder\Hosptial-ya-rab\obj\Debug\Hospital_ISA.Prescription.resources
+C:\Users\user\Desktop\New folder\Hosptial-ya-rab\obj\Debug\Hospital_ISA.Properties.Resources.resources
+C:\Users\user\Desktop\New folder\Hosptial-ya-rab\obj\Debug\Hospital_ISA.RecepionistBook.resources
+C:\Users\user\Desktop\New folder\Hosptial-ya-rab\obj\Debug\Hospital_ISA.ReceptionistDoctorInfo.resources
+C:\Users\user\Desktop\New folder\Hosptial-ya-rab\obj\Debug\Hospital_ISA.ReceptionistHome.resources
+C:\Users\user\Desktop\New folder\Hosptial-ya-rab\obj\Debug\Hospital_ISA.Rooms.resources
+C:\Users\user\Desktop\New folder\Hosptial-ya-rab\obj\Debug\Hospital_ISA.StatisticsParent.resources
+C:\Users\user\Desktop\New folder\Hosptial-ya-rab\obj\Debug\Hospital_ISA.ViewPatient.resources
+C:\Users\user\Desktop\New folder\Hosptial-ya-rab\obj\Debug\Hospital ISA.csproj.GenerateResource.cache
+C:\Users\user\Desktop\New folder\Hosptial-ya-rab\obj\Debug\Hospital ISA.exe
+C:\Users\user\Desktop\New folder\Hosptial-ya-rab\obj\Debug\Hospital ISA.pdb
+C:\Users\user\Desktop\New folder\Hosptial-ya-rab\bin\Debug\AxShockwaveFlashObjects.dll
+C:\Users\user\Desktop\New folder\Hosptial-ya-rab\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
+C:\Users\user\Desktop\New folder\Hosptial-ya-rab\bin\Debug\CrystalDecisions.ReportSource.dll
+C:\Users\user\Desktop\New folder\Hosptial-ya-rab\bin\Debug\CrystalDecisions.Shared.dll
+C:\Users\user\Desktop\New folder\Hosptial-ya-rab\bin\Debug\CrystalDecisions.Windows.Forms.dll
+C:\Users\user\Desktop\New folder\Hosptial-ya-rab\bin\Debug\System.Net.Http.dll
+C:\Users\user\Desktop\New folder\Hosptial-ya-rab\bin\Debug\ShockwaveFlashObjects.dll
+C:\Users\user\Desktop\New folder\Hosptial-ya-rab\bin\Debug\CrystalDecisions.ReportAppServer.DataDefModel.dll
+C:\Users\user\Desktop\New folder\Hosptial-ya-rab\bin\Debug\CrystalDecisions.ReportAppServer.ClientDoc.dll
+C:\Users\user\Desktop\New folder\Hosptial-ya-rab\bin\Debug\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+C:\Users\user\Desktop\New folder\Hosptial-ya-rab\bin\Debug\CrystalDecisions.ReportAppServer.Controllers.dll
+C:\Users\user\Desktop\New folder\Hosptial-ya-rab\bin\Debug\CrystalDecisions.ReportAppServer.CommLayer.dll
+C:\Users\user\Desktop\New folder\Hosptial-ya-rab\bin\Debug\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+C:\Users\user\Desktop\New folder\Hosptial-ya-rab\bin\Debug\CrystalDecisions.ReportAppServer.Prompting.dll
+C:\Users\user\Desktop\New folder\Hosptial-ya-rab\bin\Debug\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+C:\Users\user\Desktop\New folder\Hosptial-ya-rab\bin\Debug\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+C:\Users\user\Desktop\New folder\Hosptial-ya-rab\bin\Debug\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+C:\Users\user\Desktop\New folder\Hosptial-ya-rab\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+C:\Users\user\Desktop\New folder\Hosptial-ya-rab\bin\Debug\stdole.dll
+C:\Users\user\Desktop\New folder\Hosptial-ya-rab\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
+C:\Users\user\Desktop\New folder\Hosptial-ya-rab\obj\Debug\Hospital_ISA.Stats_Diseases.resources
+C:\Users\user\Desktop\New folder\Hosptial-ya-rab\obj\Debug\Hospital ISA.csproj.CopyComplete
+C:\Users\user\Desktop\New folder\Hosptial-ya-rab\obj\Debug\Hospital_ISA.General_Stats.resources
+C:\Users\user\Desktop\New folder\Hosptial-ya-rab\obj\Debug\Hospital_ISA.MedDepStats.resources
+C:\Users\user\Desktop\New folder\Hosptial-ya-rab\obj\Debug\Hospital_ISA.NonMedDepStats.resources
+C:\Users\user\Desktop\New folder\Hosptial-ya-rab\obj\Debug\Hospital ISA.csprojAssemblyReference.cache

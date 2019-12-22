@@ -39,35 +39,37 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Blue;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.BackColor = System.Drawing.Color.DodgerBlue;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(308, 9);
+            this.label1.Location = new System.Drawing.Point(346, 11);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(163, 39);
+            this.label1.Size = new System.Drawing.Size(264, 64);
             this.label1.TabIndex = 32;
             this.label1.Text = "Statistics";
             // 
             // splitter1
             // 
-            this.splitter1.BackColor = System.Drawing.Color.Blue;
+            this.splitter1.BackColor = System.Drawing.Color.DodgerBlue;
             this.splitter1.Location = new System.Drawing.Point(0, 0);
             this.splitter1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.splitter1.MaximumSize = new System.Drawing.Size(1024, 70);
+            this.splitter1.MaximumSize = new System.Drawing.Size(1152, 88);
             this.splitter1.Name = "splitter1";
-            this.splitter1.Size = new System.Drawing.Size(803, 70);
+            this.splitter1.Size = new System.Drawing.Size(903, 88);
             this.splitter1.TabIndex = 30;
             this.splitter1.TabStop = false;
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.Blue;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.BackColor = System.Drawing.Color.DodgerBlue;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(219, 268);
+            this.button1.Location = new System.Drawing.Point(246, 335);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(356, 50);
+            this.button1.Size = new System.Drawing.Size(400, 93);
             this.button1.TabIndex = 28;
             this.button1.Text = "Retrieve Staff";
             this.button1.UseVisualStyleBackColor = false;
@@ -75,13 +77,15 @@
             // 
             // button3
             // 
-            this.button3.BackColor = System.Drawing.Color.Blue;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.BackColor = System.Drawing.Color.DodgerBlue;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(219, 174);
+            this.button3.Location = new System.Drawing.Point(246, 218);
             this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(356, 50);
+            this.button3.Size = new System.Drawing.Size(400, 89);
             this.button3.TabIndex = 33;
             this.button3.Text = "Statistics";
             this.button3.UseVisualStyleBackColor = false;
@@ -89,13 +93,15 @@
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.Color.Blue;
+            this.button2.BackColor = System.Drawing.Color.Crimson;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(626, 9);
+            this.button2.Location = new System.Drawing.Point(733, 92);
             this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(146, 50);
+            this.button2.Size = new System.Drawing.Size(155, 62);
             this.button2.TabIndex = 34;
             this.button2.Text = "Log out";
             this.button2.UseVisualStyleBackColor = false;
@@ -103,13 +109,15 @@
             // 
             // button4
             // 
-            this.button4.BackColor = System.Drawing.Color.Blue;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.BackColor = System.Drawing.Color.DodgerBlue;
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(12, 74);
+            this.button4.Location = new System.Drawing.Point(14, 92);
             this.button4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(202, 35);
+            this.button4.Size = new System.Drawing.Size(227, 65);
             this.button4.TabIndex = 35;
             this.button4.Text = "change paasword";
             this.button4.UseVisualStyleBackColor = false;
@@ -117,10 +125,10 @@
             // 
             // ManagerMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(900, 562);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button3);

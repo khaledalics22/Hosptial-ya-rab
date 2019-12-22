@@ -52,9 +52,9 @@
             this.label1.BackColor = System.Drawing.Color.DodgerBlue;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(195, 7);
+            this.label1.Location = new System.Drawing.Point(219, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(386, 54);
+            this.label1.Size = new System.Drawing.Size(459, 64);
             this.label1.TabIndex = 21;
             this.label1.Text = "My Prescriptions";
             // 
@@ -62,9 +62,10 @@
             // 
             this.splitter1.BackColor = System.Drawing.Color.DodgerBlue;
             this.splitter1.Location = new System.Drawing.Point(0, 0);
-            this.splitter1.MaximumSize = new System.Drawing.Size(1024, 70);
+            this.splitter1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.splitter1.MaximumSize = new System.Drawing.Size(1152, 88);
             this.splitter1.Name = "splitter1";
-            this.splitter1.Size = new System.Drawing.Size(802, 70);
+            this.splitter1.Size = new System.Drawing.Size(902, 88);
             this.splitter1.TabIndex = 19;
             this.splitter1.TabStop = false;
             this.splitter1.SplitterMoved += new System.Windows.Forms.SplitterEventHandler(this.splitter1_SplitterMoved);
@@ -96,23 +97,25 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.GridColor = System.Drawing.Color.DodgerBlue;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 86);
+            this.dataGridView1.Location = new System.Drawing.Point(14, 108);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(740, 223);
+            this.dataGridView1.Size = new System.Drawing.Size(832, 279);
             this.dataGridView1.TabIndex = 22;
             this.dataGridView1.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseClick);
             // 
             // splitter2
             // 
             this.splitter2.BackColor = System.Drawing.Color.Blue;
-            this.splitter2.Location = new System.Drawing.Point(802, 0);
-            this.splitter2.MaximumSize = new System.Drawing.Size(1024, 70);
+            this.splitter2.Location = new System.Drawing.Point(902, 0);
+            this.splitter2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.splitter2.MaximumSize = new System.Drawing.Size(1152, 88);
             this.splitter2.Name = "splitter2";
-            this.splitter2.Size = new System.Drawing.Size(802, 70);
+            this.splitter2.Size = new System.Drawing.Size(902, 88);
             this.splitter2.TabIndex = 23;
             this.splitter2.TabStop = false;
             // 
@@ -121,9 +124,9 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label2.Location = new System.Drawing.Point(11, 324);
+            this.label2.Location = new System.Drawing.Point(12, 405);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(110, 25);
+            this.label2.Size = new System.Drawing.Size(131, 29);
             this.label2.TabIndex = 26;
             this.label2.Text = "Diagnose:";
             // 
@@ -132,9 +135,9 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label4.Location = new System.Drawing.Point(410, 322);
+            this.label4.Location = new System.Drawing.Point(461, 402);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(117, 25);
+            this.label4.Size = new System.Drawing.Size(140, 29);
             this.label4.TabIndex = 28;
             this.label4.Text = "Medicines:";
             // 
@@ -165,7 +168,8 @@
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView2.DefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridView2.GridColor = System.Drawing.Color.DodgerBlue;
-            this.dataGridView2.Location = new System.Drawing.Point(540, 322);
+            this.dataGridView2.Location = new System.Drawing.Point(608, 402);
+            this.dataGridView2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.ReadOnly = true;
             this.dataGridView2.RowHeadersWidth = 51;
@@ -173,7 +177,7 @@
             this.dataGridView2.ShowCellErrors = false;
             this.dataGridView2.ShowCellToolTips = false;
             this.dataGridView2.ShowEditingIcon = false;
-            this.dataGridView2.Size = new System.Drawing.Size(212, 115);
+            this.dataGridView2.Size = new System.Drawing.Size(238, 144);
             this.dataGridView2.TabIndex = 29;
             // 
             // textBox1
@@ -181,18 +185,18 @@
             this.textBox1.Enabled = false;
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.textBox1.Location = new System.Drawing.Point(124, 322);
+            this.textBox1.Location = new System.Drawing.Point(140, 402);
             this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(208, 30);
+            this.textBox1.Size = new System.Drawing.Size(234, 35);
             this.textBox1.TabIndex = 30;
             // 
             // Prescription
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(900, 562);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.label4);
@@ -201,6 +205,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.splitter1);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Prescription";
             this.Text = "Prescription";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

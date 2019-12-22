@@ -22,13 +22,6 @@ namespace Hospital_ISA
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Statistics statistics = new Statistics();
-            statistics.Show();
-            Close(); 
-        }
-
         private void button2_Click(object sender, EventArgs e)
         {
             Income i = new Income(); 
@@ -36,11 +29,15 @@ namespace Hospital_ISA
             Close(); 
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void button3_Click(object sender, EventArgs e)
         {
-            HealthStatistics hs = new HealthStatistics();
-            hs.Show();
-            Close(); 
+            Stats_Diseases sd = new Stats_Diseases();
+            sd.Show();
         }
     }
 }

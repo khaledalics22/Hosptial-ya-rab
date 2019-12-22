@@ -864,5 +864,27 @@ namespace Hospital_ISA
             Parameters.Add("@ssn", s);
             return dbMan.ExecuteReader(StoredProcedureName, Parameters);
         }
+
+
+        //stats
+
+        //select doctor shifts in clinic
+        public DataTable StatDeps(string s1,string s2)
+        {
+            String StoredProcedureName = StoredProcedures.StatDepIncome;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@from", s1);
+            Parameters.Add("@to", s2);
+            return dbMan.ExecuteReader(StoredProcedureName, Parameters);
+        }
+        public DataTable StatPhar(string s1, string s2)
+        {
+            String StoredProcedureName = StoredProcedures.StatPharIncome;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@from", s1);
+            Parameters.Add("@to", s2);
+            return dbMan.ExecuteReader(StoredProcedureName, Parameters);
+        }
+
     }
 }

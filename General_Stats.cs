@@ -5,26 +5,27 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Hospital_ISA
 {
-    public partial class HealthStatistics : Form
+    public partial class General_Stats : Form
     {
-        public HealthStatistics()
+        public General_Stats()
         {
             InitializeComponent();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            MedDepStats md = new MedDepStats();
+            md.Show();
         }
 
-        private void HealthStatistics_Load(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
-
+            NonMedDepStats nd = new NonMedDepStats();
+            nd.Show();
         }
     }
 }

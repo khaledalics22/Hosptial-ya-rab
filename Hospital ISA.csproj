@@ -8,7 +8,7 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>Hospital_ISA</RootNamespace>
     <AssemblyName>Hospital ISA</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
@@ -34,9 +34,16 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AxShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -97,6 +104,29 @@
       <DependentUpon>changePass.cs</DependentUpon>
     </Compile>
     <Compile Include="Controller.cs" />
+    <Compile Include="CrystalReport1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CrystalReport2.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport2.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CrystalReport3.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport3.rpt</DependentUpon>
+    </Compile>
+    <Compile Include="CrystalReport4.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport4.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="DBManager.cs" />
     <Compile Include="DoctorAppointments.cs">
       <SubType>Form</SubType>
@@ -140,11 +170,11 @@
     <Compile Include="Explore.Designer.cs">
       <DependentUpon>Explore.cs</DependentUpon>
     </Compile>
-    <Compile Include="HealthStatistics.cs">
+    <Compile Include="General_Stats.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="HealthStatistics.Designer.cs">
-      <DependentUpon>HealthStatistics.cs</DependentUpon>
+    <Compile Include="General_Stats.Designer.cs">
+      <DependentUpon>General_Stats.cs</DependentUpon>
     </Compile>
     <Compile Include="Income.cs">
       <SubType>Form</SubType>
@@ -175,6 +205,18 @@
     </Compile>
     <Compile Include="ManagerMain.Designer.cs">
       <DependentUpon>ManagerMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MedDepStats.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MedDepStats.Designer.cs">
+      <DependentUpon>MedDepStats.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NonMedDepStats.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NonMedDepStats.Designer.cs">
+      <DependentUpon>NonMedDepStats.cs</DependentUpon>
     </Compile>
     <Compile Include="NurseAssignRoom.cs">
       <SubType>Form</SubType>
@@ -226,17 +268,17 @@
     <Compile Include="Rooms.Designer.cs">
       <DependentUpon>Rooms.cs</DependentUpon>
     </Compile>
-    <Compile Include="Statistics.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Statistics.Designer.cs">
-      <DependentUpon>Statistics.cs</DependentUpon>
-    </Compile>
     <Compile Include="StatisticsParent.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="StatisticsParent.Designer.cs">
       <DependentUpon>StatisticsParent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stats_Diseases.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stats_Diseases.Designer.cs">
+      <DependentUpon>Stats_Diseases.cs</DependentUpon>
     </Compile>
     <Compile Include="StoredProcedures.cs" />
     <Compile Include="ViewPatient.cs">
@@ -269,6 +311,22 @@
     <EmbeddedResource Include="changePass.resx">
       <DependentUpon>changePass.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport2.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport3.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport3.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport4.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport4.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="DoctorAppointments.resx">
       <DependentUpon>DoctorAppointments.cs</DependentUpon>
     </EmbeddedResource>
@@ -290,8 +348,8 @@
     <EmbeddedResource Include="Explore.resx">
       <DependentUpon>Explore.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="HealthStatistics.resx">
-      <DependentUpon>HealthStatistics.cs</DependentUpon>
+    <EmbeddedResource Include="General_Stats.resx">
+      <DependentUpon>General_Stats.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Income.resx">
       <DependentUpon>Income.cs</DependentUpon>
@@ -307,6 +365,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ManagerMain.resx">
       <DependentUpon>ManagerMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MedDepStats.resx">
+      <DependentUpon>MedDepStats.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NonMedDepStats.resx">
+      <DependentUpon>NonMedDepStats.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NurseAssignRoom.resx">
       <DependentUpon>NurseAssignRoom.cs</DependentUpon>
@@ -342,11 +406,11 @@
     <EmbeddedResource Include="Rooms.resx">
       <DependentUpon>Rooms.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Statistics.resx">
-      <DependentUpon>Statistics.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="StatisticsParent.resx">
       <DependentUpon>StatisticsParent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stats_Diseases.resx">
+      <DependentUpon>Stats_Diseases.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ViewPatient.resx">
       <DependentUpon>ViewPatient.cs</DependentUpon>
@@ -374,6 +438,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Images\arrow.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

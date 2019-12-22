@@ -97,5 +97,11 @@ namespace Hospital_ISA
         public static string getPatientInfo = "getPatientInfo";
         public static string patientHistory = "patientHistory";
 
+
+        //Stats
+
+        public static string StatDepIncome = "StatDepIncome";
+        public static string StatPharIncome = "StatPharIncome";
+
     }
 }
