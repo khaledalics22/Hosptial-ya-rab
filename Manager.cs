@@ -16,6 +16,7 @@ namespace Hospital_ISA
         int SelcetedDssn = -1;        //store selected SSN for any staff, initially with -1 because no item is selected at first
         int SelcetedNssn = -1;
         int SelcetedEssn = -1;
+        int SelectedPssn = -1;
 
         public Manager()
         {
@@ -63,7 +64,7 @@ namespace Hospital_ISA
         }
         //if update is clicked
         private void button4_Click(object sender, EventArgs e)
-        {       
+        {
             //check all comboBox, then go to corespondant SSN to update
             if (comboBox1.SelectedItem.ToString() == "Doctors")
             {
@@ -76,7 +77,7 @@ namespace Hospital_ISA
                 EditNurse en = new EditNurse(SelcetedNssn);
                 en.Show();
             }
-                
+
             else if (comboBox1.SelectedItem.ToString() == "Employees")
             {
                 EditEmp ee = new EditEmp(SelcetedEssn);
@@ -139,19 +140,19 @@ namespace Hospital_ISA
                 button2.Enabled = false;
                 button4.Enabled = false;
                 button1.Enabled = false;
-                button5.Enabled = true;
+                button5.Enabled = false;
             }
         }
 
         //if any row is clicked in dataGridView 
         private void dataGridView1_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            button4.Enabled = true;
             //check if comboBox has value Doctor
             if (comboBox1.SelectedItem.ToString() == "Doctors")
             {
+                button4.Enabled = true;
                 int indexi = e.RowIndex;     //get clicked row index
-                if(indexi>=0)               //check if this row in table
+                if (indexi >= 0)               //check if this row in table
                 {
                     DataGridViewRow selRow = dataGridView1.Rows[indexi];    //store row
                     SelcetedDssn = Convert.ToInt32(selRow.Cells[0].Value.ToString());    //get cel[0] >> which is location of DSSN
@@ -159,8 +160,9 @@ namespace Hospital_ISA
             }
             else if (comboBox1.SelectedItem.ToString() == "Nurses")
             {
+                button4.Enabled = true;
                 int indexi = e.RowIndex;
-                if (indexi >= 0) 
+                if (indexi >= 0)
                 {
                     DataGridViewRow selRow = dataGridView1.Rows[indexi];
                     SelcetedNssn = Convert.ToInt32(selRow.Cells[0].Value.ToString());
@@ -168,11 +170,22 @@ namespace Hospital_ISA
             }
             else if (comboBox1.SelectedItem.ToString() == "Employees")
             {
+                button4.Enabled = true;
                 int indexi = e.RowIndex;
                 if (indexi >= 0)
                 {
                     DataGridViewRow selRow = dataGridView1.Rows[indexi];
                     SelcetedEssn = Convert.ToInt32(selRow.Cells[0].Value.ToString());
+                }
+            }
+            else if (comboBox1.SelectedItem.ToString() == "Patients")
+            {
+                button5.Enabled = true;
+                int indexi = e.RowIndex;
+                if (indexi >= 0)
+                {
+                    DataGridViewRow selRow = dataGridView1.Rows[indexi];
+                    SelectedPssn = Convert.ToInt32(selRow.Cells[0].Value.ToString());
                 }
             }
             //if there's no selected item >> make SSN=-1 (to avoid deleting previous selected row)
@@ -181,6 +194,7 @@ namespace Hospital_ISA
                 SelcetedDssn = -1;
                 SelcetedEssn = -1;
                 SelcetedNssn = -1;
+                SelectedPssn = -1;
             }
         }
 
@@ -226,7 +240,7 @@ namespace Hospital_ISA
                 else
                     MessageBox.Show("Please, Select Employee");
             }
-            
+
 
         }
 
@@ -234,10 +248,10 @@ namespace Hospital_ISA
         {
 
         }
-       
+
         private void button5_Click(object sender, EventArgs e)
         {
-            ViewPatient vp = new ViewPatient();
+            ViewPatient vp = new ViewPatient(SelectedPssn);
             vp.Show();
         }
 

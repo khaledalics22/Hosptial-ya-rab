@@ -16,9 +16,8 @@ namespace Hospital_ISA
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new RecepionistBook ());
-            Application.Run(new ReceptionistHome());
             Application.Run(new Manager());
+            
         }
     }
 }

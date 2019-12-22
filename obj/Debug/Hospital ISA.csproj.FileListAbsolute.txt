@@ -251,3 +251,83 @@ E:\ENGINEERING\CMP2-1\DB\project\project code\v6 git clone\Hosptial-ya-rab\obj\D
 E:\ENGINEERING\CMP2-1\DB\project\project code\v6 git clone\Hosptial-ya-rab\obj\Debug\Hospital ISA.pdb
 C:\Users\IslamAhmed\Desktop\Projects\DB_Project\Hosptial-ya-rab\obj\Debug\Hospital_ISA.changePass.resources
 C:\Users\IslamAhmed\Desktop\Projects\DB_Project\Hosptial-ya-rab\obj\Debug\Hospital_ISA.login_with_pass.resources
+E:\ENGINEERING\CMP2-1\DB\project\project code\v7\Hosptial-ya-rab\bin\Debug\Hospital ISA.exe.config
+E:\ENGINEERING\CMP2-1\DB\project\project code\v7\Hosptial-ya-rab\bin\Debug\Hospital ISA.exe
+E:\ENGINEERING\CMP2-1\DB\project\project code\v7\Hosptial-ya-rab\bin\Debug\Hospital ISA.pdb
+E:\ENGINEERING\CMP2-1\DB\project\project code\v7\Hosptial-ya-rab\obj\Debug\Hospital ISA.csprojAssemblyReference.cache
+E:\ENGINEERING\CMP2-1\DB\project\project code\v7\Hosptial-ya-rab\obj\Debug\Hospital_ISA.AddDoctor.resources
+E:\ENGINEERING\CMP2-1\DB\project\project code\v7\Hosptial-ya-rab\obj\Debug\Hospital_ISA.AddEmployee.resources
+E:\ENGINEERING\CMP2-1\DB\project\project code\v7\Hosptial-ya-rab\obj\Debug\Hospital_ISA.AddNurse.resources
+E:\ENGINEERING\CMP2-1\DB\project\project code\v7\Hosptial-ya-rab\obj\Debug\Hospital_ISA.AddPatient.resources
+E:\ENGINEERING\CMP2-1\DB\project\project code\v7\Hosptial-ya-rab\obj\Debug\Hospital_ISA.Appoints.resources
+E:\ENGINEERING\CMP2-1\DB\project\project code\v7\Hosptial-ya-rab\obj\Debug\Hospital_ISA.AppointsInfo.resources
+E:\ENGINEERING\CMP2-1\DB\project\project code\v7\Hosptial-ya-rab\obj\Debug\Hospital_ISA.Book.resources
+E:\ENGINEERING\CMP2-1\DB\project\project code\v7\Hosptial-ya-rab\obj\Debug\Hospital_ISA.changePass.resources
+E:\ENGINEERING\CMP2-1\DB\project\project code\v7\Hosptial-ya-rab\obj\Debug\Hospital_ISA.DoctorAppointments.resources
+E:\ENGINEERING\CMP2-1\DB\project\project code\v7\Hosptial-ya-rab\obj\Debug\Hospital_ISA.DoctorInfo.resources
+E:\ENGINEERING\CMP2-1\DB\project\project code\v7\Hosptial-ya-rab\obj\Debug\Hospital_ISA.DoctorPatientInfo.resources
+E:\ENGINEERING\CMP2-1\DB\project\project code\v7\Hosptial-ya-rab\obj\Debug\Hospital_ISA.EditDoctor.resources
+E:\ENGINEERING\CMP2-1\DB\project\project code\v7\Hosptial-ya-rab\obj\Debug\Hospital_ISA.EditEmp.resources
+E:\ENGINEERING\CMP2-1\DB\project\project code\v7\Hosptial-ya-rab\obj\Debug\Hospital_ISA.EditNurse.resources
+E:\ENGINEERING\CMP2-1\DB\project\project code\v7\Hosptial-ya-rab\obj\Debug\Hospital_ISA.Explore.resources
+E:\ENGINEERING\CMP2-1\DB\project\project code\v7\Hosptial-ya-rab\obj\Debug\Hospital_ISA.HealthStatistics.resources
+E:\ENGINEERING\CMP2-1\DB\project\project code\v7\Hosptial-ya-rab\obj\Debug\Hospital_ISA.Income.resources
+E:\ENGINEERING\CMP2-1\DB\project\project code\v7\Hosptial-ya-rab\obj\Debug\Hospital_ISA.LoginPage.resources
+E:\ENGINEERING\CMP2-1\DB\project\project code\v7\Hosptial-ya-rab\obj\Debug\Hospital_ISA.login_with_pass.resources
+E:\ENGINEERING\CMP2-1\DB\project\project code\v7\Hosptial-ya-rab\obj\Debug\Hospital_ISA.Manager.resources
+E:\ENGINEERING\CMP2-1\DB\project\project code\v7\Hosptial-ya-rab\obj\Debug\Hospital_ISA.ManagerMain.resources
+E:\ENGINEERING\CMP2-1\DB\project\project code\v7\Hosptial-ya-rab\obj\Debug\Hospital_ISA.NurseAssignRoom.resources
+E:\ENGINEERING\CMP2-1\DB\project\project code\v7\Hosptial-ya-rab\obj\Debug\Hospital_ISA.Patient.resources
+E:\ENGINEERING\CMP2-1\DB\project\project code\v7\Hosptial-ya-rab\obj\Debug\Hospital_ISA.Pharmacist.resources
+E:\ENGINEERING\CMP2-1\DB\project\project code\v7\Hosptial-ya-rab\obj\Debug\Hospital_ISA.Prescription.resources
+E:\ENGINEERING\CMP2-1\DB\project\project code\v7\Hosptial-ya-rab\obj\Debug\Hospital_ISA.Properties.Resources.resources
+E:\ENGINEERING\CMP2-1\DB\project\project code\v7\Hosptial-ya-rab\obj\Debug\Hospital_ISA.RecepionistBook.resources
+E:\ENGINEERING\CMP2-1\DB\project\project code\v7\Hosptial-ya-rab\obj\Debug\Hospital_ISA.ReceptionistDoctorInfo.resources
+E:\ENGINEERING\CMP2-1\DB\project\project code\v7\Hosptial-ya-rab\obj\Debug\Hospital_ISA.ReceptionistHome.resources
+E:\ENGINEERING\CMP2-1\DB\project\project code\v7\Hosptial-ya-rab\obj\Debug\Hospital_ISA.Rooms.resources
+E:\ENGINEERING\CMP2-1\DB\project\project code\v7\Hosptial-ya-rab\obj\Debug\Hospital_ISA.Statistics.resources
+E:\ENGINEERING\CMP2-1\DB\project\project code\v7\Hosptial-ya-rab\obj\Debug\Hospital_ISA.StatisticsParent.resources
+E:\ENGINEERING\CMP2-1\DB\project\project code\v7\Hosptial-ya-rab\obj\Debug\Hospital_ISA.ViewPatient.resources
+E:\ENGINEERING\CMP2-1\DB\project\project code\v7\Hosptial-ya-rab\obj\Debug\Hospital ISA.csproj.GenerateResource.cache
+E:\ENGINEERING\CMP2-1\DB\project\project code\v7\Hosptial-ya-rab\obj\Debug\Hospital ISA.exe
+E:\ENGINEERING\CMP2-1\DB\project\project code\v7\Hosptial-ya-rab\obj\Debug\Hospital ISA.pdb
+C:\Users\IslamAhmed\Desktop\Projects\Hosptial-ya-rab\bin\Debug\Hospital ISA.exe.config
+C:\Users\IslamAhmed\Desktop\Projects\Hosptial-ya-rab\bin\Debug\Hospital ISA.exe
+C:\Users\IslamAhmed\Desktop\Projects\Hosptial-ya-rab\bin\Debug\Hospital ISA.pdb
+C:\Users\IslamAhmed\Desktop\Projects\Hosptial-ya-rab\obj\Debug\Hospital ISA.csprojAssemblyReference.cache
+C:\Users\IslamAhmed\Desktop\Projects\Hosptial-ya-rab\obj\Debug\Hospital_ISA.AddDoctor.resources
+C:\Users\IslamAhmed\Desktop\Projects\Hosptial-ya-rab\obj\Debug\Hospital_ISA.AddEmployee.resources
+C:\Users\IslamAhmed\Desktop\Projects\Hosptial-ya-rab\obj\Debug\Hospital_ISA.AddNurse.resources
+C:\Users\IslamAhmed\Desktop\Projects\Hosptial-ya-rab\obj\Debug\Hospital_ISA.AddPatient.resources
+C:\Users\IslamAhmed\Desktop\Projects\Hosptial-ya-rab\obj\Debug\Hospital_ISA.Appoints.resources
+C:\Users\IslamAhmed\Desktop\Projects\Hosptial-ya-rab\obj\Debug\Hospital_ISA.AppointsInfo.resources
+C:\Users\IslamAhmed\Desktop\Projects\Hosptial-ya-rab\obj\Debug\Hospital_ISA.Book.resources
+C:\Users\IslamAhmed\Desktop\Projects\Hosptial-ya-rab\obj\Debug\Hospital_ISA.changePass.resources
+C:\Users\IslamAhmed\Desktop\Projects\Hosptial-ya-rab\obj\Debug\Hospital_ISA.DoctorAppointments.resources
+C:\Users\IslamAhmed\Desktop\Projects\Hosptial-ya-rab\obj\Debug\Hospital_ISA.DoctorInfo.resources
+C:\Users\IslamAhmed\Desktop\Projects\Hosptial-ya-rab\obj\Debug\Hospital_ISA.DoctorPatientInfo.resources
+C:\Users\IslamAhmed\Desktop\Projects\Hosptial-ya-rab\obj\Debug\Hospital_ISA.EditDoctor.resources
+C:\Users\IslamAhmed\Desktop\Projects\Hosptial-ya-rab\obj\Debug\Hospital_ISA.EditEmp.resources
+C:\Users\IslamAhmed\Desktop\Projects\Hosptial-ya-rab\obj\Debug\Hospital_ISA.EditNurse.resources
+C:\Users\IslamAhmed\Desktop\Projects\Hosptial-ya-rab\obj\Debug\Hospital_ISA.Explore.resources
+C:\Users\IslamAhmed\Desktop\Projects\Hosptial-ya-rab\obj\Debug\Hospital_ISA.HealthStatistics.resources
+C:\Users\IslamAhmed\Desktop\Projects\Hosptial-ya-rab\obj\Debug\Hospital_ISA.Income.resources
+C:\Users\IslamAhmed\Desktop\Projects\Hosptial-ya-rab\obj\Debug\Hospital_ISA.LoginPage.resources
+C:\Users\IslamAhmed\Desktop\Projects\Hosptial-ya-rab\obj\Debug\Hospital_ISA.login_with_pass.resources
+C:\Users\IslamAhmed\Desktop\Projects\Hosptial-ya-rab\obj\Debug\Hospital_ISA.Manager.resources
+C:\Users\IslamAhmed\Desktop\Projects\Hosptial-ya-rab\obj\Debug\Hospital_ISA.ManagerMain.resources
+C:\Users\IslamAhmed\Desktop\Projects\Hosptial-ya-rab\obj\Debug\Hospital_ISA.NurseAssignRoom.resources
+C:\Users\IslamAhmed\Desktop\Projects\Hosptial-ya-rab\obj\Debug\Hospital_ISA.Patient.resources
+C:\Users\IslamAhmed\Desktop\Projects\Hosptial-ya-rab\obj\Debug\Hospital_ISA.Pharmacist.resources
+C:\Users\IslamAhmed\Desktop\Projects\Hosptial-ya-rab\obj\Debug\Hospital_ISA.Prescription.resources
+C:\Users\IslamAhmed\Desktop\Projects\Hosptial-ya-rab\obj\Debug\Hospital_ISA.Properties.Resources.resources
+C:\Users\IslamAhmed\Desktop\Projects\Hosptial-ya-rab\obj\Debug\Hospital_ISA.RecepionistBook.resources
+C:\Users\IslamAhmed\Desktop\Projects\Hosptial-ya-rab\obj\Debug\Hospital_ISA.ReceptionistDoctorInfo.resources
+C:\Users\IslamAhmed\Desktop\Projects\Hosptial-ya-rab\obj\Debug\Hospital_ISA.ReceptionistHome.resources
+C:\Users\IslamAhmed\Desktop\Projects\Hosptial-ya-rab\obj\Debug\Hospital_ISA.Rooms.resources
+C:\Users\IslamAhmed\Desktop\Projects\Hosptial-ya-rab\obj\Debug\Hospital_ISA.Statistics.resources
+C:\Users\IslamAhmed\Desktop\Projects\Hosptial-ya-rab\obj\Debug\Hospital_ISA.StatisticsParent.resources
+C:\Users\IslamAhmed\Desktop\Projects\Hosptial-ya-rab\obj\Debug\Hospital_ISA.ViewPatient.resources
+C:\Users\IslamAhmed\Desktop\Projects\Hosptial-ya-rab\obj\Debug\Hospital ISA.csproj.GenerateResource.cache
+C:\Users\IslamAhmed\Desktop\Projects\Hosptial-ya-rab\obj\Debug\Hospital ISA.exe
+C:\Users\IslamAhmed\Desktop\Projects\Hosptial-ya-rab\obj\Debug\Hospital ISA.pdb
