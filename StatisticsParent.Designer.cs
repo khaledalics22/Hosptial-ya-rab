@@ -43,9 +43,10 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(220, 194);
+            this.button1.Location = new System.Drawing.Point(248, 242);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(356, 50);
+            this.button1.Size = new System.Drawing.Size(400, 62);
             this.button1.TabIndex = 18;
             this.button1.Text = "General";
             this.button1.UseVisualStyleBackColor = false;
@@ -57,9 +58,10 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(220, 280);
+            this.button2.Location = new System.Drawing.Point(248, 350);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(356, 50);
+            this.button2.Size = new System.Drawing.Size(400, 62);
             this.button2.TabIndex = 19;
             this.button2.Text = "Income";
             this.button2.UseVisualStyleBackColor = false;
@@ -71,9 +73,9 @@
             this.label1.BackColor = System.Drawing.Color.DodgerBlue;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(289, 9);
+            this.label1.Location = new System.Drawing.Point(325, 11);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(221, 54);
+            this.label1.Size = new System.Drawing.Size(264, 64);
             this.label1.TabIndex = 27;
             this.label1.Text = "Statistics";
             // 
@@ -81,9 +83,10 @@
             // 
             this.splitter1.BackColor = System.Drawing.Color.DodgerBlue;
             this.splitter1.Location = new System.Drawing.Point(0, 0);
-            this.splitter1.MaximumSize = new System.Drawing.Size(1024, 70);
+            this.splitter1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.splitter1.MaximumSize = new System.Drawing.Size(1152, 88);
             this.splitter1.Name = "splitter1";
-            this.splitter1.Size = new System.Drawing.Size(802, 70);
+            this.splitter1.Size = new System.Drawing.Size(902, 88);
             this.splitter1.TabIndex = 25;
             this.splitter1.TabStop = false;
             // 
@@ -93,9 +96,10 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(220, 363);
+            this.button3.Location = new System.Drawing.Point(248, 454);
+            this.button3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(356, 50);
+            this.button3.Size = new System.Drawing.Size(400, 62);
             this.button3.TabIndex = 30;
             this.button3.Text = "Health";
             this.button3.UseVisualStyleBackColor = false;
@@ -104,9 +108,10 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Hospital_ISA.Properties.Resources.arrow;
-            this.pictureBox1.Location = new System.Drawing.Point(24, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(27, 15);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(57, 50);
+            this.pictureBox1.Size = new System.Drawing.Size(64, 62);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 112;
             this.pictureBox1.TabStop = false;
@@ -114,16 +119,17 @@
             // 
             // StatisticsParent
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(900, 562);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.splitter1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "StatisticsParent";
             this.Text = "StatisticsParent";
             this.Load += new System.EventHandler(this.StatisticsParent_Load);

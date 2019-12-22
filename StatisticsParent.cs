@@ -31,7 +31,8 @@ namespace Hospital_ISA
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            General_Stats gs = new General_Stats();
+            gs.Show();
         }
 
         private void button3_Click(object sender, EventArgs e)
