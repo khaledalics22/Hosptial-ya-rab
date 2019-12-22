@@ -76,5 +76,10 @@ namespace Hospital_ISA
         {
 
         }
+
+        private void AddEmployee_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

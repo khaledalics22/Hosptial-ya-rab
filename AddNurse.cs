@@ -83,5 +83,10 @@ namespace Hospital_ISA
                 MessageBox.Show("Please Enter Valid Values");
             }
         }
+
+        private void AddNurse_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

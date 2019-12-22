@@ -27,7 +27,8 @@ namespace Hospital_ISA
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (DateTime.Parse(textBox1.Text) >= DateTime.Parse(textBox2.Text))
+            if(textBox1.Text == "" || textBox2.Text == "") MessageBox.Show("Please,enter valid values");
+            else if (DateTime.Parse(textBox1.Text) >= DateTime.Parse(textBox2.Text))
                 MessageBox.Show("Please,enter valid values");
             else
             {
@@ -42,6 +43,7 @@ namespace Hospital_ISA
             if (rid == -1) MessageBox.Show("Please,choose room");
             else {
                 contobj.AddReservation(Convert.ToInt32(textBox3.Text), rid, textBox1.Text, textBox2.Text);
+                MessageBox.Show("Room is reserved");
                 Close();
             }
         }

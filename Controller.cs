@@ -806,11 +806,11 @@ namespace Hospital_ISA
             Parameters.Add("@pssn", pssn);
             Parameters.Add("@fname", s1);
             Parameters.Add("@lname", s2);
-            Parameters.Add("@ins", s3);
-            Parameters.Add("@Age", age);
+            Parameters.Add("@ins", s3== "" ? Convert.DBNull:s3);
+            Parameters.Add("@Age", age==0? Convert.DBNull:age);
             Parameters.Add("@phone", s4);
-            Parameters.Add("@city", s5);
-            Parameters.Add("@street", s6);
+            Parameters.Add("@city", s5==""? Convert.DBNull:s5);
+            Parameters.Add("@street", s6==""? Convert.DBNull:s6);
             return dbMan.ExecuteNonQuery(StoredProcedureName, Parameters);
         }
         //insert appointment
