@@ -285,7 +285,7 @@ namespace Hospital_ISA
 
         private void comboBox6_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            
         }
     }
 }

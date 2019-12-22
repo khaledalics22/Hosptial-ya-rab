@@ -176,7 +176,7 @@
             this.Controls.Add(this.AssignButton);
             this.Controls.Add(this.button3);
             this.Name = "NurseAssignRoom";
-            this.Text = "NurseAssignRoom";
+            this.Text = "a";
             ((System.ComponentModel.ISupportInitialize)(this.RemoveRoomGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.AssignRoomGridView)).EndInit();
             this.ResumeLayout(false);

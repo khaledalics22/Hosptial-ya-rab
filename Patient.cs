@@ -56,5 +56,12 @@ namespace Hospital_ISA
             cp.Show();
             Close();
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            LoginPage l = new LoginPage();
+            l.Show();
+            Close();
+        }
     }
 }

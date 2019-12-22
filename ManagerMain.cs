@@ -28,5 +28,19 @@ namespace Hospital_ISA
         {
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            LoginPage l = new LoginPage();
+            l.Show();
+            Close(); 
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            changePass cp = new changePass("E");
+            cp.Show();
+            Close();
+        }
     }
 }

@@ -34,5 +34,19 @@ namespace Hospital_ISA
             Rooms R = new Rooms();
             R.Show();
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            LoginPage l = new LoginPage();
+            l.Show();
+            Close(); 
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            changePass cp = new changePass("E");
+            cp.Show();
+            Close();
+        }
     }
 }

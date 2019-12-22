@@ -174,5 +174,18 @@ namespace Hospital_ISA
         {
 
         }
+
+        private void splitter1_SplitterMoved(object sender, SplitterEventArgs e)
+        {
+
+        }
+        
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            LoginPage l = new LoginPage();
+            l.Show();
+            Close();
+        }
     }
 }
