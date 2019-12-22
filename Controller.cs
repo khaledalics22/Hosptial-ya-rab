@@ -631,7 +631,21 @@ namespace Hospital_ISA
             Parameters.Add("@Pssn", pssn);
             return dbMan.ExecuteScalar(StoredProcedureName, Parameters);
         }
-        
+        public DataTable getPatientInfo(int pssn)
+        {
+            String StoredProcedureName = StoredProcedures.getPatientInfo;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@Pssn", pssn);
+            return dbMan.ExecuteReader(StoredProcedureName, Parameters);
+        }
+        public DataTable patientHistory(int pssn)
+        {
+            String StoredProcedureName = StoredProcedures.patientHistory;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@Pssn", pssn);
+            return dbMan.ExecuteReader(StoredProcedureName, Parameters);
+        }
+
         public DataTable getDocClinicsAtDate(int Dssn,string date)
         {
             String StoredProcedureName = StoredProcedures.selectPatient;

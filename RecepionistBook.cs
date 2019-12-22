@@ -20,7 +20,7 @@ namespace Hospital_ISA
         public RecepionistBook()
         {
             InitializeComponent();
-            DataTable dt = contobj.SelectDep();
+            DataTable dt = contobj.getMedicineDeps();
             //string s = dt.Rows[1]["Dname"].ToString();
             comboBox1.DataSource = dt;
             comboBox1.DisplayMember = "Dname";

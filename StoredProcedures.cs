@@ -93,5 +93,9 @@ namespace Hospital_ISA
         public static string Book = "insertappointment";
         public static string cancelAppoint="cancelAppoint";
         public static string AddDoctorClinic = "AddDoctorClinic";
+
+        public static string getPatientInfo = "getPatientInfo";
+        public static string patientHistory = "patientHistory";
+
     }
 }
